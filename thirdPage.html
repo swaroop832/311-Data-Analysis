@@ -1,0 +1,133 @@
+<html>
+<style>
+    table, th, td {
+
+        border-collapse: collapse;
+        font-weight: bold;
+
+    }
+    th, td {
+        padding: 5px;
+        text-align: right;
+
+    }
+    .form{
+        display: inline-block;
+    }
+    .tt{
+        display: inline;
+    }
+</style>
+<body>
+<h1>area zip code data visulization</h1>
+<div class="form">
+<form>
+    <div>
+    <label>Select month: </label>
+    <input title="" type="number" value="select month number" ng-model="use.month">
+    Select year : <input title="" type="number" value="select year" ng-model="use.year">
+    </div>
+</form>
+</div>
+<div class="tt">
+
+    <button style="background-color: cyan; cursor: pointer; font-size: 16px" data-ng-click = "myfunction1(use)"> click to get results </button>
+
+    <h3> maximum No. of call service requests by zipcode for {{use.month}} month and {{use.year}} year </h3>
+    <table class="dat" >
+        <tr>
+            <th>Zip code</th>
+            <th>No. of service calls</th>
+        </tr>
+        <tr>
+            <td>{{data211}}</td>
+            <td>{{data21}}</td>
+        </tr>
+
+        <tr>
+            <td>{{data212}}</td>
+            <td>{{data22}}</td>
+        </tr>
+
+        <tr>
+            <td>{{data213}}</td>
+            <td>{{data23}}</td>
+        </tr>
+
+        <tr>
+            <td>{{data214}}</td>
+            <td>{{data24}}</td>
+        </tr>
+
+        <tr>
+            <td>{{data215}}</td>
+            <td>{{data25}}</td>
+        </tr>
+
+        <tr>
+            <td>{{data216}}</td>
+            <td>{{data26}}</td>
+        </tr>
+    </table>
+
+</div>
+<div id="piechart" style="width: 400px; height: 400px; background-color: transparent"></div>
+<form class="form">
+    <div>
+        select status: <select title="status" ng-model="my.stas">
+        <option value="OPEN">open</option>
+        <option value="CANC">cancelled</option>
+        <option value="ASSIG">assigned</option>
+        <option value="RESOL">resolved</option>
+                     </select>
+        select month:<input title="month" type="number" value="select month number" ng-model="my.month1">
+        select year: <input title="year" type="number" value="select month number" ng-model="my.year1">
+    </div>
+</form>
+<div class="tt">
+
+    <button style="background-color: cyan; cursor: pointer; font-size: 16px" data-ng-click = "myfunction2(my)"> click to get results </button>
+
+    <h3> The staus of {{my.stas}} call service requests by zipcode for particular month and year </h3>
+    <table class="dat" >
+        <tr>
+            <th>Zip code</th>
+            <th>No. of service calls</th>
+        </tr>
+        <tr>
+            <td>{{data311}}</td>
+            <td>{{data31}}</td>
+        </tr>
+
+        <tr>
+            <td>{{data321}}</td>
+            <td>{{data32}}</td>
+        </tr>
+
+        <tr>
+            <td>{{data331}}</td>
+            <td>{{data33}}</td>
+        </tr>
+
+        <tr>
+            <td>{{data341}}</td>
+            <td>{{data34}}</td>
+        </tr>
+
+        <tr>
+            <td>{{data351}}</td>
+            <td>{{data35}}</td>
+        </tr>
+
+        <tr>
+            <td>{{data361}}</td>
+            <td>{{data36}}</td>
+        </tr>
+    </table>
+
+</div>
+<h4>  Number of {{my.stas}} service requests</h4>
+<div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+</body>
+</html>

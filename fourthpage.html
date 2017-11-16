@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Category Analysis</title>
+</head>
+<body>
+<h1> Visualization based on service categories by year</h1>
+Enter Year : <input title="year" type="number" value="2010" ng-model="swa.asp">
+<select title="order" ng-model="swa.asq">
+    <option value="DESC">Descending order</option>
+    <option value="%20">Ascending order</option>
+</select>
+<button style="background-color: cyan; cursor: pointer; font-size: 16px" data-ng-click = "myfunction3(swa)"> click to get results </button>
+<br>
+<div>
+    <table>
+        <tr>
+            <th>category</th>
+            <th>no. of requests</th>
+        </tr>
+        <tr ng-repeat="user in data4">
+            <td>{{user.category}}</td>
+            <td>{{user.count_case_id}}</td>
+        </tr>
+    </table>
+</div>
+<div id="chart_div" style="width: 100%; height: 500px;"></div>
+<br>
+Enter Month : <input title="month" type="number" value="3" ng-model="swa.asr">
+Enter Year : <input title="year" type="number" value="2010" ng-model="swa.asp">
+<select title="order" ng-model="swa.asq">
+    <option value="DESC">Descending order</option>
+    <option value="%20">Ascending order</option>
+</select>
+<button style="background-color: cyan; cursor: pointer; font-size: 16px" data-ng-click = "myfunction4(swa)"> click to get results </button>
+<br>
+<br>
+<div>
+    <p>{{data5e}}</p>
+    <table>
+        <tr>
+            <th>category</th>
+            <th>no. of requests</th>
+        </tr>
+        <tr ng-repeat="user in data5">
+            <td>{{user.category}}</td>
+            <td>{{user.count_case_id}}</td>
+        </tr>
+    </table>
+</div>
+<div>
+    <h3>Monthly data visualization by category</h3>
+    select month<input title="month" type="number" value="1" ng-model="sw.mo">
+    select catageory by year(15-17) <select title="year15 to 17" ng-model="sw.year">
+    <option title="year" value="2017"> 2017</option>
+    <option title="year" value="2016"> 2016</option>
+    <option title="year" value="2015"> 2015</option>
+    <option title="year" value="2014"> 2014 </option>
+</select>
+    select a category<select title="category" ng-model="sw.cat">
+    <option title="category" value="Trash / Recycling"> Trash / Recycling</option>
+    <option title="category" value="Animals / Pets">Animals / Pets</option>
+    <option title="category" value="Water"> Water </option>
+    <option title="category" value="Trees"> Trees </option>
+    <option title="category" value="Vehicles / Parking"> Vehicles / Parking</option>
+    <option title="category" value="Signs"> Signs</option>
+    <option title="category" value="Water Leak">Water Leak</option>
+    <option title="category" value="Lights / Signals"> Lights / Signals</option>
+    <option title="category" value="Property / Buildings / Construction"> Property / Construction</option>
+
+</select>
+    <button style="background-color: cyan; cursor: pointer; font-size: 16px" data-ng-click = "myfunction5(sw)"> click to get results </button>
+    <p>no. of records on {{sw.cat}} in this month:{{data6}}</p>
+    <br>
+
+</div>
+<div id="chart1_div" style="width: 100%; height: 500px;"></div>
+</body>
+</html>
