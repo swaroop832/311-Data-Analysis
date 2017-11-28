@@ -110,7 +110,7 @@ app.controller('MainCtrl', function ($scope, $http) {
             chartArea: {width: '50%'},
             isStacked: true,
             hAxis: {
-                title: 'number of records',
+                title: 'Number of Call Requests',
                 minValue: 0
             },
             bars: 'horizontal'
@@ -123,7 +123,6 @@ app.controller('MainCtrl', function ($scope, $http) {
 app.controller('MainCtrl1',function ($scope,$http) {
 
     $scope.myfunction1 = function (use) {
-
 
 
             $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=zip_code,count(case_id)&creation_month=" + use.month + "&creation_year=" +use.year+"&$group=zip_code&$order=count(case_id)%20DESC").then(function (response) {
@@ -161,14 +160,15 @@ app.controller('MainCtrl1',function ($scope,$http) {
 
             var options = {
                 backgroundColor: 'transparent',
-                chartArea: {width: '75%'},
-                title: 'maximum of call service requests for given month and year for particular zipcode region'
+                chartArea: {width: '75%'}
+
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
             chart.draw(data, options);
         }
+
     };
 
     $scope.myfunction2 = function (my) {
@@ -208,7 +208,6 @@ app.controller('MainCtrl1',function ($scope,$http) {
         ]);
 
         var options = {
-            title: 'No. of Services  ',
             vAxis: {title: 'Call service requests'},
             isStacked: true
         };
@@ -225,34 +224,59 @@ app.controller('MainCtrl2',function ($scope,$http) {
         $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$limit=10&creation_year=" + swa.asp + "&$select=category,count(case_id)&$group=category&$order=count(case_id)%20" + swa.asq + "").then(function (response) {
 
             $scope.data4 = response.data;
-            drawChart();
             $scope.data41 = $scope.data4[0].category;
             $scope.data411 = $scope.data4[0].count_case_id;
             $scope.data42 = $scope.data4[1].category;
             $scope.data421 = $scope.data4[1].count_case_id;
+
+            $scope.data43 = $scope.data4[2].category;
+            $scope.data431 = $scope.data4[2].count_case_id;
+            $scope.data44 = $scope.data4[3].category;
+            $scope.data441 = $scope.data4[3].count_case_id;
+            $scope.data45 = $scope.data4[4].category;
+            $scope.data451 = $scope.data4[4].count_case_id;
+            $scope.data46 = $scope.data4[5].category;
+            $scope.data461 = $scope.data4[5].count_case_id;
+            $scope.data47 = $scope.data4[6].category;
+            $scope.data471 = $scope.data4[6].count_case_id;
+            $scope.data48 = $scope.data4[7].category;
+            $scope.data481 = $scope.data4[7].count_case_id;
+
+
+
             drawChart();
         });
     };
 
     google.charts.load('current', {'packages': ['corechart']});
     google.charts.setOnLoadCallback(drawChart);
-
     function drawChart() {
+
         var data = google.visualization.arrayToDataTable([
-            ['Year', "" + $scope.data41 + "", "" + $scope.data42 + ""],
-            ["2007", 1000, 400]
+            ['category', 'No. call request for given month and time'],
+            [$scope.data41, parseInt($scope.data411)],
+            [$scope.data42, parseInt($scope.data421)],
+            [$scope.data43, parseInt($scope.data431)],
+            [$scope.data44, parseInt($scope.data441)],
+            [$scope.data45, parseInt($scope.data451)],
+            [$scope.data46, parseInt($scope.data461)],
+            [$scope.data47, parseInt($scope.data471)],
+            [$scope.data48, parseInt($scope.data481)]
 
         ]);
 
         var options = {
-            title: 'Company Performance',
-            hAxis: {title: 'Year', titleTextStyle: {color: '#333'}},
-            vAxis: {minValue: 0}
+            backgroundColor: 'transparent',
+            chartArea: {width: '75%'}
+
         };
 
-        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
         chart.draw(data, options);
     }
+
+
 
     $scope.myfunction4 = function (swa) {
 
@@ -353,13 +377,66 @@ app.controller('MainCtrl2',function ($scope,$http) {
         ]);
 
         var options = {
-            title: 'Category analysis based on month',
-            hAxis: {month: 'Year',  titleTextStyle: {color: '#333'}},
-            vAxis: {minValue: 0}
+            backgroundColor: 'transparent',
+            hAxis: {month: 'Year',  titleTextStyle: {color: '#333'}}
         };
 
         var chart = new google.visualization.AreaChart(document.getElementById('chart1_div'));
         chart.draw(data, options);
+    }
+
+    $scope.myfunction7 = function () {
+
+        $http.get("").then(function (response) {
+
+
+
+        })
+
+    }
+
+});
+
+app.controller('MainCtrl3',function ($scope,$http) {
+
+    $scope.myfunction6 = function (use) {
+
+        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=creation_year,count(case_id)&$group=creation_year").then(function (response) {
+
+            $scope.data7k = response.data;
+
+
+        });
+        $http.get("https://data.austintexas.gov/resource/5h38-fd8d.json?$select=date_extract_y(sr_created_date)%20as%20year,count(*)&$group=year&$order=year").then(function (response) {
+
+            $scope.data7A = response.data;
+
+        });
+
+        $http.get("https://data.sfgov.org/resource/ktji-gk7t.json?$select=date_extract_y(requested_datetime)as%20year,count(*)&$group=year&$order=year").then(function (response) {
+
+            $scope.data7S = response.data;
+
+        });
+
+
+        $http.get("https://data.cincinnati-oh.gov/resource/5zzw-knr5.json?$select=date_extract_y(requested_date)as%20year,count(*)&$group=year&$order=year").then(function (response) {
+
+            $scope.data7C = response.data;
+
+        });
+        $http.get("https://data.chattlibrary.org/resource/sf89-4qcw.json?$select=date_extract_y(created_date)as%20year,count(*)&$group=year&$order=year").then(function (response) {
+
+            $scope.data7CH = response.data;
+
+        });
+        $http.get("https://data.nola.gov/resource/m959-fs8u.json?$select=date_extract_y(ticket_created_date_time)as%20year,count(*)&$group=year&$order=year").then(function (response) {
+
+            $scope.data7N = response.data;
+
+        });
+
+
     }
 
 });
@@ -388,10 +465,14 @@ when('/', {
 }).
 when('/fifthpage', {
     templateUrl: 'fifthpage.html',
-    controller: 'MainCtrl2'
+    controller: 'MainCtrl3'
 }).
-  otherwise( {
-  redirectTo : '/errorPage'
+when('/sixpage', {
+        templateUrl: 'sixpage.html',
+        controller: 'MainCtrl4'
+}).
+otherwise( {
+    redirectTo : '/errorPage'
   });
 }]);
 

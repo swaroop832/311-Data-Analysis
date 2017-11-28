@@ -12,13 +12,18 @@
         text-align: right;
 
     }
+    .xg{
+        display: inline-block;
+    }
 </style>
+<title>311 data visulization</title>
 <body>
 <h1>Yearly data visulization</h1>
 <div>
     <button style="background-color: cyan; cursor: pointer; font-size: 16px" data-ng-click = "myfunction()"> click to get results </button>
     <br>
 <br>
+    <div class="xg">
     <table class="dat" >
         <tr>
             <th>YEAR</th>
@@ -58,12 +63,12 @@
             <td>{{mydata2016}}</td>
         </tr>
     </table>
-
+    </div>
 
 </div>
 <br>
 
-<div id="barchart_material" style="width: 1000px; height: 500px;"></div>
+<div class="xg" id="barchart_material" style="width: 1000px; height: 500px;"></div>
 
 <h4> The above chart shows the call service requests per year and 1st max, 2nd max per council district for a given year</h4>
 </body>
