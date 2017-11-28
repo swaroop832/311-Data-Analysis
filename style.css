@@ -9,9 +9,14 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 23px;
 }
 .button1 {background-color: #008CBA;} /* Blue */
 .button2 {background-color: #f44336;} /* Red */
 .button3 {background-color: #ff323d;} /* Gray */
 .button4 {background-color: yellowgreen}
 .button5 {background-color: #008CBA}
+
+.form-control{
+    width: 174px !important;
+}

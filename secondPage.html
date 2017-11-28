@@ -16,60 +16,69 @@
         display: inline-block;
     }
 </style>
-<title>311 data visulization</title>
+<title>311 data visualization</title>
+
 <body>
-<h1>Yearly data visulization</h1>
-<div>
-    <button style="background-color: cyan; cursor: pointer; font-size: 16px" data-ng-click = "myfunction()"> click to get results </button>
-    <br>
-<br>
-    <div class="xg">
-    <table class="dat" >
-        <tr>
-            <th>YEAR</th>
-            <th>No. of records per year</th>
-        </tr>
-        <tr>
-            <td>2010</td>
-            <td>{{mydata2010}}</td>
-        </tr>
 
-        <tr>
-            <td>2011</td>
-            <td>{{mydata2011}}</td>
-        </tr>
+<div class="row">
 
-        <tr>
-            <td>2012</td>
-            <td>{{mydata2012}}</td>
-        </tr>
+    <div class="col-md-3">
+        <h1>Yearly data visualization</h1>
+        <div>
+            <button class="btn btn-primary" data-ng-click = "myfunction()"> click to get results</button>
+            <br>
+            <br>
+            <div >
+                <table class="dat" >
+                    <tr>
+                        <th>YEAR</th>
+                        <th>No. of records per year</th>
+                    </tr>
+                    <tr>
+                        <td>2010</td>
+                        <td>{{mydata2010}}</td>
+                    </tr>
 
-        <tr>
-            <td>2013</td>
-            <td>{{mydata2013}}</td>
-        </tr>
+                    <tr>
+                        <td>2011</td>
+                        <td>{{mydata2011}}</td>
+                    </tr>
 
-        <tr>
-            <td>2014</td>
-            <td>{{mydata2014}}</td>
-        </tr>
+                    <tr>
+                        <td>2012</td>
+                        <td>{{mydata2012}}</td>
+                    </tr>
 
-        <tr>
-            <td>2015</td>
-            <td>{{mydata2015}}</td>
-        </tr>
-        <tr>
-            <td>2016</td>
-            <td>{{mydata2016}}</td>
-        </tr>
-    </table>
+                    <tr>
+                        <td>2013</td>
+                        <td>{{mydata2013}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>2014</td>
+                        <td>{{mydata2014}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>2015</td>
+                        <td>{{mydata2015}}</td>
+                    </tr>
+                    <tr>
+                        <td>2016</td>
+                        <td>{{mydata2016}}</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
     </div>
-
+    <div class="col-md-9">
+        <div id="barchart_material" style="width: 1000px; height: 500px; margin-top: 44px; margin-left: -97px"></div>
+    </div>
 </div>
-<br>
 
-<div class="xg" id="barchart_material" style="width: 1000px; height: 500px;"></div>
 
-<h4> The above chart shows the call service requests per year and 1st max, 2nd max per council district for a given year</h4>
+
+
 </body>
 </html>

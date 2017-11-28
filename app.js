@@ -107,6 +107,7 @@ app.controller('MainCtrl', function ($scope, $http) {
         ]);
 
         var options = {
+            title: 'The chart shows the call service requests per year and 1st max, 2nd max per council district for a given year',
             chartArea: {width: '50%'},
             isStacked: true,
             hAxis: {
@@ -124,6 +125,26 @@ app.controller('MainCtrl1',function ($scope,$http) {
 
     $scope.myfunction1 = function (use) {
 
+        var x = document.getElementById("tt31");
+        x.style.display = "block";
+
+        var enteredYear2;
+        enteredYear2 = document.getElementById("year3").value;
+        if (isNaN(enteredYear2) || enteredYear2 < 2006 || enteredYear2 > 2019) {
+            text = "Please enter year between 2007-2017";
+        } else {
+            text = "";
+        }
+        document.getElementById("yearErrorMessage6").innerHTML = text;
+
+        var enteredMonth4;
+        enteredMonth4 = document.getElementById("month3").value;
+        if (isNaN(enteredMonth4) || enteredMonth4 < 0 || enteredMonth4 > 13) {
+            text = "Please enter Month between 1-12";
+        } else {
+            text = "";
+        }
+        document.getElementById("yearErrorMessage7").innerHTML = text;
 
             $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=zip_code,count(case_id)&creation_month=" + use.month + "&creation_year=" +use.year+"&$group=zip_code&$order=count(case_id)%20DESC").then(function (response) {
 
@@ -143,6 +164,7 @@ app.controller('MainCtrl1',function ($scope,$http) {
                 drawChartx();
             });
 
+
         google.charts.load('current', {'packages': ['corechart']});
         google.charts.setOnLoadCallback(drawChartx);
 
@@ -159,8 +181,9 @@ app.controller('MainCtrl1',function ($scope,$http) {
             ]);
 
             var options = {
-                backgroundColor: 'transparent',
-                chartArea: {width: '75%'}
+                title:'The pie chart displays number of service calls per zipcode in the selected month and year',
+                backgroundColor: 'transparent'
+              //  chartArea: {width: '75%'}
 
             };
 
@@ -172,6 +195,27 @@ app.controller('MainCtrl1',function ($scope,$http) {
     };
 
     $scope.myfunction2 = function (my) {
+
+        var x = document.getElementById("tt32");
+        x.style.display = "block";
+
+        var enteredYear3;
+        enteredYear3 = document.getElementById("year4").value;
+        if (isNaN(enteredYear3) || enteredYear3 < 2006 || enteredYear3 > 2019) {
+            text = "Please enter year between 2007-2017";
+        } else {
+            text = "";
+        }
+        document.getElementById("yearErrorMessage8").innerHTML = text;
+
+        var enteredMonth5;
+        enteredMonth5 = document.getElementById("month4").value;
+        if (isNaN(enteredMonth5) || enteredMonth5 < 0 || enteredMonth5 > 13) {
+            text = "Please enter Month between 1-12";
+        } else {
+            text = "";
+        }
+        document.getElementById("yearErrorMessage9").innerHTML = text;
 
             $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=zip_code,count(case_id)&status=" + my.stas + "&creation_month=" + my.month1 + "&creation_year=" + my.year1 + "&$group=zip_code&$order=count(case_id)%20DESC").then(function (response) {
 
@@ -221,6 +265,28 @@ app.controller('MainCtrl2',function ($scope,$http) {
 
     $scope.myfunction3 = function (swa) {
 
+        var x = document.getElementById("tt41");
+        x.style.display = "block";
+
+        var enteredYear;
+        enteredYear = document.getElementById("year").value;
+        if (isNaN(enteredYear) || enteredYear < 2006 || enteredYear > 2019) {
+            text = "Please enter year between 2007-2017";
+        } else {
+            text = "";
+        }
+        document.getElementById("yearErrorMessage").innerHTML = text;
+
+        var e = document.getElementById("order");
+        var orderValue = e.options[e.selectedIndex].text;
+        if ( orderValue === "") {
+            text = "Please select order";
+        } else {
+            text = "";
+        }
+        document.getElementById("orderErrorMessage").innerHTML = text;
+
+
         $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$limit=10&creation_year=" + swa.asp + "&$select=category,count(case_id)&$group=category&$order=count(case_id)%20" + swa.asq + "").then(function (response) {
 
             $scope.data4 = response.data;
@@ -241,8 +307,6 @@ app.controller('MainCtrl2',function ($scope,$http) {
             $scope.data471 = $scope.data4[6].count_case_id;
             $scope.data48 = $scope.data4[7].category;
             $scope.data481 = $scope.data4[7].count_case_id;
-
-
 
             drawChart();
         });
@@ -280,6 +344,25 @@ app.controller('MainCtrl2',function ($scope,$http) {
 
     $scope.myfunction4 = function (swa) {
 
+        var enteredMonth1;
+        enteredMonth1 = document.getElementById("month2").value;
+        if (isNaN(enteredMonth1) || enteredMonth1 < 0 || enteredMonth1 > 13) {
+            text = "Please enter year between 1-12";
+        } else {
+            text = "";
+        }
+        document.getElementById("yearErrorMessage4").innerHTML = text;
+
+        var enteredYear1;
+        enteredYear1 = document.getElementById("year2").value;
+        if (isNaN(enteredYear1) || enteredYear1 < 2006 || enteredYear1 > 2019) {
+            text = "Please enter year between 2007-2017";
+        } else {
+            text = "";
+        }
+        document.getElementById("yearErrorMessage5").innerHTML = text;
+
+
 
         $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$limit=10&creation_year="+swa.asp+"&$select=category,count(case_id)&creation_month="+swa.asr +"&$group=category&$order=count(case_id)%20"+swa.asq+"")
             .then(function (response) {
@@ -288,6 +371,18 @@ app.controller('MainCtrl2',function ($scope,$http) {
 
     };
     $scope.myfunction5 = function (sw) {
+
+        var x1 = document.getElementById("tt42");
+        x1.style.display = "block";
+
+        var enteredMonth;
+        enteredMonth = document.getElementById("month").value;
+        if (isNaN(enteredMonth) || enteredMonth < 0 || enteredMonth > 13) {
+            text = "Please enter year between 1-12";
+        } else {
+            text = "";
+        }
+        document.getElementById("yearErrorMessage1").innerHTML = text;
 
         $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$limit=10&creation_year="+sw.year+"&$select=category,count(case_id)&creation_month="+sw.mo+"&category="+sw.cat+"&$group=category&$order=count(case_id)").then(function (response) {
 
@@ -378,6 +473,7 @@ app.controller('MainCtrl2',function ($scope,$http) {
 
         var options = {
             backgroundColor: 'transparent',
+            chartArea: {width: '83%'},
             hAxis: {month: 'Year',  titleTextStyle: {color: '#333'}}
         };
 
@@ -388,9 +484,6 @@ app.controller('MainCtrl2',function ($scope,$http) {
     $scope.myfunction7 = function () {
 
         $http.get("").then(function (response) {
-
-
-
         })
 
     }
@@ -400,6 +493,9 @@ app.controller('MainCtrl2',function ($scope,$http) {
 app.controller('MainCtrl3',function ($scope,$http) {
 
     $scope.myfunction6 = function (use) {
+
+        var x = document.getElementById("hideData");
+        x.style.display = "block";
 
         $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=creation_year,count(case_id)&$group=creation_year").then(function (response) {
 
@@ -437,6 +533,67 @@ app.controller('MainCtrl3',function ($scope,$http) {
         });
 
 
+    }
+
+});
+
+app.controller('MainCtrl4',function ($http,$scope) {
+
+    $scope.myfunction61 = function (sw) {
+
+        var x3 = document.getElementById("ss");
+        x3.style.display = "block";
+
+        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year="+sw.year1+"&category="+sw.cat2+"").then(function (respone) {
+
+            $scope.data8=respone.data[0].avg_days_to_close;
+        });
+
+        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2017&category="+sw.cat2+"").then(function (respone) {
+
+            $scope.data81=respone.data[0].avg_days_to_close;
+        });
+
+        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2016&category="+sw.cat2+"").then(function (respone) {
+
+            $scope.data82=respone.data[0].avg_days_to_close;
+        });
+
+        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2015&category="+sw.cat2+"").then(function (respone) {
+
+            $scope.data83=respone.data[0].avg_days_to_close;
+        });
+
+        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2014&category="+sw.cat2+"").then(function (respone) {
+
+            $scope.data84=respone.data[0].avg_days_to_close;
+
+            drawChartp();
+        });
+
+
+    };
+
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChartp);
+
+    function drawChartp() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Average'],
+            ['2015',  parseInt($scope.data83)],
+            ['2016',  parseInt($scope.data82)],
+            ['2017',  parseInt($scope.data81)]
+        ]);
+
+        var options = {
+            title: 'pace of development',
+            curveType: 'function',
+            legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
     }
 
 });
