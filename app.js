@@ -182,7 +182,8 @@ app.controller('MainCtrl1',function ($scope,$http) {
 
             var options = {
                 title:'The pie chart displays number of service calls per zipcode in the selected month and year',
-                backgroundColor: 'transparent'
+                backgroundColor: 'transparent',
+                is3D: true
               //  chartArea: {width: '75%'}
 
             };
@@ -253,7 +254,8 @@ app.controller('MainCtrl1',function ($scope,$http) {
 
         var options = {
             vAxis: {title: 'Call service requests'},
-            isStacked: true
+            isStacked: true,
+            is3D: true
         };
         var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div'));
         chart.draw(data, options);
@@ -331,7 +333,8 @@ app.controller('MainCtrl2',function ($scope,$http) {
 
         var options = {
             backgroundColor: 'transparent',
-            chartArea: {width: '75%'}
+            chartArea: {width: '75%'},
+            is3D: true
 
         };
 
@@ -474,7 +477,8 @@ app.controller('MainCtrl2',function ($scope,$http) {
         var options = {
             backgroundColor: 'transparent',
             chartArea: {width: '83%'},
-            hAxis: {month: 'Year',  titleTextStyle: {color: '#333'}}
+            hAxis: {month: 'Year',  titleTextStyle: {color: '#333'}},
+            is3D: true
         };
 
         var chart = new google.visualization.AreaChart(document.getElementById('chart1_div'));
@@ -588,11 +592,115 @@ app.controller('MainCtrl4',function ($http,$scope) {
         var options = {
             title: 'pace of development',
             curveType: 'function',
-            legend: { position: 'bottom' }
+            legend: { position: 'bottom' },
+            is3D: true
         };
 
         var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
+        chart.draw(data, options);
+    }
+
+
+    $scope.myfunction62 = function (sw) {
+
+        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=exceeded_est_timeframe%20as%20e,count(e)&$group=e&creation_year="+ sw.asp +"&exceeded_est_timeframe="+sw.asp1+"").then(function (response) {
+
+            $scope.data91 = response.data[0].count_e;
+        });
+
+        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=exceeded_est_timeframe%20as%20e,count(e)&$group=e&creation_year=2017&exceeded_est_timeframe=Y").then(function (response) {
+
+            $scope.data917y = response.data[0].count_e;
+
+        });
+        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=exceeded_est_timeframe%20as%20e,count(e)&$group=e&creation_year=2016&exceeded_est_timeframe=Y").then(function (response) {
+
+            $scope.data916y = response.data[0].count_e;
+
+        });
+        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=exceeded_est_timeframe%20as%20e,count(e)&$group=e&creation_year=2015&exceeded_est_timeframe=Y").then(function (response) {
+
+            $scope.data915y = response.data[0].count_e;
+
+        });
+        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=exceeded_est_timeframe%20as%20e,count(e)&$group=e&creation_year=2014&exceeded_est_timeframe=Y").then(function (response) {
+
+            $scope.data914y = response.data[0].count_e;
+
+        });
+        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=exceeded_est_timeframe%20as%20e,count(e)&$group=e&creation_year=2013&exceeded_est_timeframe=Y").then(function (response) {
+
+            $scope.data913y = response.data[0].count_e;
+
+        });
+        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=exceeded_est_timeframe%20as%20e,count(e)&$group=e&creation_year=2012&exceeded_est_timeframe=Y").then(function (response) {
+
+            $scope.data912y = response.data[0].count_e;
+
+        });
+
+        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=exceeded_est_timeframe%20as%20e,count(e)&$group=e&creation_year=2012&exceeded_est_timeframe=N").then(function (response) {
+
+            $scope.data912n = response.data[0].count_e;
+
+        });
+        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=exceeded_est_timeframe%20as%20e,count(e)&$group=e&creation_year=2013&exceeded_est_timeframe=N").then(function (response) {
+
+            $scope.data913n = response.data[0].count_e;
+
+        });
+        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=exceeded_est_timeframe%20as%20e,count(e)&$group=e&creation_year=2014&exceeded_est_timeframe=N").then(function (response) {
+
+            $scope.data914n = response.data[0].count_e;
+
+        });
+        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=exceeded_est_timeframe%20as%20e,count(e)&$group=e&creation_year=2015&exceeded_est_timeframe=N").then(function (response) {
+
+            $scope.data915n = response.data[0].count_e;
+
+        });
+        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=exceeded_est_timeframe%20as%20e,count(e)&$group=e&creation_year=2016&exceeded_est_timeframe=N").then(function (response) {
+
+            $scope.data916n = response.data[0].count_e;
+
+        });
+        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=exceeded_est_timeframe%20as%20e,count(e)&$group=e&creation_year=2017&exceeded_est_timeframe=N").then(function (response) {
+
+            $scope.data917n = response.data[0].count_e;
+
+        });
+        drawAnnotations()
+
+    };
+
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawAnnotations);
+
+    function drawAnnotations() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Yes', 'No'],
+            ['2012', parseInt($scope.data912y), parseInt($scope.data912n)],
+            ['2013', parseInt($scope.data913y), parseInt($scope.data913n)],
+            ['2014', parseInt($scope.data914y), parseInt($scope.data914n)],
+            ['2015', parseInt($scope.data915y), parseInt($scope.data915n)],
+            ['2016', parseInt($scope.data916y), parseInt($scope.data916n)],
+            ['2017', parseInt($scope.data917y), parseInt($scope.data917n)]
+        ]);
+
+        var options = {
+            chart: {
+                title: 'Estimation time requested',
+                subtitle: 'Yes or No: 2012-2017',
+                seriesType: 'bars',
+                vAxis: {title: 'No. of cases'},
+                hAxis: {title: 'Year    '},
+                series: {5: {type: 'line'}}
+
+            }
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart3_div'));
         chart.draw(data, options);
     }
 
