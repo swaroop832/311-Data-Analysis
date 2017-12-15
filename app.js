@@ -146,7 +146,7 @@ app.controller('MainCtrl1',function ($scope,$http) {
         }
         document.getElementById("yearErrorMessage7").innerHTML = text;
 
-            $http.get("https://data.kcmo.org/resource/cyqf-nban.json?&$limit="+use.tt+"$select=zip_code,count(case_id)&creation_month=" + use.month + "&creation_year=" +use.year+"&$group=zip_code&$order=count(case_id)%20DESC").then(function (response) {
+            $http.get("https://data.kcmo.org/resource/cyqf-nban.json?&$limit="+use.tt+"&$select=zip_code,count(case_id)&creation_month=" + use.month + "&creation_year=" +use.year+"&$group=zip_code&$order=count(case_id)%20DESC").then(function (response) {
 
 
                 $scope.data21 = response.data[0].count_case_id;
