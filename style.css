@@ -20,3 +20,11 @@
 .form-control{
     width: 174px !important;
 }
+
+.umkc-image{
+    position: relative;
+    float: right;
+    right:0px;
+    top:0px;
+    z-index:2;
+}
