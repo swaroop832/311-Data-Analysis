@@ -572,6 +572,26 @@ app.controller("MinCtrl",function ($scope,$http) {
                     })})})})})});
     };
 
+    //Denver, manually from cvs file
+
+    $scope.dvfunction = function () {
+
+        $scope.dvvalue = [
+            {"creation_year" : 2010, "number_of_requests" :305439},
+            {"creation_year" : 2011, "number_of_requests" :460247},
+            {"creation_year" : 2012, "number_of_requests" :447663},
+            {"creation_year" : 2013, "number_of_requests" :459944},
+            {"creation_year" : 2014, "number_of_requests" :457645},
+            {"creation_year" : 2015, "number_of_requests" :471694},
+            {"creation_year" : 2016, "number_of_requests" :479626}
+        ]
+
+        drawChartx($scope.dvvalue[0].number_of_requests, $scope.dvvalue[1].number_of_requests, $scope.dvvalue[2].number_of_requests, $scope.dvvalue[3].number_of_requests, $scope.dvvalue[4].number_of_requests, $scope.dvvalue[5].number_of_requests, $scope.dvvalue[6].number_of_requests, 'dv_chart1');
+        drawCharty($scope.dvvalue[0].number_of_requests/$scope.population[0].Denver, $scope.dvvalue[1].number_of_requests/$scope.population[1].Denver, $scope.dvvalue[2].number_of_requests/$scope.population[2].Denver, $scope.dvvalue[3].number_of_requests/$scope.population[3].Denver, $scope.dvvalue[4].number_of_requests/$scope.population[4].Denver, $scope.dvvalue[5].number_of_requests/$scope.population[5].Denver, $scope.dvvalue[6].number_of_requests/$scope.population[6].Denver, 'dv_chart2');
+
+
+    };
+
 
     google.charts.load('current', {'packages': ['corechart']});
     google.charts.setOnLoadCallback(drawChartx);
@@ -638,7 +658,9 @@ app.controller("MinCtrl",function ($scope,$http) {
             "Washington": 605183,
             "Oakland": 391724,
             "SantaMonica": 89791,
-            "chicago" : 2697736
+            "chicago" : 2697736,
+            "Denver" : 603329
+
 
         },
         {
@@ -661,7 +683,8 @@ app.controller("MinCtrl",function ($scope,$http) {
             "Washington": 620477,
             "Oakland": 396515,
             "SantaMonica": 90600,
-            "chicago" : 2705404
+            "chicago" : 2705404,
+            "Denver" : 619281
         },
         {
             "Year" : 2012,
@@ -683,7 +706,8 @@ app.controller("MinCtrl",function ($scope,$http) {
             "Washington": 635327,
             "Oakland": 401704,
             "SantaMonica": 91508,
-            "chicago" : 2714120
+            "chicago" : 2714120,
+            "Denver" : 633563
         },
         {
             "Year" : 2013,
@@ -705,7 +729,8 @@ app.controller("MinCtrl",function ($scope,$http) {
             "Washington": 649165,
             "Oakland": 407205,
             "SantaMonica": 92276,
-            "chicago" : 2718887
+            "chicago" : 2718887,
+            "Denver" : 647433
         },
         {
             "Year" : 2014,
@@ -727,7 +752,8 @@ app.controller("MinCtrl",function ($scope,$http) {
             "Washington": 659005,
             "Oakland": 413313,
             "SantaMonica": 92346,
-            "chicago" : 2718530
+            "chicago" : 2718530,
+            "Denver" : 662425
         },
         {
             "Year" : 2015,
@@ -749,7 +775,8 @@ app.controller("MinCtrl",function ($scope,$http) {
             "Washington": 670377,
             "Oakland": 417870,
             "SantaMonica": 92685,
-            "chicago" : 2713596
+            "chicago" : 2713596,
+            "Denver" : 680032
         },
         {
             "Year" : 2016,
@@ -771,7 +798,8 @@ app.controller("MinCtrl",function ($scope,$http) {
             "Washington": 681170,
             "Oakland": 420005,
             "SantaMonica": 92478,
-            "chicago" : 2704958
+            "chicago" : 2704958,
+            "Denver" : 693060
         }
     ];
 });
