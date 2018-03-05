@@ -52,8 +52,8 @@ app.controller("MinCtrl",function ($scope,$http) {
         $scope.jcfunction();$scope.mifunction();$scope.nrfunction();$scope.phfunction();$scope.scfunction();$scope.sffunction();$scope.losangeles();
         $scope.cincifunction();$scope.wdfunction();$scope.oakfunction();$scope.santafunction();$scope.chfunction();
 
-        window.setTimeout(function () {
-            if( my.sel1 === "Kansas_City" ) {
+        window.setTimeout(function (){
+            if(my.sel1 === "Kansas_City"){
                 drawCharty($scope.mydata2010 / $scope.population[0].Kansas_City, $scope.mydata2011 / $scope.population[1].Kansas_City, $scope.mydata2012 / $scope.population[2].Kansas_City, $scope.mydata2013 / $scope.population[3].Kansas_City, $scope.mydata2014 / $scope.population[4].Kansas_City, $scope.mydata2015 / $scope.population[5].Kansas_City, $scope.mydata2016 / $scope.population[6].Kansas_City, 'compare_chart1');
             }
             if(my.sel1 ==="New_York"){
