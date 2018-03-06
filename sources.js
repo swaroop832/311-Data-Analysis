@@ -68,12 +68,20 @@ app.controller("MinCtrl",function ($scope,$http) {
             $scope.kc_web_2017 = parseInt($scope.kcvalue[152].count_case_id);
             $scope.kc_web_2018 = parseInt($scope.kcvalue[153].count_case_id);
 
-            drawChartx($scope.kc_email_2010,$scope.kc_email_2011,$scope.kc_email_2012,$scope.kc_email_2013,$scope.kc_email_2014,$scope.kc_email_2015,$scope.kc_email_2016,$scope.kc_email_2017,$scope.kc_email_2018,
+            drawChartkc1($scope.kc_email_2010,$scope.kc_email_2011,$scope.kc_email_2012,$scope.kc_email_2013,$scope.kc_email_2014,$scope.kc_email_2015,$scope.kc_email_2016,$scope.kc_email_2017,$scope.kc_email_2018,
                  /*fax*/ $scope.kc_fax_2010,$scope.kc_fax_2011,$scope.kc_fax_2012,$scope.kc_fax_2013,$scope.kc_fax_2014,$scope.kc_fax_2015,$scope.kc_fax_2016,$scope.kc_fax_2017,$scope.kc_fax_2018,
                 /*mail*/$scope.kc_mail_2010,$scope.kc_mail_2011,$scope.kc_mail_2012,$scope.kc_mail_2013,$scope.kc_mail_2014,$scope.kc_mail_2015,$scope.kc_mail_2016,$scope.kc_mail_2017,$scope.kc_mail_2018,
                 /*phone*/ $scope.kc_phone_2010,$scope.kc_phone_2011,$scope.kc_phone_2012,$scope.kc_phone_2013,$scope.kc_phone_2014,$scope.kc_phone_2015,$scope.kc_phone_2016,$scope.kc_phone_2017,$scope.kc_phone_2018,
                 /*walk*/$scope.kc_walk_2010,$scope.kc_walk_2011,$scope.kc_walk_2012,$scope.kc_walk_2013,$scope.kc_walk_2014,$scope.kc_walk_2015,$scope.kc_walk_2016,$scope.kc_walk_2017,$scope.kc_walk_2018,
                 /*web*/$scope.kc_web_2010,$scope.kc_web_2011,$scope.kc_web_2012,$scope.kc_web_2013,$scope.kc_web_2014,$scope.kc_web_2015,$scope.kc_web_2016,$scope.kc_web_2017,$scope.kc_web_2018,'kc_chart1');
+
+
+            drawChartkc2($scope.kc_email_2010,$scope.kc_email_2011,$scope.kc_email_2012,$scope.kc_email_2013,$scope.kc_email_2014,$scope.kc_email_2015,$scope.kc_email_2016,$scope.kc_email_2017,$scope.kc_email_2018,
+                /*fax*/ $scope.kc_fax_2010,$scope.kc_fax_2011,$scope.kc_fax_2012,$scope.kc_fax_2013,$scope.kc_fax_2014,$scope.kc_fax_2015,$scope.kc_fax_2016,$scope.kc_fax_2017,$scope.kc_fax_2018,
+                /*mail*/$scope.kc_mail_2010,$scope.kc_mail_2011,$scope.kc_mail_2012,$scope.kc_mail_2013,$scope.kc_mail_2014,$scope.kc_mail_2015,$scope.kc_mail_2016,$scope.kc_mail_2017,$scope.kc_mail_2018,
+                /*phone*/ $scope.kc_phone_2010,$scope.kc_phone_2011,$scope.kc_phone_2012,$scope.kc_phone_2013,$scope.kc_phone_2014,$scope.kc_phone_2015,$scope.kc_phone_2016,$scope.kc_phone_2017,$scope.kc_phone_2018,
+                /*walk*/$scope.kc_walk_2010,$scope.kc_walk_2011,$scope.kc_walk_2012,$scope.kc_walk_2013,$scope.kc_walk_2014,$scope.kc_walk_2015,$scope.kc_walk_2016,$scope.kc_walk_2017,$scope.kc_walk_2018,
+                /*web*/$scope.kc_web_2010,$scope.kc_web_2011,$scope.kc_web_2012,$scope.kc_web_2013,$scope.kc_web_2014,$scope.kc_web_2015,$scope.kc_web_2016,$scope.kc_web_2017,$scope.kc_web_2018,'kc_chart2');
 
         });
     };
@@ -161,16 +169,54 @@ app.controller("MinCtrl",function ($scope,$http) {
     $scope.aufunction = function () {
 
 
-        $http.get("https://data.austintexas.gov/resource/5h38-fd8d.json?$select=date_extract_y(sr_status_date)%20as%20year,count(sr_number)&$group=year&$order=year").then(function (value) {
+        $http.get("https://data.austintexas.gov/resource/5h38-fd8d.json?$query=SELECT%20sr_method_received_desc,count(sr_number),date_extract_y(sr_created_date)%20as%20year%20group%20by%20sr_method_received_desc,year").then(function (value) {
 
             $scope.auvalue = value.data;
-            $scope.au2014 = $scope.auvalue[1].count_sr_number;
-            $scope.au2015 = $scope.auvalue[2].count_sr_number;
-            $scope.au2016 = $scope.auvalue[3].count_sr_number;
-            drawChartx(0,0,0,0,$scope.au2014,$scope.au2015,$scope.au2016,'au_chart1');
-            drawCharty(0,0,0,0,$scope.au2014/$scope.population[4].Austin,$scope.au2015/$scope.population[5].Austin,$scope.au2016/$scope.population[6].Austin,'au_chart2');
+            //email
+            $scope.au_email_2014 = parseInt($scope.auvalue[37].count_sr_number);
+            $scope.au_email_2015 = parseInt($scope.auvalue[41].count_sr_number);
+            $scope.au_email_2016 = parseInt($scope.auvalue[13].count_sr_number);
+            $scope.au_email_2017 = parseInt($scope.auvalue[6].count_sr_number);
+            //spot 311
+            $scope.au_spot_311_Interface_2014 = parseInt($scope.auvalue[38].count_sr_number);
+            $scope.au_spot_311_Interface_2015 = parseInt($scope.auvalue[34].count_sr_number);
+            $scope.au_spot_311_Interface_2016 = parseInt($scope.auvalue[7].count_sr_number);
+            $scope.au_spot_311_Interface_2017 = parseInt($scope.auvalue[12].count_sr_number);
+            //mass entry  mail
+            $scope.au_mass_entry_2014 = parseInt($scope.auvalue[2].count_sr_number);
+            $scope.au_mass_entry_2015 = parseInt($scope.auvalue[9].count_sr_number);
+            $scope.au_mass_entry_2016 = parseInt($scope.auvalue[40].count_sr_number);
+            //phone
+            $scope.au_phone_2014 = parseInt($scope.auvalue[24].count_sr_number);
+            $scope.au_phone_2015 = parseInt($scope.auvalue[30].count_sr_number);
+            $scope.au_phone_2016 = parseInt($scope.auvalue[61].count_sr_number);
+            $scope.au_phone_2017 = parseInt($scope.auvalue[45].count_sr_number);
+            //field request  fax
+            $scope.au_field_request_2014 = parseInt($scope.auvalue[32].count_sr_number);
+            $scope.au_field_request_2015 = parseInt($scope.auvalue[23].count_sr_number);
+            $scope.au_field_request_2016 = parseInt($scope.auvalue[51].count_sr_number);
+            $scope.au_field_request_2017 = parseInt($scope.auvalue[55].count_sr_number);
+            //website
+            $scope.au_web_2014 = parseInt($scope.auvalue[53].count_sr_number);
+            $scope.au_web_2015 = parseInt($scope.auvalue[48].count_sr_number);
+            $scope.au_web_2016 = parseInt($scope.auvalue[18].count_sr_number);
+            $scope.au_web_2017 = parseInt($scope.auvalue[28].count_sr_number);
 
-        })
+            drawChartau1($scope.au_email_2014,$scope.au_email_2015,$scope.au_email_2016,$scope.au_email_2017,
+                /*fax*/ $scope.au_spot_311_Interface_2014,$scope.au_spot_311_Interface_2015,$scope.au_spot_311_Interface_2016,$scope.au_spot_311_Interface_2017,
+                /*mail*/$scope.au_mass_entry_2014,$scope.au_mass_entry_2015,$scope.au_mass_entry_2016,0,
+                /*phone*/ $scope.au_phone_2014,$scope.au_phone_2015,$scope.au_phone_2016,$scope.au_phone_2017,
+                /*walk*/$scope.au_field_request_2014,$scope.au_field_request_2015,$scope.au_field_request_2016,$scope.au_field_request_2017,
+                /*web*/$scope.au_web_2014,$scope.au_web_2015,$scope.au_web_2016,$scope.au_web_2017,'au_chart1');
+
+
+            drawChartau2($scope.au_email_2014,$scope.au_email_2015,$scope.au_email_2016,$scope.au_email_2017,
+                /*fax*/ $scope.au_spot_311_Interface_2014,$scope.au_spot_311_Interface_2015,$scope.au_spot_311_Interface_2016,$scope.au_spot_311_Interface_2017,
+                /*mail*/$scope.au_mass_entry_2014,$scope.au_mass_entry_2015,$scope.au_mass_entry_2016,0,
+                /*phone*/ $scope.au_phone_2014,$scope.au_phone_2015,$scope.au_phone_2016,$scope.au_phone_2017,
+                /*walk*/$scope.au_field_request_2014,$scope.au_field_request_2015,$scope.au_field_request_2016,$scope.au_field_request_2017,
+                /*web*/$scope.au_web_2014,$scope.au_web_2015,$scope.au_web_2016,$scope.au_web_2017,'au_chart2');
+        });
     };
 
 
@@ -535,8 +581,8 @@ app.controller("MinCtrl",function ($scope,$http) {
 
 
     google.charts.load('current', {'packages': ['corechart']});
-    google.charts.setOnLoadCallback(drawChartx);
-    function drawChartx(var0, var1 , var2, var3, var4, var5, var6, var7, var8, //email
+    google.charts.setOnLoadCallback(drawChartkc1);
+    function drawChartkc1(var0, var1 , var2, var3, var4, var5, var6, var7, var8, //email
                         var9, var10,var11,var12,var13,var14,var15,var16,var17,//fax
                         var18,var19,var20,var21,var22,var23,var24,var25,var26,//mail
                         var27,var28,var29,var30,var31,var32,var33,var34,var35,//phone
@@ -556,7 +602,86 @@ app.controller("MinCtrl",function ($scope,$http) {
         ]);
         var options = {
             title: 'Sources ',
-            legend: {position: 'bottom'},
+            legend: {position: 'right'},
+            width:1100
+            ,height:600,
+            pointSize: 7,
+            series: {
+                0: { pointShape: 'circle' },
+                1: { pointShape: 'triangle' },
+                4: { pointShape: 'star' },
+                5: { pointShape: 'polygon' },
+                2: { pointShape: 'square' },
+                3: { pointShape: 'diamond' }
+
+            },
+           vAxis: {scaleType: 'log'},
+
+
+            colors : ['#e7711b', '#C35817','#808000','#990012','#357EC7','#A9A9A9']
+        };
+        var chart = new google.visualization.LineChart(document.getElementById(var54));
+        chart.draw(data, options);
+    }
+
+    function drawChartkc2(var0, var1 , var2, var3, var4, var5, var6, var7, var8, //email
+                        var9, var10,var11,var12,var13,var14,var15,var16,var17,//fax
+                        var18,var19,var20,var21,var22,var23,var24,var25,var26,//mail
+                        var27,var28,var29,var30,var31,var32,var33,var34,var35,//phone
+                        var36,var37,var38,var39,var40,var41,var42,var43,var44,//walk
+                        var45,var46,var47,var48,var49,var50,var51,var52,var53,var54) {//web
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Email','Fax','mail','phone','walk','web'],
+            ['2010', parseInt(var0),parseInt(var9),parseInt(var18),parseInt(var27),parseInt(var36),parseInt(var45)],
+            ['2011', parseInt(var1),parseInt(var10),parseInt(var19),parseInt(var28),parseInt(var37),parseInt(var46)],
+            ['2012', parseInt(var2),parseInt(var11),parseInt(var20),parseInt(var29),parseInt(var38),parseInt(var47)],
+            ['2013', parseInt(var3),parseInt(var12),parseInt(var21),parseInt(var30),parseInt(var39),parseInt(var48)],
+            ['2014', parseInt(var4),parseInt(var13),parseInt(var22),parseInt(var31),parseInt(var40),parseInt(var49)],
+            ['2015', parseInt(var5),parseInt(var14),parseInt(var23),parseInt(var32),parseInt(var41),parseInt(var50)],
+            ['2016', parseInt(var6),parseInt(var15),parseInt(var24),parseInt(var33),parseInt(var42),parseInt(var51)],
+            ['2017', parseInt(var7),parseInt(var16),parseInt(var25),parseInt(var34),parseInt(var43),parseInt(var52)],
+            ['2018', parseInt(var8),parseInt(var17),parseInt(var26),parseInt(var35),parseInt(var44),parseInt(var53)]
+        ]);
+        var options = {
+            title: 'Sources ',
+            legend: {position: 'right'},
+            width:1100
+            ,height:600,
+            pointSize: 7,
+            series: {
+                0: { pointShape: 'circle' },
+                1: { pointShape: 'triangle' },
+                4: { pointShape: 'star' },
+                5: { pointShape: 'polygon' },
+                2: { pointShape: 'square' },
+                3: { pointShape: 'diamond' }
+
+            },
+            //vAxis: {scaleType: 'log'},
+
+
+            colors : ['#e7711b', '#C35817','#808000','#990012','#357EC7','#A9A9A9']
+        };
+        var chart = new google.visualization.LineChart(document.getElementById(var54));
+        chart.draw(data, options);
+    }
+
+    function drawChartau1(var0, var1 , var2, var3,//email
+                          var4,var5, var6, var7,//spot 311
+                          var8,var9, var10,var11,//mass entry
+                          var12,var13,var14,var15,//phone
+                          var16,var17,var18,var19,//field request
+                          var20,var21,var22,var23,var24) {//web
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'E-Mail','Spot_311_Interface','Mass Entry','Phone','Field Request','Web'],
+            ['2014', parseInt(var0),parseInt(var4),parseInt(var8),parseInt(var12),parseInt(var16),parseInt(var20)],
+            ['2015', parseInt(var1),parseInt(var5),parseInt(var9),parseInt(var13),parseInt(var17),parseInt(var21)],
+            ['2016', parseInt(var2),parseInt(var6),parseInt(var10),parseInt(var14),parseInt(var18),parseInt(var22)],
+            ['2017', parseInt(var3),parseInt(var7),parseInt(var11),parseInt(var15),parseInt(var19),parseInt(var23)]
+        ]);
+        var options = {
+            title: 'Sources ',
+            legend: {position: 'right'},
             width:1100
             ,height:600,
             pointSize: 7,
@@ -574,7 +699,44 @@ app.controller("MinCtrl",function ($scope,$http) {
 
             colors : ['#e7711b', '#C35817','#808000','#990012','#357EC7','#A9A9A9']
         };
-        var chart = new google.visualization.LineChart(document.getElementById(var54));
+        var chart = new google.visualization.LineChart(document.getElementById(var24));
+        chart.draw(data, options);
+    }
+
+    function drawChartau2(var0, var1 , var2, var3,//email
+                          var4,var5, var6, var7,//spot 311
+                          var8,var9, var10,var11,//mass entry
+                          var12,var13,var14,var15,//phone
+                          var16,var17,var18,var19,//field request
+                          var20,var21,var22,var23,var24) {//web
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'E-Mail','Spot_311_Interface','Mass Entry','Phone','Field Request','Web'],
+            ['2014', parseInt(var0),parseInt(var4),parseInt(var8),parseInt(var12),parseInt(var16),parseInt(var20)],
+            ['2015', parseInt(var1),parseInt(var5),parseInt(var9),parseInt(var13),parseInt(var17),parseInt(var21)],
+            ['2016', parseInt(var2),parseInt(var6),parseInt(var10),parseInt(var14),parseInt(var18),parseInt(var22)],
+            ['2017', parseInt(var3),parseInt(var7),parseInt(var11),parseInt(var15),parseInt(var19),parseInt(var23)]
+        ]);
+        var options = {
+            title: 'Sources ',
+            legend: {position: 'right'},
+            width:1100
+            ,height:600,
+            pointSize: 7,
+            series: {
+                0: { pointShape: 'circle' },
+                1: { pointShape: 'triangle' },
+                4: { pointShape: 'star' },
+                5: { pointShape: 'polygon' },
+                2: { pointShape: 'square' },
+                3: { pointShape: 'diamond' }
+
+            },
+            //vAxis: {scaleType: 'log'},
+
+
+            colors : ['#e7711b', '#C35817','#808000','#990012','#357EC7','#A9A9A9']
+        };
+        var chart = new google.visualization.LineChart(document.getElementById(var24));
         chart.draw(data, options);
     }
 });
