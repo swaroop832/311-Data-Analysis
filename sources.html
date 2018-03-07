@@ -334,7 +334,7 @@
                                         <td>{{au_phone_2017}}</td>
                                     </tr>
                                     <tr>
-                                        <th>spot_311_Interface</th>
+                                        <th>spot 311 Interface</th>
                                         <td>{{au_spot_311_Interface_2014}}</td>
                                         <td>{{au_spot_311_Interface_2015}}</td>
                                         <td>{{au_spot_311_Interface_2016}}</td>
@@ -369,6 +369,29 @@
                                         <td>{{au_mass_entry_2016}}</td>
                                         <td>0</td>
                                     </tr>
+                                    <tr>
+                                        <th>Fax</th>
+                                        <td>0</td>
+                                        <td>{{au_fax_2015}}</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Mail</th>
+                                        <td>{{au_mail_2014}}</td>
+                                        <td>0</td>
+                                        <td>{{au_mail_2016}}</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Open 311</th>
+                                        <td>0</td>
+                                        <td>{{au_open_311_2015}}</td>
+                                        <td>{{au_open_311_2016}}</td>
+                                        <td>{{au_open_311_2017}}</td>
+                                    </tr>
+
+
 
                                     </tbody>
                                 </table>
@@ -506,46 +529,106 @@
                 <!--San Francisco, CA-->
                 <div id="san_Francisco" class="tab-pane fade ">
                     <div class="row">
-                        <h2 class="page-header text-center text-primary">san Francisco</h2>
+                        <h2 class="page-header text-center text-primary">San Francisco</h2>
                         <div class="text-center">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
+                            <div class="col-md-10 col-md-offset-1">
+                                <table class="table table-primary table-bodered text-primary text-center main_table" >
                                     <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> No. of requests</th>
+                                    <tr>
+                                        <th></th>
+                                        <th >2012</th>
+                                        <th >2013</th>
+                                        <th >2014</th>
+                                        <th >2015</th>
+                                        <th >2016</th>
+                                        <th >2017</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="x in sfvalue">
-                                        <td>{{x.year}}</td>
-                                        <td>{{x.count_service_request_id}}</td>
+                                    <tr>
+                                        <th>Phone</th>
+                                        <td>{{sf_phone_2012}}</td>
+                                        <td>{{sf_phone_2013}}</td>
+                                        <td>{{sf_phone_2014}}</td>
+                                        <td>{{sf_phone_2015}}</td>
+                                        <td>{{sf_phone_2016}}</td>
+                                        <td>{{sf_phone_2017}}</td>
                                     </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> Population</th>
+                                    <tr>
+                                        <th>Integrated Agency</th>
+                                        <td>{{sf_integrated_agency_2012}}</td>
+                                        <td>{{sf_integrated_agency_2013}}</td>
+                                        <td>{{sf_integrated_agency_2014}}</td>
+                                        <td>{{sf_integrated_agency_2015}}</td>
+                                        <td>{{sf_integrated_agency_2016}}</td>
+                                        <td>{{sf_integrated_agency_2017}}</td>
                                     </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in population">
-                                        <td>{{x.Year}}</td>
-                                        <td>{{x.San_Francisco}}</td>
+
+                                    <tr>
+                                        <th>Mobile/Open 311</th>
+                                        <td>{{sf_mobile_2012}}</td>
+                                        <td>{{sf_mobile_2013}}</td>
+                                        <td>{{sf_mobile_2014}}</td>
+                                        <td>{{sf_mobile_2015}}</td>
+                                        <td>{{sf_mobile_2016}}</td>
+                                        <td>{{sf_mobile_2017}}</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th>Twitter</th>
+                                        <td>{{sf_twitter_2012}}</td>
+                                        <td>{{sf_twitter_2013}}</td>
+                                        <td>{{sf_twitter_2014}}</td>
+                                        <td>{{sf_twitter_2015}}</td>
+                                        <td>{{sf_twitter_2016}}</td>
+                                        <td>{{sf_twitter_2017}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Web</th>
+                                        <td>{{sf_web_2012}}</td>
+                                        <td>{{sf_web_2013}}</td>
+                                        <td>{{sf_web_2014}}</td>
+                                        <td>{{sf_web_2015}}</td>
+                                        <td>{{sf_web_2016}}</td>
+                                        <td>{{sf_web_2017}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Other Department</th>
+                                        <td>0</td>
+                                        <td>{{sf_other_department_2013}}</td>
+                                        <td>{{sf_other_department_2014}}</td>
+                                        <td>{{sf_other_department_2015}}</td>
+                                        <td>{{sf_other_department_2016}}</td>
+                                        <td>{{sf_other_department_2017}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Mail</th>
+                                        <td>0</td>
+                                        <td>{{sf_mail_2013}}</td>
+                                        <td>{{sf_mail_2014}}</td>
+                                        <td>{{sf_mail_2015}}</td>
+                                        <td>{{sf_mail_2016}}</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <th>E-Mail</th>
+                                        <td>{{sf_email_2012}}</td>
+                                        <td>{{sf_email_2013}}</td>
+                                        <td>{{sf_email_2014}}</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>{{sf_email_2017}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div id="sf_chart1" style="float: left; margin-left: 50px"></div>
-                        <div id="sf_chart2" style="margin-left: 550px"></div>
+                    <div class="image1">
+                        <div id="sf_chart1" style="margin-left: 10px"></div>
+                    </div>
+                    <div class="image1">
+                        <div id="sf_chart2" style="margin-left: 10px"></div>
                     </div>
                 </div>
 
@@ -556,49 +639,92 @@
                     <div class="row">
                         <h2 class="page-header text-center text-primary">Los Angeles</h2>
                         <div class="text-center">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
+                            <div class="col-md-10 col-md-offset-1">
+                                <table class="table table-primary table-bodered text-primary text-center main_table">
                                     <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> No. of requests</th>
+                                    <tr>
+                                        <th></th>
+                                        <th >2015</th>
+                                        <th >2016</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td>2015</td>
-                                        <td>{{lagraphvalue2015}}</td>
+                                        <th>Phone</th>
+                                        <td>{{la_phone_2015}}</td>
+                                        <td>{{la_phone_2016}}</td>
                                     </tr>
                                     <tr>
-                                        <td>2016</td>
-                                        <td>{{lagraphvalue2016}}</td>
+                                        <th>Walk In</th>
+                                        <td>{{la_walk_in_2015}}</td>
+                                        <td>{{la_walk_in_2016}}</td>
                                     </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> Population</th>
+                                    <tr>
+                                        <th>Driver Self Report</th>
+                                        <td>{{la_driver_self_2015}}</td>
+                                        <td>{{la_driver_self_2016}}</td>
                                     </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in population">
-                                        <td>{{x.Year}}</td>
-                                        <td>{{x.LosAngeles}}</td>
+
+                                    <tr>
+                                        <th>Mobile</th>
+                                        <td>{{la_mobile_2015}}</td>
+                                        <td>{{la_mobile_2016}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Web</th>
+                                        <td>{{la_web_2015}}</td>
+                                        <td>{{la_web_2016}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Council's Office</th>
+                                        <td>{{la_councils_office_2015}}</td>
+                                        <td>{{la_councils_office_2016}}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>Fax</th>
+                                        <td>{{la_fax_2015}}</td>
+                                        <td>{{la_fax_2016}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Self Service</th>
+                                        <td>{{la_self_service_2015}}</td>
+                                        <td>{{la_self_service_2016}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Mail</th>
+                                        <td>{{la_mail_2015}}</td>
+                                        <td>{{la_mail_2016}}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>Voice Mail</th>
+                                        <td>{{la_voice_mail_2015}}</td>
+                                        <td>{{la_voice_mail_2016}}</td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <th>Email</th>
+                                        <td>{{la_email_2015}}</td>
+                                        <td>{{la_email_2016}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Twitter</th>
+                                        <td>{{la_twitter_2015}}</td>
+                                        <td>{{la_twitter_2016}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div id="la_chart1" style="float: left; margin-left: 50px"></div>
-                        <div id="la_chart2" style="margin-left: 550px"></div>
-                    </div>
+                    <div class="image1">
+                    <div id="la_chart1" style="margin-left: 10px"></div>
+                </div>
+                <div class="image1">
+                    <div id=los_chart2" style="margin-left: 10px"></div>
+                </div>
                 </div>
             </div>
         </div>
