@@ -12,7 +12,7 @@
     <style>
         /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
         /* Set gray background color and 100% height */
-        /* Set gray background color and 100% height */
+       /* Set gray background color and 100% height */
 
 
         /* Set gray background color and 100% height */
@@ -44,7 +44,7 @@
             margin-left: 15%;
         }
         .list1{
-            color : #e7711b
+        color : #e7711b
         }
 
         .table{
@@ -63,7 +63,7 @@
         <div class="col-sm-3 sidenav">
             <br>
             <button onclick="window.location.href='index.html'" class="btn btn-success">Go Home</button>
-            <h3 class="text-success" style="color : #e7711b">Time-to Close</h3>
+            <h3 class="text-success" style="color : #e7711b">City-Comparison</h3>
             <ul class="nav nav-pills nav-stacked list1" >
                 <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
                 <li><a data-toggle="pill" href="#Kansas_City" data-ng-click="kcfunction()">Kansas City</a></li>
@@ -113,7 +113,7 @@
 
                 <div id="home" class="tab-pane fade in active container-fluid text-center">
                     <br>
-                    <button class="btn btn-danger" data-ng-click="allfunction()">click to get results</button>
+                   <button class="btn btn-danger" data-ng-click="allfunction()">click to get results</button>
                     <div id="message" class="container-fluid text-danger" style="display: none"> <h1>Plase wait while we are gathering your results</h1>
                         <img src="giphy.gif" id="img" style="text-align: center">
                     </div>
@@ -691,7 +691,7 @@
                     <div class="row">
                         <div id="jc_chart1" style="float: left; margin-left: 50px"></div>
                         <div id="jc_chart2" style="margin-left: 550px"></div>
-                    </div>
+                </div>
                 </div>
 
                 <!--Las Vegas, NV-->
@@ -703,51 +703,51 @@
                 <div id="los_Angeles" class="tab-pane fade ">
                     <div class="row">
                         <h2 class="page-header text-center text-primary">Los Angeles</h2>
-                        <div class="text-center">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> No. of requests</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>2015</td>
-                                        <td>{{lagraphvalue2015}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2016</td>
-                                        <td>{{lagraphvalue2016}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> Population</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in population">
-                                        <td>{{x.Year}}</td>
-                                        <td>{{x.LosAngeles}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                            <div class="text-center">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-4">
+                                    <table class="table table-primary table-bodered text-primary text-center">
+                                        <thead>
+                                        <tr class="text-center">
+                                            <th style="text-align: center">year</th>
+                                            <th style="text-align: center"> No. of requests</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>2015</td>
+                                            <td>{{lagraphvalue2015}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2016</td>
+                                            <td>{{lagraphvalue2016}}</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-4">
+                                    <table class="table table-primary table-bodered text-primary text-center">
+                                        <thead>
+                                        <tr class="text-center">
+                                            <th style="text-align: center">year</th>
+                                            <th style="text-align: center"> Population</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr ng-repeat="x in population">
+                                            <td>{{x.Year}}</td>
+                                            <td>{{x.LosAngeles}}</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div id="la_chart1" style="float: left; margin-left: 50px"></div>
+                            <div id="la_chart2" style="margin-left: 550px"></div>
+                        </div>
                     </div>
-                    <div class="row">
-                        <div id="la_chart1" style="float: left; margin-left: 50px"></div>
-                        <div id="la_chart2" style="margin-left: 550px"></div>
-                    </div>
-                </div>
 
 
                 <!--Louisville, KY-->
@@ -771,20 +771,20 @@
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td>2011</td>
-                                        <td>{{mi2011}}</td>
+                                    <td>2011</td>
+                                    <td>{{mi2011}}</td>
                                     </tr>
                                     <tr>
-                                        <td>2012</td>
-                                        <td>{{mi2012}}</td>
+                                    <td>2012</td>
+                                    <td>{{mi2012}}</td>
                                     </tr>
                                     <tr>
-                                        <td>2013</td>
-                                        <td>{{mi2013}}</td>
+                                    <td>2013</td>
+                                    <td>{{mi2013}}</td>
                                     </tr>
                                     <tr>
-                                        <td>2014</td>
-                                        <td>{{mi2014}}</td>
+                                    <td>2014</td>
+                                    <td>{{mi2014}}</td>
                                     </tr>
                                     <tr>
                                         <td>2015</td>
@@ -816,7 +816,7 @@
                     <div class="row">
                         <div id="mi_chart1" style="float: left; margin-left: 50px"></div>
                         <div id="mi_chart2" style="margin-left: 550px"></div>
-                    </div>
+                </div>
                 </div>
 
                 <!--New Orleans, LA-->
@@ -1096,7 +1096,7 @@
                     <div class="row">
                         <div id="wd_chart1" style="float: left; margin-left: 50px"></div>
                         <div id="wd_chart2" style="margin-left: 550px"></div>
-                    </div>
+                </div>
                 </div>
 
                 <!--Ann Arbor, MI-->
@@ -1353,7 +1353,7 @@
 
                 <!--Providence, RI-->
                 <div id="providence" class="tab-pane fade ">
-                    <h1>couldn't find data</h1>
+                   <h1>couldn't find data</h1>
                 </div>
 
                 <!--San Antonio, TX-->
