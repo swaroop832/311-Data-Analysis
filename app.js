@@ -35,6 +35,7 @@ app.controller("MinCtrl",function ($scope,$http) {
                 title: 'City Comparison from 2010 to 2016',
                 curveType: 'none',
                 dataOpacity : 2.0,
+                pointSize: 7,
                 legend: { position: 'right' }
             };
 
@@ -379,14 +380,11 @@ app.controller("MinCtrl",function ($scope,$http) {
         $http.get("https://phl.carto.com/api/v2/sql?q=SELECT%20count(cartodb_id)%20FROM%20public_cases_fc%20WHERE%20requested_datetime%20%3E=%20%272016-01-01%27%20AND%20requested_datetime%20%3C%20%272016-12-31%27").then(function (value) {
 
             $scope.phvalue2016 = value.data.rows[0].count;
-            console.log($scope.phvalue2016);
         $http.get("https://phl.carto.com/api/v2/sql?q=SELECT%20count(cartodb_id)%20FROM%20public_cases_fc%20WHERE%20requested_datetime%20%3E=%20%272015-01-01%27%20AND%20requested_datetime%20%3C%20%272015-12-31%27").then(function (value) {
 
             $scope.phvalue2015 = value.data.rows[0].count;
         $http.get("https://phl.carto.com/api/v2/sql?q=SELECT%20count(cartodb_id)%20FROM%20public_cases_fc%20WHERE%20requested_datetime%20%3E=%20%272014-01-01%27%20AND%20requested_datetime%20%3C%20%272014-12-31%27").then(function (value) {
-
             $scope.phvalue2014 = value.data.rows[0].count;
-            console.log($scope.phvalue2014);
             drawChartx(0,0,0,0,$scope.phvalue2014,$scope.phvalue2015,$scope.phvalue2016,'ph_chart1');
             drawCharty(0,0,0,0,$scope.phvalue2014/$scope.population[4].Philadelphia,$scope.phvalue2015/$scope.population[5].Philadelphia,$scope.phvalue2016/$scope.population[6].Philadelphia,'ph_chart2');
         }); }); });
@@ -536,7 +534,6 @@ app.controller("MinCtrl",function ($scope,$http) {
 
         $http.get("https://data.cityofchicago.org/resource/6zsd-86xi.json?$select=date_extract_y(date)%20as%20year,count(case_number)&$group=year&$order=year").then(function (value) {
             $scope.chvalue = value.data;
-            console.log($scope.chvalue);
             $scope.chvalue2010 = $scope.chvalue[9].count_case_number;
             $scope.chvalue2011 = $scope.chvalue[10].count_case_number;
             $scope.chvalue2012 = $scope.chvalue[11].count_case_number;
@@ -633,6 +630,7 @@ app.controller("MinCtrl",function ($scope,$http) {
                 legend: {position: 'bottom'},
                 width:600
                 ,height:400,
+                pointSize: 7,
                 colors : ['#e7711b']
             };
             var chart = new google.visualization.LineChart(document.getElementById(var7));
