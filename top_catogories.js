@@ -49,10 +49,10 @@ app.controller("MinCtrl",function ($scope,$http) {
                           var9, var10,var11,var12,var13,var14,var15,var16,var17,
                           var18,var19,var20,var21,var22,var23,var24,var25,var26,
                           var27,var28,var29,var30) {
-        console.log(var0);
+        //console.log(var0);
         var data = google.visualization.arrayToDataTable([
             ['category', 'No. call request for given year'],
-            [var0, ($scope.var15)],
+            [var0, parseInt(var15)],
             [var1, parseInt(var16)],
             [var2, parseInt(var17)],
             [var3, parseInt(var18)],
