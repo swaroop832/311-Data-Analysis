@@ -1,76 +1,81 @@
 <html>
 <head>
     <title>
-        311-Data-Analysis
+        City Comparison
     </title>
     <script src="js/angular.min.js"></script>
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-    div.main{
-        margin: auto;
-        width : 1000px;
-        height: 60px;
-        padding: 188px 0px;
+    <style>
+        div.main{
+            margin: auto;
+            width : 1000px;
+            padding: 20px 0px 70px 0px;
 
 
-    }
-    div.second{
-        text-align: center;
+        }
+        div.second{
+            text-align: center;
 
-    }
-    div.first{
-        text-align: center;
+        }
+        div.first{
+            text-align: center;
 
-    }
-    .button {
-        border-radius: 4px;
-        background-color: #f4511e;
-        border: none;
-        color: #FFFFFF;
-        text-align: center;
-        font-size: 28px;
-        padding: 10px;
-        width: 305px;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin: 0px;
-    }
+        }
+        .button {
+            border-radius: 4px;
+            background-color: #f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 10px;
+            width: 305px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 0px;
+        }
 
-    .button span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-    }
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
 
-    .button span:after {
-        content: '\00bb';
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -20px;
-        transition: 0.5s;
-    }
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
 
-    .button:hover span {
-        padding-right: 25px;
-    }
+        .button:hover span {
+            padding-right: 25px;
+        }
 
-    .button:hover span:after {
-        opacity: 1;
-        right: 0;
-    }
-</style>
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        body{
+            background-image: linear-gradient(rgba(0, 0, 255, 0.48), rgba(255, 255, 0, 0.3)),
+            url("back_image_1.jpg");
+           
+        }
+    </style>
 </head>
 
-<body>
-<div class="main">
+<body style="height: 600px;">
+
+<div class="main" style="padding-top: 180px;">
     <div class="first">
-        <span style="font-size: 30px;">Welcome To 311 Data Analysis</span><br/><br/>
+        <span style="font-size: 40px;color: white;font-family:Calibri"><b>Welcome To 311 Data Analysis</b></span><br/><br/>
     </div>
     <div class="second" style="float: left">
-         <button class="button" onclick="window.location.href='index11.html'"><span>City Comparision</span> </button>
+        <button class="button" onclick="window.location.href='index11.html'"><span>City Comparision</span> </button>
 
     </div>
     <div class="second" style="float: left; margin-left: 10px">
@@ -81,9 +86,28 @@
         <button class="button" onclick="window.location.href='time_to_close.html'"><span>Time to Close</span> </button>
 
     </div>
+
+
 </div>
 
+<div class="main">
+    <div class="second" style="float: left;">
+        <button class="button"
+                onclick="window.location.href='top_catogories.html'">
+            <span>Top-Catogories</span></button>
 
+    </div>
+    <div class="second" style="float: left;margin-left: 10px">
+        <button class="button">
+            <span>Per-Month</span></button>
+
+    </div>
+    <div class="second" style="float: left;margin-left: 10px">
+        <button class="button">
+            <span>Geographical</span></button>
+
+    </div>
+</div>
 
 </body>
 </html>
