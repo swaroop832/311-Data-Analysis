@@ -366,8 +366,6 @@ app.controller("MinCtrl",function ($scope,$http) {
             //twitter
             $scope.la_twitter_2015 = parseInt($scope.lavalue[2].count_srnumber);
 
-        });
-
          $http.get("https://data.lacity.org/resource/ndkd-k878.json?$query=SELECT%20requestsource,count(srnumber),date_trunc_y(createddate)%20as%20year%20group%20by%20requestsource,year").then(function (value) {
 
                 $scope.lavalue = value.data;
@@ -423,7 +421,7 @@ app.controller("MinCtrl",function ($scope,$http) {
                     /*self service*/$scope.la_self_service_2015,$scope.la_self_service_2016,
                     /*mobile*/$scope.la_mobile_2015,$scope.la_mobile_2016,'los_chart2');
          });
-
+         });
     };
 
     //chicago Api
