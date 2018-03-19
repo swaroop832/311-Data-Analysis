@@ -41,7 +41,51 @@ app.controller("MinCtrl",function ($scope,$http) {
                       $scope.kc_count_1,$scope.kc_count_2,$scope.kc_count_3,$scope.kc_count_4,$scope.kc_count_5,$scope.kc_count_6,$scope.kc_count_7,$scope.kc_count_8,$scope.kc_count_9,$scope.kc_count_10,$scope.kc_count_11,$scope.kc_count_12,$scope.kc_count_13,$scope.kc_count_14,$scope.kc_count_15,'kcchart1');
 
               });
-      };
+
+              $scope.kcfunction1 = function (selected_year) {
+
+                  $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$limit=15&creation_year=" + selected_year + "&$select=category,count(case_id)&$group=category&$order=count(case_id) DESC").then(function (response) {
+
+                      $scope.kcvalue = response.data;
+                      $scope.kc_category_1 = ($scope.kcvalue[0].category);
+                      $scope.kc_category_2 = ($scope.kcvalue[1].category);
+                      $scope.kc_category_3 = ($scope.kcvalue[2].category);
+                      $scope.kc_category_4 = ($scope.kcvalue[3].category);
+                      $scope.kc_category_5 = ($scope.kcvalue[4].category);
+                      $scope.kc_category_6 = ($scope.kcvalue[5].category);
+                      $scope.kc_category_7 = ($scope.kcvalue[6].category);
+                      $scope.kc_category_8 = ($scope.kcvalue[7].category);
+                      $scope.kc_category_9 =($scope.kcvalue[8].category);
+                      $scope.kc_category_10 = ($scope.kcvalue[9].category);
+                      $scope.kc_category_11 = ($scope.kcvalue[10].category);
+                      $scope.kc_category_12 = ($scope.kcvalue[11].category);
+                      $scope.kc_category_13 = ($scope.kcvalue[12].category);
+                      $scope.kc_category_14 = ($scope.kcvalue[13].category);
+                      $scope.kc_category_15 =($scope.kcvalue[14].category);
+                      $scope.kc_count_1 = parseInt($scope.kcvalue[0].count_case_id);
+                      $scope.kc_count_2 = parseInt($scope.kcvalue[1].count_case_id);
+                      $scope.kc_count_3 = parseInt($scope.kcvalue[2].count_case_id);
+                      $scope.kc_count_4 = parseInt($scope.kcvalue[3].count_case_id);
+                      $scope.kc_count_5 = parseInt($scope.kcvalue[4].count_case_id);
+                      $scope.kc_count_6 = parseInt($scope.kcvalue[5].count_case_id);
+                      $scope.kc_count_7 = parseInt($scope.kcvalue[6].count_case_id);
+                      $scope.kc_count_8 = parseInt($scope.kcvalue[7].count_case_id);
+                      $scope.kc_count_9 = parseInt($scope.kcvalue[8].count_case_id);
+                      $scope.kc_count_10 = parseInt($scope.kcvalue[9].count_case_id);
+                      $scope.kc_count_11 = parseInt($scope.kcvalue[10].count_case_id);
+                      $scope.kc_count_12 = parseInt($scope.kcvalue[11].count_case_id);
+                      $scope.kc_count_13 = parseInt($scope.kcvalue[12].count_case_id);
+                      $scope.kc_count_14 = parseInt($scope.kcvalue[13].count_case_id);
+                      $scope.kc_count_15 = parseInt($scope.kcvalue[14].count_case_id);
+
+                      drawChartkc2($scope.kc_category_1,$scope.kc_category_2,$scope.kc_category_3,$scope.kc_category_4,$scope.kc_category_5,$scope.kc_category_6,$scope.kc_category_7,$scope.kc_category_8,$scope.kc_category_9,$scope.kc_category_10,$scope.kc_category_11,$scope.kc_category_12,$scope.kc_category_13,$scope.kc_category_14,$scope.kc_category_15,
+                          $scope.kc_count_1,$scope.kc_count_2,$scope.kc_count_3,$scope.kc_count_4,$scope.kc_count_5,$scope.kc_count_6,$scope.kc_count_7,$scope.kc_count_8,$scope.kc_count_9,$scope.kc_count_10,$scope.kc_count_11,$scope.kc_count_12,$scope.kc_count_13,$scope.kc_count_14,$scope.kc_count_15,'kcchart1');
+
+                  });
+          };
+
+
+
 
     google.charts.load('current', {'packages': ['corechart'],'callback': drawChartkc2});
     google.charts.setOnLoadCallback(drawChartkc2);
