@@ -446,7 +446,7 @@ app.controller("MinCtrl",function ($scope,$http) {
 //alert("this is 1");
 
 
-         })
+         });
              drawChartla1($scope.la_email_2015,$scope.la_email_2016,
                  /*fax*/$scope.la_fax_2015,$scope.la_fax_2016,
                  /*mail*/$scope.la_mail_2015,$scope.la_mail_2016,
