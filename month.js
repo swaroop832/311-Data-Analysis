@@ -24,7 +24,7 @@ app.controller("MinCtrl",function ($scope,$http) {
 
     $scope.nyfunction = function (selected_year) {
 
-        $http.get("https://data.cityofnewyork.us/resource/fhrw-4uyv.json?$select=date_extract_m(created_date)%20as%20month,count(month)&$group=month&$where=date_extract_y(created_date)%3E"+selected_year+"&$order=month").then(function (value) {
+        $http.get("https://data.cityofnewyork.us/resource/fhrw-4uyv.json?$select=date_extract_m(created_date)%20as%20month,count(month)&$group=month&$where=date_extract_y(created_date)="+selected_year+"&$order=month").then(function (value) {
             $scope.nydata = value.data;
             $scope.ny0 = $scope.nydata[0].count_month;
             $scope.ny1 = $scope.nydata[1].count_month;
@@ -39,6 +39,30 @@ app.controller("MinCtrl",function ($scope,$http) {
             $scope.ny10 = $scope.nydata[10].count_month;
             $scope.ny11 = $scope.nydata[11].count_month;
             drawChart($scope.ny0,$scope.ny1,$scope.ny2,$scope.ny3,$scope.ny4,$scope.ny5,$scope.ny6,$scope.ny7,$scope.ny8,$scope.ny9,$scope.ny10,$scope.ny11,'nychart1');
+        })
+    };
+
+
+    //Austin Tx  monthly api
+
+    $scope.Aufunction = function (selected_year) {
+
+        $http.get("https://data.austintexas.gov/resource/5h38-fd8d.json?$select=date_extract_m(sr_status_date)%20as%20month,count(month)&$group=month&$where=date_extract_y(sr_status_date)="+selected_year+"&$order=month").then(function (value) {
+
+            $scope.Auvalue = value.data;
+            $scope.Au0=$scope.Auvalue[0].count_month;
+            $scope.Au1=$scope.Auvalue[1].count_month;
+            $scope.Au2=$scope.Auvalue[2].count_month;
+            $scope.Au3=$scope.Auvalue[3].count_month;
+            $scope.Au4=$scope.Auvalue[4].count_month;
+            $scope.Au5=$scope.Auvalue[5].count_month;
+            $scope.Au6=$scope.Auvalue[6].count_month;
+            $scope.Au7=$scope.Auvalue[7].count_month;
+            $scope.Au8=$scope.Auvalue[8].count_month;
+            $scope.Au9=$scope.Auvalue[9].count_month;
+            $scope.Au10=$scope.Auvalue[10].count_month;
+            $scope.Au11 =$scope.Auvalue[11].count_month;
+            drawChart($scope.Au0,$scope.Au1,$scope.Au2,$scope.Au3,$scope.Au4,$scope.Au5,$scope.Au6,$scope.Au7,$scope.Au8,$scope.Au9,$scope.Au10,$scope.Au11,'Auchart1')
         })
     };
 
