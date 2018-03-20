@@ -22,6 +22,27 @@ app.controller("MinCtrl",function ($scope,$http) {
         });
     };
 
+    $scope.gainesville = function (selected_year) {
+
+        $http.get("https://data.cityofgainesville.org/resource/cgd2-6k8s.json?$select=date_extract_m(created)%20as%20month,count(month)&$group=month&$where=date_extract_y(created)="+selected_year+"&$order=month").then(function (response) {
+
+            $scope.gainvalue = response.data;
+            $scope.gainjan = $scope.gainvalue[0].count_month;
+            $scope.gainfeb = $scope.gainvalue[1].count_month;
+            $scope.gainmar = $scope.gainvalue[2].count_month;
+            $scope.gainapr = $scope.gainvalue[3].count_month;
+            $scope.gainmay = $scope.gainvalue[4].count_month;
+            $scope.gainjun = $scope.gainvalue[5].count_month;
+            $scope.gainjul = $scope.gainvalue[6].count_month;
+            $scope.gainaug = $scope.gainvalue[7].count_month;
+            $scope.gainsep = $scope.gainvalue[8].count_month;
+            $scope.gainoct = $scope.gainvalue[9].count_month;
+            $scope.gainnov = $scope.gainvalue[10].count_month;
+            $scope.gaindec = $scope.gainvalue[11].count_month;
+            drawChart($scope.gainjan,$scope.gainfeb,$scope.gainmar,$scope.gainapr,$scope.gainmay,$scope.gainjun,$scope.gainjul,$scope.gainaug,$scope.gainsep,$scope.gainoct,$scope.gainnov,$scope.gaindec,'gainchart1')
+        });
+    };
+
     $scope.nyfunction = function (selected_year) {
 
         $http.get("https://data.cityofnewyork.us/resource/fhrw-4uyv.json?$select=date_extract_m(created_date)%20as%20month,count(month)&$group=month&$where=date_extract_y(created_date)="+selected_year+"&$order=month").then(function (value) {
@@ -154,6 +175,7 @@ app.controller("MinCtrl",function ($scope,$http) {
             drawChart($scope.No0,$scope.No1,$scope.No2,$scope.No3,$scope.No4,$scope.No5,$scope.No6,$scope.No7,$scope.No8,$scope.No9,$scope.No10,$scope.No11,'Nochart1')
         })
     };
+
 
     google.charts.load('current', {'packages': ['corechart'],'callback': drawChart});
     google.charts.setOnLoadCallback(drawChart);
