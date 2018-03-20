@@ -79,7 +79,7 @@
                 <li><a data-toggle="pill" href="#johns_Creek" data-ng-click="jcfunction()">Johns Creek, GA</a></li>
                 <li><a data-toggle="pill" href="#las_Vegas">Las Vegas, NV</a></li>
                 <li><a data-toggle="pill" href="#los_Angeles" data-ng-click = "losangeles()">Los Angeles, CA</a></li>
-                <li><a data-toggle="pill" href="#louisville">Louisville, KY</a></li>
+                <li><a data-toggle="pill" href="#louisville" data-ng-click = "louisville()">Louisville, KY</a></li>
                 <li><a data-toggle="pill" href="#minneapolis" data-ng-click="mifunction()">Minneapolis, MN</a></li>
                 <li><a data-toggle="pill" href="#new_Orleans" data-ng-click="nrfunction()">New Orleans, LA</a></li>
                 <li><a data-toggle="pill" href="#philadelphia" data-ng-click="phfunction()">Philadelphia, PA</a></li>
@@ -94,7 +94,7 @@
                 <li><a data-toggle="pill" href="#jersey_City">Jersey City, NJ</a></li>
                 <li><a data-toggle="pill" href="#salt_Lake_City">Salt Lake City, UT</a></li>
                 <li><a data-toggle="pill" href="#santa_Monica" data-ng-click= "santafunction()">Santa Monica, CA</a></li>
-                <li><a data-toggle="pill" href="#st_Louis">St. Louis, MO</a></li>
+                <li><a data-toggle="pill" href="#st_Louis" data-ng-click= "st_Louis()">St. Louis, MO</a></li>
                 <li><a data-toggle="pill" href="#oakland" data-ng-click="oakfunction()">Oakland, CA</a></li>
                 <li><a data-toggle="pill" href="#san_Jose">San Jose, CA</a></li>
                 <li><a data-toggle="pill" href="#charlotte">Charlotte, NC</a></li>
@@ -752,7 +752,50 @@
 
                 <!--Louisville, KY-->
                 <div id="louisville" class="tab-pane fade ">
-                    <h4 CLASS="text-danger"> The Louisville is not providing API, just csv file</h4>
+                    <div class="row">
+                        <h2 class="page-header text-center text-primary">Louisville</h2>
+                        <div class="text-center">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-4">
+                                <table class="table table-primary table-bodered text-primary text-center">
+                                    <thead>
+                                    <tr class="text-center">
+                                        <th style="text-align: center">year</th>
+                                        <th style="text-align: center"> No. of requests</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr ng-repeat="x in lvvalue">
+                                        <td>{{x.creation_year}}</td>
+                                        <td>{{x.number_of_requests}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-4">
+                                <table class="table table-primary table-bodered text-primary text-center">
+                                    <thead>
+                                    <tr class="text-center">
+                                        <th style="text-align: center">year</th>
+                                        <th style="text-align: center"> Population</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr ng-repeat="x in population">
+                                        <td>{{x.Year}}</td>
+                                        <td>{{x.Denver}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image1">
+                        <div id="lv_chart1" style="float: left; margin-left: 50px"></div>
+                    </div>
+                    <div class="image1">
+                        <div id="lv_chart2" style="margin-left: 550px"></div>
+                    </div>
                 </div>
 
                 <!--Minneapolis, MN-->
@@ -1236,7 +1279,50 @@
 
                 <!--St. Louis, MO-->
                 <div id="st_Louis" class="tab-pane fade ">
-                    <h1>Still searching for data anf found data for 2010,2015,2018 in csv file</h1>
+                    <div class="row">
+                        <h2 class="page-header text-center text-primary">St. Louis</h2>
+                        <div class="text-center">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-4">
+                                <table class="table table-primary table-bodered text-primary text-center">
+                                    <thead>
+                                    <tr class="text-center">
+                                        <th style="text-align: center">year</th>
+                                        <th style="text-align: center"> No. of requests</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr ng-repeat="x in slvalue">
+                                        <td>{{x.creation_year}}</td>
+                                        <td>{{x.number_of_requests}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-4">
+                                <table class="table table-primary table-bodered text-primary text-center">
+                                    <thead>
+                                    <tr class="text-center">
+                                        <th style="text-align: center">year</th>
+                                        <th style="text-align: center"> Population</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr ng-repeat="x in population">
+                                        <td>{{x.Year}}</td>
+                                        <td>{{x.St_Louis}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image1">
+                        <div id="sl_chart1" style="float: left; margin-left: 50px"></div>
+                    </div>
+                    <div class="image1">
+                        <div id="sl_chart2" style="margin-left: 550px"></div>
+                    </div>
                 </div>
 
                 <!--Oakland, CA-->

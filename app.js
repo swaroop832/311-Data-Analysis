@@ -589,6 +589,45 @@ app.controller("MinCtrl",function ($scope,$http) {
 
     };
 
+    //Louisville, manually from cvs file
+
+    $scope.louisville = function () {
+
+        $scope.lvvalue = [
+            {"creation_year" : 2010, "number_of_requests" :106380},
+            {"creation_year" : 2011, "number_of_requests" :106296},
+            {"creation_year" : 2012, "number_of_requests" :105503},
+            {"creation_year" : 2013, "number_of_requests" :96335},
+            {"creation_year" : 2014, "number_of_requests" :94605},
+            {"creation_year" : 2015, "number_of_requests" :104145},
+            {"creation_year" : 2016, "number_of_requests" :102039}
+        ]
+
+        drawChartx($scope.lvvalue[0].number_of_requests, $scope.lvvalue[1].number_of_requests, $scope.lvvalue[2].number_of_requests, $scope.lvvalue[3].number_of_requests, $scope.lvvalue[4].number_of_requests, $scope.lvvalue[5].number_of_requests, $scope.lvvalue[6].number_of_requests, 'lv_chart1');
+        drawCharty($scope.lvvalue[0].number_of_requests/$scope.population[0].Louisville, $scope.lvvalue[1].number_of_requests/$scope.population[1].Louisville, $scope.lvvalue[2].number_of_requests/$scope.population[2].Louisville, $scope.lvvalue[3].number_of_requests/$scope.population[3].Louisville, $scope.lvvalue[4].number_of_requests/$scope.population[4].Louisville, $scope.lvvalue[5].number_of_requests/$scope.population[5].Louisville, $scope.lvvalue[6].number_of_requests/$scope.population[6].Louisville, 'lv_chart2');
+
+
+    };
+
+    //St. Louis, manually from cvs file
+
+    $scope.st_Louis = function () {
+
+        $scope.slvalue = [
+            {"creation_year" : 2010, "number_of_requests" :118715},
+            {"creation_year" : 2011, "number_of_requests" :121748},
+            {"creation_year" : 2012, "number_of_requests" :108800},
+            {"creation_year" : 2013, "number_of_requests" :110552},
+            {"creation_year" : 2014, "number_of_requests" :123878},
+            {"creation_year" : 2015, "number_of_requests" :119647},
+            {"creation_year" : 2016, "number_of_requests" :122827}
+        ]
+
+        drawChartx($scope.slvalue[0].number_of_requests, $scope.slvalue[1].number_of_requests, $scope.slvalue[2].number_of_requests, $scope.slvalue[3].number_of_requests, $scope.slvalue[4].number_of_requests, $scope.slvalue[5].number_of_requests, $scope.slvalue[6].number_of_requests, 'sl_chart1');
+        drawCharty($scope.slvalue[0].number_of_requests/$scope.population[0].St_Louis, $scope.slvalue[1].number_of_requests/$scope.population[1].St_Louis, $scope.slvalue[2].number_of_requests/$scope.population[2].St_Louis, $scope.slvalue[3].number_of_requests/$scope.population[3].St_Louis, $scope.slvalue[4].number_of_requests/$scope.population[4].St_Louis, $scope.slvalue[5].number_of_requests/$scope.population[5].St_Louis, $scope.slvalue[6].number_of_requests/$scope.population[6].St_Louis, 'sl_chart2');
+
+
+    };
 
     google.charts.load('current', {'packages': ['corechart']});
     google.charts.setOnLoadCallback(drawChartx);
@@ -657,7 +696,9 @@ app.controller("MinCtrl",function ($scope,$http) {
             "Oakland": 391724,
             "SantaMonica": 89791,
             "chicago" : 2697736,
-            "Denver" : 603329
+            "Denver" : 603329,
+            "Louisville" : 597269,
+            "St_Louis" : 319305
 
 
         },
@@ -682,7 +723,9 @@ app.controller("MinCtrl",function ($scope,$http) {
             "Oakland": 396515,
             "SantaMonica": 90600,
             "chicago" : 2705404,
-            "Denver" : 619281
+            "Denver" : 619281,
+            "Louisville" : 600425,
+            "St_Louis" : 319144
         },
         {
             "Year" : 2012,
@@ -705,7 +748,9 @@ app.controller("MinCtrl",function ($scope,$http) {
             "Oakland": 401704,
             "SantaMonica": 91508,
             "chicago" : 2714120,
-            "Denver" : 633563
+            "Denver" : 633563,
+            "Louisville" : 604609,
+            "St_Louis" : 319085
         },
         {
             "Year" : 2013,
@@ -728,7 +773,9 @@ app.controller("MinCtrl",function ($scope,$http) {
             "Oakland": 407205,
             "SantaMonica": 92276,
             "chicago" : 2718887,
-            "Denver" : 647433
+            "Denver" : 647433,
+            "Louisville" : 609863,
+            "St_Louis" : 317947
         },
         {
             "Year" : 2014,
@@ -751,7 +798,9 @@ app.controller("MinCtrl",function ($scope,$http) {
             "Oakland": 413313,
             "SantaMonica": 92346,
             "chicago" : 2718530,
-            "Denver" : 662425
+            "Denver" : 662425,
+            "Louisville" : 612367,
+            "St_Louis" : 316840
         },
         {
             "Year" : 2015,
@@ -774,7 +823,9 @@ app.controller("MinCtrl",function ($scope,$http) {
             "Oakland": 417870,
             "SantaMonica": 92685,
             "chicago" : 2713596,
-            "Denver" : 680032
+            "Denver" : 680032,
+            "Louisville" : 614748,
+            "St_Louis" : 314875
         },
         {
             "Year" : 2016,
@@ -797,7 +848,9 @@ app.controller("MinCtrl",function ($scope,$http) {
             "Oakland": 420005,
             "SantaMonica": 92478,
             "chicago" : 2704958,
-            "Denver" : 693060
+            "Denver" : 693060,
+            "Louisville" : 616261,
+            "St_Louis" : 311404
         }
     ];
 });
