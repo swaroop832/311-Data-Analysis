@@ -1,6 +1,7 @@
 var app = angular.module("app", []);
 
 app.controller("MinCtrl",function ($scope,$http) {
+
     $scope.kcfunction1 = function (selected_year) {
 
         $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=creation_month,count(creation_month)&$group=creation_month&creation_year="+selected_year +"&$order=creation_month").then(function (response) {
@@ -155,8 +156,55 @@ app.controller("MinCtrl",function ($scope,$http) {
         })
     };
 
+    // Boston monthly api
+
+    $scope.Bsfunction = function (selected_year) {
+
+        $http.get("https://data.boston.gov/api/3/action/datastore_search_sql?sql=SELECT%20Extract(MONTH%20FROM%20open_dt)%20as%20month,count(open_dt)from%20%222968e2c0-d479-49ba-a884-4ef523ada3c0%22%20where%20EXTRACT(YEAR%20FROM%20OPEN_DT)%20=%20"+selected_year+"%20group%20by%20month%20order%20by%20month").then(function (value) {
+
+            $scope.Bsvalue = value.data.result.records;
+            $scope.Bs0 = $scope.Bsvalue[0].count;
+            $scope.Bs1 = $scope.Bsvalue[1].count;
+            $scope.Bs2 = $scope.Bsvalue[2].count;
+            $scope.Bs3 = $scope.Bsvalue[3].count;
+            $scope.Bs4 = $scope.Bsvalue[4].count;
+            $scope.Bs5 = $scope.Bsvalue[5].count;
+            $scope.Bs6 = $scope.Bsvalue[6].count;
+            $scope.Bs7 = $scope.Bsvalue[7].count;
+            $scope.Bs8 = $scope.Bsvalue[8].count;
+            $scope.Bs9 = $scope.Bsvalue[9].count;
+            $scope.Bs10 = $scope.Bsvalue[10].count;
+            $scope.Bs11 = $scope.Bsvalue[11].count;
+            drawChart($scope.Bs0,$scope.Bs1,$scope.Bs2,$scope.Bs3,$scope.Bs4,$scope.Bs5,$scope.Bs6,$scope.Bs7,$scope.Bs8,$scope.Bs9,$scope.Bs10,$scope.Bs11,'Bschart1');
+        })
+    };
+
+    //Cincinnati monthly api
+
+    $scope.Cifunction = function (selected_year) {
+
+        $http.get("https://data.cincinnati-oh.gov/resource/5zzw-knr5.json?$select=date_extract_m(requested_date)%20as%20month,count(month)&$group=month&$where=date_extract_y(requested_date)="+selected_year+"&$order=month").then(function (value) {
+          $scope.Civalue = value.data;
+          $scope.Ci0 = $scope.Civalue[0].count_month;
+            $scope.Ci1 = $scope.Civalue[1].count_month;
+            $scope.Ci2 = $scope.Civalue[2].count_month;
+            $scope.Ci3 = $scope.Civalue[3].count_month;
+            $scope.Ci4 = $scope.Civalue[4].count_month;
+            $scope.Ci5 = $scope.Civalue[5].count_month;
+            $scope.Ci6 = $scope.Civalue[6].count_month;
+            $scope.Ci7 = $scope.Civalue[7].count_month;
+            $scope.Ci8 = $scope.Civalue[8].count_month;
+            $scope.Ci9 = $scope.Civalue[9].count_month;
+            $scope.Ci10 = $scope.Civalue[10].count_month;
+            $scope.Ci11 = $scope.Civalue[11].count_month;
+
+            drawChart($scope.Ci0,$scope.Ci1,$scope.Ci2,$scope.Ci3,$scope.Ci4,$scope.Ci5,$scope.Ci6,$scope.Ci7,$scope.Ci8,$scope.Ci9,$scope.Ci10,$scope.Ci11,'Cichart1')
+        })
+    };
+
     google.charts.load('current', {'packages': ['corechart'],'callback': drawChart});
     google.charts.setOnLoadCallback(drawChart);
+
     function drawChart(var0, var1 , var2, var3, var4, var5, var6, var7, var8,
                           var9, var10,var11,var12) {
         var data = google.visualization.arrayToDataTable([
