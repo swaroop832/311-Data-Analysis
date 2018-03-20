@@ -177,8 +177,8 @@ app.controller("MinCtrl",function ($scope,$http) {
         })
     };
 
-<<<<<<< HEAD
-=======
+
+
     // Boston monthly api
 
     $scope.Bsfunction = function (selected_year) {
@@ -224,7 +224,7 @@ app.controller("MinCtrl",function ($scope,$http) {
             drawChart($scope.Ci0,$scope.Ci1,$scope.Ci2,$scope.Ci3,$scope.Ci4,$scope.Ci5,$scope.Ci6,$scope.Ci7,$scope.Ci8,$scope.Ci9,$scope.Ci10,$scope.Ci11,'Cichart1')
         })
     };
->>>>>>> 70840818b762a56a27c2deeb5c86088bba095c47
+
 
     google.charts.load('current', {'packages': ['corechart'],'callback': drawChart});
     google.charts.setOnLoadCallback(drawChart);
