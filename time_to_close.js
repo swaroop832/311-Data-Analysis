@@ -8,36 +8,88 @@ app.controller("MinCtrl",function ($scope,$http) {
 
             $scope.avg_days_2010 = Math.round(value.data[0].avg_days_to_close);
 
-        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2011").then(function (value) {
+            $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2011").then(function (value) {
 
-            $scope.avg_days_2011 = Math.round(value.data[0].avg_days_to_close);
+                $scope.avg_days_2011 = Math.round(value.data[0].avg_days_to_close);
 
-        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2012").then(function (value) {
+                $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2012").then(function (value) {
 
-            $scope.avg_days_2012 = Math.round(value.data[0].avg_days_to_close);
+                    $scope.avg_days_2012 = Math.round(value.data[0].avg_days_to_close);
 
-        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2013").then(function (value) {
+                    $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2013").then(function (value) {
 
-            $scope.avg_days_2013 = Math.round(value.data[0].avg_days_to_close);
+                        $scope.avg_days_2013 = Math.round(value.data[0].avg_days_to_close);
 
-        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2014").then(function (value) {
+                        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2014").then(function (value) {
 
-            $scope.avg_days_2014 = Math.round(value.data[0].avg_days_to_close);
+                            $scope.avg_days_2014 = Math.round(value.data[0].avg_days_to_close);
 
-        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2015").then(function (value) {
+                            $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2015").then(function (value) {
 
-            $scope.avg_days_2015 = Math.round(value.data[0].avg_days_to_close);
+                                $scope.avg_days_2015 = Math.round(value.data[0].avg_days_to_close);
 
-        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2016").then(function (value) {
+                                $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2016").then(function (value) {
 
-            $scope.avg_days_2016 = Math.round(value.data[0].avg_days_to_close);
+                                    $scope.avg_days_2016 = Math.round(value.data[0].avg_days_to_close);
 
-        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2017").then(function (value) {
+                                    $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2017").then(function (value) {
 
-            $scope.avg_days_2017 = Math.round(value.data[0].avg_days_to_close);
-        drawChartx($scope.avg_days_2010,$scope.avg_days_2011,$scope.avg_days_2012,$scope.avg_days_2013,$scope.avg_days_2014,$scope.avg_days_2015,$scope.avg_days_2016,$scope.avg_days_2017,'kc_chart1');
-        });});});});});});});});
+                                        $scope.avg_days_2017 = Math.round(value.data[0].avg_days_to_close);
+                                        drawChartx($scope.avg_days_2010, $scope.avg_days_2011, $scope.avg_days_2012, $scope.avg_days_2013, $scope.avg_days_2014, $scope.avg_days_2015, $scope.avg_days_2016, $scope.avg_days_2017, 'kc_chart1');
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        });
     };
+
+
+        $scope.nyfunction = function () {
+
+            $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2010").then(function (value) {
+
+                $scope.avg_days_2010 = Math.round(value.data[0].avg_days_to_close);
+
+                $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2011").then(function (value) {
+
+                    $scope.avg_days_2011 = Math.round(value.data[0].avg_days_to_close);
+
+                    $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2012").then(function (value) {
+
+                        $scope.avg_days_2012 = Math.round(value.data[0].avg_days_to_close);
+
+                        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2013").then(function (value) {
+
+                            $scope.avg_days_2013 = Math.round(value.data[0].avg_days_to_close);
+
+                            $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2014").then(function (value) {
+
+                                $scope.avg_days_2014 = Math.round(value.data[0].avg_days_to_close);
+
+                                $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2015").then(function (value) {
+
+                                    $scope.avg_days_2015 = Math.round(value.data[0].avg_days_to_close);
+
+                                    $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2016").then(function (value) {
+
+                                        $scope.avg_days_2016 = Math.round(value.data[0].avg_days_to_close);
+
+                                        $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=avg(days_to_close)&creation_year=2017").then(function (value) {
+
+                                            $scope.avg_days_2017 = Math.round(value.data[0].avg_days_to_close);
+                                            drawChartx($scope.avg_days_2010, $scope.avg_days_2011, $scope.avg_days_2012, $scope.avg_days_2013, $scope.avg_days_2014, $scope.avg_days_2015, $scope.avg_days_2016, $scope.avg_days_2017, 'kc_chart1');
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        };
 
     google.charts.load('current', {'packages': ['corechart']});
     google.charts.setOnLoadCallback(drawChartx);
