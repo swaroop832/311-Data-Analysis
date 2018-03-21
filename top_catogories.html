@@ -105,6 +105,15 @@
             <ul class="nav nav-pills nav-stacked list1" >
                 <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
                 <li><a data-toggle="pill" href="#Kansas_City">Kansas City</a></li>
+                <li><a data-toggle="pill" href="#new_York_City">NewYork City</a></li>
+                <li><a data-toggle="pill" href="#austin">Austin, TX</a></li>
+                <li><a data-toggle="pill" href="#baton_Rouge">Baton Rouge, LA</a></li>
+                <li><a data-toggle="pill" href="#chattanooga">Chattanooga, TN</a></li>
+                <li><a data-toggle="pill" href="#gainesville">Gainesville, FL</a></li>
+                <li><a data-toggle="pill" href="#new_Orleans">New Orleans, LA</a></li>
+                <li><a data-toggle="pill" href="#san_Francisco">San Francisco, CA</a></li>
+                <li><a data-toggle="pill" href="#cincinnati">Cincinnati, OH</a></li>
+                <li><a data-toggle="pill" href="#oakland">Oakland, CA</a></li>
             </ul><br>
         </div>
         <div class="col-sm-9 container1">
@@ -118,7 +127,7 @@
                     <div class="row">
                         <h2 class="page-header text-center text-primary">Kansas City</h2>
                         <input type="text" id="selected_year" name="selected_year" value="2017" ng-model="selected_year" style="float: left">
-                        <button class="button" data-ng-click = "kcfunction1(selected_year)">Get Results</button>
+                        <button class="button" data-ng-click = "kcfunction(selected_year)">Get Results</button>
                         <h5 class="page-header text-center text-primary">Please Enter a year between <b>2007-2017</b> to get results</h5>
                         <div class="text-center">
                             <div class="col-md-6 col-md-offset-3">
@@ -147,46 +156,31 @@
                 <!--New York City, NY-->
                 <div id="new_York_City" class="tab-pane fade">
                     <div class="row">
-                        <h2 class="page-header text-center text-primary">New York City</h2>
+                        <h2 class="page-header text-center text-primary">NewYork City</h2>
+                        <input type="text" name="selected_year"  ng-model="selected_year" style="float: left">
+                        <button class="button" data-ng-click = "nyfunction(selected_year)">Get Results</button>
+                        <h5 class="page-header text-center text-primary">Please Enter a year between <b>2010-2017</b> to get results</h5>
                         <div class="text-center">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
+                            <div class="col-md-6 col-md-offset-3">
                                 <table class="table table-primary table-bodered text-primary text-center">
                                     <thead>
                                     <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> No. of requests</th>
+                                        <th style="text-align: center">Category</th>
+                                        <th style="text-align: center">No. of requests</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="x in nycvalue | limitTo : 7 ">
-                                        <td>{{x.date_extract_y_created_date}}</td>
+                                    <tr ng-repeat="x in nyvalue ">
+                                        <td>{{x.complaint_type}}</td>
                                         <td>{{x.count_unique_key}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> Population</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in population">
-                                        <td>{{x.Year}}</td>
-                                        <td>{{x.NewYork_City}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div id="ny_chart1" style="float: left; margin-left: 50px"></div>
-                        <div id="ny_chart2" style="margin-left: 550px"></div>
+                    <div class="image1">
+                        <div id="nychart1" style="margin-left: 150px"></div>
                     </div>
                 </div>
 
@@ -194,99 +188,68 @@
                 <!--Austin, TX-->
                 <div id="austin" class="tab-pane fade ">
                     <div class="row">
-                        <h2 class="page-header text-center text-primary">Austin City</h2>
+                        <h2 class="page-header text-center text-primary">Austin</h2>
+                        <input type="text" name="selected_year"  ng-model="selected_year" style="float: left">
+                        <button class="button" data-ng-click = "aufunction(selected_year)">Get Results</button>
+                        <h5 class="page-header text-center text-primary">Please Enter a year between <b>2013-2017</b> to get results</h5>
                         <div class="text-center">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
+                            <div class="col-md-6 col-md-offset-3">
                                 <table class="table table-primary table-bodered text-primary text-center">
                                     <thead>
                                     <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> No. of requests</th>
+                                        <th style="text-align: center">Category</th>
+                                        <th style="text-align: center">No. of requests</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="x in auvalue | limitTo : 6 ">
-                                        <td>{{x.year}}</td>
+                                    <tr ng-repeat="x in auvalue ">
+                                        <td>{{x.sr_type_desc}}</td>
                                         <td>{{x.count_sr_number}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> Population</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in population">
-                                        <td>{{x.Year}}</td>
-                                        <td>{{x.Austin}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div id="au_chart1" style="float: left; margin-left: 50px"></div>
-                        <div id="au_chart2" style="margin-left: 550px"></div>
+                    <div class="image1">
+                        <div id="auchart1" style="margin-left: 150px"></div>
                     </div>
                 </div>
 
                 <!--Baltimore, MD-->
                 <div id="baltimore" class="tab-pane fade ">
-                    <h6>Unable to extract date from the data column</h6>
+                    <h2>Work in progress. (Unable to extract date from the data column)</h2>
                 </div>
 
                 <!--Baton Rouge, LA-->
                 <div id="baton_Rouge" class="tab-pane fade ">
                     <div class="row">
                         <h2 class="page-header text-center text-primary">Baton Rouge</h2>
+                        <input type="text" name="selected_year"  ng-model="selected_year" style="float: left">
+                        <button class="button" data-ng-click = "bafunction(selected_year)">Get Results</button>
+                        <h5 class="page-header text-center text-primary">Please Enter a year between <b>2016-2017</b> to get results</h5>
                         <div class="text-center">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
+                            <div class="col-md-6 col-md-offset-3">
                                 <table class="table table-primary table-bodered text-primary text-center">
                                     <thead>
                                     <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> No. of requests</th>
+                                        <th style="text-align: center">Category</th>
+                                        <th style="text-align: center">No. of requests</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="x in bavalue | limitTo : 6 ">
-                                        <td>{{x.year}}</td>
+                                    <tr ng-repeat="x in bavalue ">
+                                        <td>{{x.division}}</td>
                                         <td>{{x.count_id}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> Population</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in population">
-                                        <td>{{x.Year}}</td>
-                                        <td>{{x.Baton_Rouge}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div id="ba_chart1" style="float: left; margin-left: 50px"></div>
-                        <div id="ba_chart2" style="margin-left: 550px"></div>
+                    <div class="image1">
+                        <div id="bachart1" style="margin-left: 150px"></div>
                     </div>
-
                 </div>
 
                 <!--Boston , MA-->
@@ -362,83 +325,54 @@
                 <!--Chattanooga, TN-->
                 <div id="chattanooga" class="tab-pane fade ">
                     <div class="row">
-                        <h2 class="page-header text-center text-primary">Chattanooga City</h2>
+                        <h2 class="page-header text-center text-primary">Chattanooga</h2>
+                        <input type="text" name="selected_year"  ng-model="selected_year" style="float: left">
+                        <button class="button" data-ng-click = "ctfunction(selected_year)">Get Results</button>
+                        <h5 class="page-header text-center text-primary">Please Enter a year between <b>2010-2017</b> to get results</h5>
                         <div class="text-center">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
+                            <div class="col-md-6 col-md-offset-3">
                                 <table class="table table-primary table-bodered text-primary text-center">
                                     <thead>
                                     <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> No. of requests</th>
+                                        <th style="text-align: center">Category</th>
+                                        <th style="text-align: center">No. of requests</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="x in ctvalue | limitTo : 7 : 7 ">
-                                        <td>{{x.year}}</td>
-                                        <td>{{x.count_description}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> Population</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in population">
-                                        <td>{{x.Year}}</td>
-                                        <td>{{x.Chattanooga}}</td>
+                                    <tr ng-repeat="x in ctvalue ">
+                                        <td>{{x.description}}</td>
+                                        <td>{{x.count_service_request_key}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div id="ct_chart1" style="float: left; margin-left: 50px"></div>
-                        <div id="ct_chart2" style="margin-left: 550px"></div>
+                    <div class="image1">
+                        <div id="ctchart1" style="margin-left: 150px"></div>
                     </div>
                 </div>
 
                 <!--Chicago, IL-->
                 <div id="chicago" class="tab-pane fade ">
                     <div class="row">
-                        <h2 class="page-header text-center text-primary">Chicago</h2>
+                        <h2 class="page-header text-center text-primary">Oakland</h2>
+                        <input type="text" name="selected_year"  ng-model="selected_year" style="float: left">
+                        <button class="button" data-ng-click = "chifunction(selected_year)">Get Results</button>
+                        <h5 class="page-header text-center text-primary">Please Enter a year between <b>2014-2017</b> to get results</h5>
                         <div class="text-center">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
+                            <div class="col-md-6 col-md-offset-3">
                                 <table class="table table-primary table-bodered text-primary text-center">
                                     <thead>
                                     <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> No. of requests</th>
+                                        <th style="text-align: center">Category</th>
+                                        <th style="text-align: center">No. of requests</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="x in chvalue | limitTo : 7 : 9">
-                                        <td>{{x.year}}</td>
-                                        <td>{{x.count_case_number}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> Population</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in population">
-                                        <td>{{x.Year}}</td>
-                                        <td>{{x.chicago}}</td>
+                                    <tr ng-repeat="x in chivalue ">
+                                        <td>{{x.reqcategory}}</td>
+                                        <td>{{x.count_requestid}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -446,10 +380,7 @@
                         </div>
                     </div>
                     <div class="image1">
-                        <div id="ch_chart1" style="float: left; margin-left: 50px"></div>
-                    </div>
-                    <div class="image1">
-                        <div id="ch_chart2" style="margin-left: 550px"></div>
+                        <div id="chichart1" style="margin-left: 150px"></div>
                     </div>
                 </div>
 
@@ -457,45 +388,30 @@
                 <div id="gainesville" class="tab-pane fade ">
                     <div class="row">
                         <h2 class="page-header text-center text-primary">Gainesville</h2>
+                        <input type="text" name="selected_year"  ng-model="selected_year" style="float: left">
+                        <button class="button" data-ng-click = "gafunction(selected_year)">Get Results</button>
+                        <h5 class="page-header text-center text-primary">Please Enter a year between <b>2015-2017</b> to get results</h5>
                         <div class="text-center">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
+                            <div class="col-md-6 col-md-offset-3">
                                 <table class="table table-primary table-bodered text-primary text-center">
                                     <thead>
                                     <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> No. of requests</th>
+                                        <th style="text-align: center">Category</th>
+                                        <th style="text-align: center">No. of requests</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="x in gainvalue ">
-                                        <td>{{x.year}}</td>
+                                    <tr ng-repeat="x in gavalue ">
+                                        <td>{{x.category}}</td>
                                         <td>{{x.count_id}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> Population</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in population">
-                                        <td>{{x.Year}}</td>
-                                        <td>{{x.Gainesville}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div id="gain_chart1" style="float: left; margin-left: 50px"></div>
-                        <div id="gain_chart2" style="margin-left: 550px"></div>
+                    <div class="image1">
+                        <div id="gachart1" style="margin-left: 150px"></div>
                     </div>
                 </div>
 
@@ -743,45 +659,30 @@
                 <div id="new_Orleans" class="tab-pane fade ">
                     <div class="row">
                         <h2 class="page-header text-center text-primary">New Orleans</h2>
+                        <input type="text" name="selected_year"  ng-model="selected_year" style="float: left">
+                        <button class="button" data-ng-click = "nrfunction(selected_year)">Get Results</button>
+                        <h5 class="page-header text-center text-primary">Please Enter a year between <b>2012-2017</b> to get results</h5>
                         <div class="text-center">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
+                            <div class="col-md-6 col-md-offset-3">
                                 <table class="table table-primary table-bodered text-primary text-center">
                                     <thead>
                                     <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> No. of requests</th>
+                                        <th style="text-align: center">Category</th>
+                                        <th style="text-align: center">No. of requests</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="x in novalue">
-                                        <td>{{x.year}}</td>
+                                    <tr ng-repeat="x in nrvalue ">
+                                        <td>{{x.issue_type}}</td>
                                         <td>{{x.count_ticket_id}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> Population</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in population">
-                                        <td>{{x.Year}}</td>
-                                        <td>{{x.New_Orleans}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div id="nr_chart1" style="float: left; margin-left: 50px"></div>
-                        <div id="nr_chart2" style="margin-left: 550px"></div>
+                    <div class="image1">
+                        <div id="nrchart1" style="margin-left: 150px"></div>
                     </div>
                 </div>
 
@@ -906,46 +807,31 @@
                 <!--San Francisco, CA-->
                 <div id="san_Francisco" class="tab-pane fade ">
                     <div class="row">
-                        <h2 class="page-header text-center text-primary">san Francisco</h2>
+                        <h2 class="page-header text-center text-primary">San Francisco</h2>
+                        <input type="text" name="selected_year"  ng-model="selected_year" style="float: left">
+                        <button class="button" data-ng-click = "sffunction(selected_year)">Get Results</button>
+                        <h5 class="page-header text-center text-primary">Please Enter a year between <b>2010-2017</b> to get results</h5>
                         <div class="text-center">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
+                            <div class="col-md-6 col-md-offset-3">
                                 <table class="table table-primary table-bodered text-primary text-center">
                                     <thead>
                                     <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> No. of requests</th>
+                                        <th style="text-align: center">Category</th>
+                                        <th style="text-align: center">No. of requests</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="x in sfvalue">
-                                        <td>{{x.year}}</td>
+                                    <tr ng-repeat="x in sfvalue ">
+                                        <td>{{x.service_name}}</td>
                                         <td>{{x.count_service_request_id}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> Population</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in population">
-                                        <td>{{x.Year}}</td>
-                                        <td>{{x.San_Francisco}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div id="sf_chart1" style="float: left; margin-left: 50px"></div>
-                        <div id="sf_chart2" style="margin-left: 550px"></div>
+                    <div class="image1">
+                        <div id="sfchart1" style="margin-left: 150px"></div>
                     </div>
                 </div>
 
@@ -1031,46 +917,31 @@
                 <!--Cincinnati, OH-->
                 <div id="cincinnati" class="tab-pane fade ">
                     <div class="row">
-                        <h2 class="page-header text-center text-primary">Cincinnati City</h2>
+                        <h2 class="page-header text-center text-primary">Cincinnati</h2>
+                        <input type="text" name="selected_year"  ng-model="selected_year" style="float: left">
+                        <button class="button" data-ng-click = "cincifunction(selected_year)">Get Results</button>
+                        <h5 class="page-header text-center text-primary">Please Enter a year between <b>2014-2017</b> to get results</h5>
                         <div class="text-center">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
+                            <div class="col-md-6 col-md-offset-3">
                                 <table class="table table-primary table-bodered text-primary text-center">
                                     <thead>
                                     <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> No. of requests</th>
+                                        <th style="text-align: center">Category</th>
+                                        <th style="text-align: center">No. of requests</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="x in cinvalue | limitTo : 5">
-                                        <td>{{x.year | date :"y"}}</td>
+                                    <tr ng-repeat="x in cincivalue ">
+                                        <td>{{x.service_name}}</td>
                                         <td>{{x.count_service_request_id}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> Population</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in population">
-                                        <td>{{x.Year}}</td>
-                                        <td>{{x.Cincinnati}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div id="cin_chart1" style="margin-left: 50px;float: left"></div>
-                        <div id="cin_chart2" style="margin-left: 550px"></div>
+                    <div class="image1">
+                        <div id="cincichart1" style="margin-left: 150px"></div>
                     </div>
                 </div>
 
@@ -1086,72 +957,7 @@
 
                 <!--Santa Monica, CA-->
                 <div id="santa_Monica" class="tab-pane fade ">
-                    <div class="row">
-                        <h2 class="page-header text-center text-primary">Santa Monica</h2>
-                        <div class="text-center">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> No. of requests</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>{{2010}}</td>
-                                        <td>{{santa2010 }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>{{2011}}</td>
-                                        <td>{{santa2011}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>{{2012}}</td>
-                                        <td>{{santa2012}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>{{2013}}</td>
-                                        <td>{{santa2013}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>{{2014}}</td>
-                                        <td>{{santa2014}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>{{2015}}</td>
-                                        <td>{{santa2015}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>{{2016}}</td>
-                                        <td>{{santa2016}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> Population</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in population">
-                                        <td>{{x.Year}}</td>
-                                        <td>{{x.SantaMonica}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div id="santa_chart1" style="float: left; margin-left: 50px"></div>
-                        <div id="santa_chart2" style="margin-left: 550px"></div>
-                    </div>
+
                 </div>
 
                 <!--St. Louis, MO-->
@@ -1163,45 +969,30 @@
                 <div id="oakland" class="tab-pane fade ">
                     <div class="row">
                         <h2 class="page-header text-center text-primary">Oakland</h2>
+                        <input type="text" name="selected_year"  ng-model="selected_year" style="float: left">
+                        <button class="button" data-ng-click = "oakfunction(selected_year)">Get Results</button>
+                        <h5 class="page-header text-center text-primary">Please Enter a year between <b>2014-2017</b> to get results</h5>
                         <div class="text-center">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
+                            <div class="col-md-6 col-md-offset-3">
                                 <table class="table table-primary table-bodered text-primary text-center">
                                     <thead>
                                     <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> No. of requests</th>
+                                        <th style="text-align: center">Category</th>
+                                        <th style="text-align: center">No. of requests</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="x in oakvalue | limitTo : 8">
-                                        <td>{{x.year }}</td>
+                                    <tr ng-repeat="x in oakvalue ">
+                                        <td>{{x.reqcategory}}</td>
                                         <td>{{x.count_requestid}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> Population</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in population">
-                                        <td>{{x.Year}}</td>
-                                        <td>{{x.Oakland}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div id="oak_chart1" style="float: left; margin-left: 50px"></div>
-                        <div id="oak_chart2" style="margin-left: 550px"></div>
+                    <div class="image1">
+                        <div id="oakchart1" style="margin-left: 150px"></div>
                     </div>
                 </div>
 
@@ -1220,50 +1011,7 @@
 
                 <!--Denver, CO-->
                 <div id="denver" class="tab-pane fade" >
-                    <div class="row">
-                        <h2 class="page-header text-center text-primary">Denver</h2>
-                        <div class="text-center">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> No. of requests</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in dvvalue">
-                                        <td>{{x.creation_year}}</td>
-                                        <td>{{x.number_of_requests}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> Population</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in population">
-                                        <td>{{x.Year}}</td>
-                                        <td>{{x.Denver}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="image1">
-                        <div id="dv_chart1" style="float: left; margin-left: 50px"></div>
-                    </div>
-                    <div class="image1">
-                        <div id="dv_chart2" style="margin-left: 550px"></div>
-                    </div>
+
                 </div>
 
                 <!--Grand Rapids, MI-->
