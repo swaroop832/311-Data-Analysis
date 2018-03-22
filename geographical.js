@@ -12,7 +12,17 @@ app.controller("MinCtrl",function ($scope,$http) {
                     $scope.auvalue=value3.data[0].count_sr_number;
                     $http.get("https://data.brla.gov/resource/uqxt-dtpe.json?$select=date_extract_y(createdate)%20as%20year,count(id)&$where=year="+selected_year+"&$group=year&$order=year").then(function (value4) {
                         $scope.bavalue = value4.data[0].count_id;
-                        drawMap();
+                        $http.get("https://data.chattlibrary.org/resource/sf89-4qcw.json?$select=date_extract_y(created_date)%20as%20year,count(description)&$group=year&$where=year="+selected_year+"&$order=year").then(function (value5) {
+                            $scope.chtvalue=value5.data[0].count_description;
+                            $http.get("https://data.cityofgainesville.org/resource/cgd2-6k8s.json?$select=date_extract_y(created)%20as%20year,count(id)&$group=year&$where=year="+selected_year+"&$order=year").then(function (value6) {
+                                $scope.gsvalue=value6.data[0].count_id;
+                                $http.get("https://data.nola.gov/resource/m959-fs8u.json?$select=date_extract_y(ticket_created_date_time)%20as%20year,count(ticket_id)&$group=year&$where=year="+selected_year+"&$order=year").then(function (value7) {
+                                    $scope.nrvalue = value7.data[0].count_ticket_id;
+                                    drawMarkersMap();
+                                });
+
+                            })
+                        });
                     })
                 })
             })
@@ -20,32 +30,35 @@ app.controller("MinCtrl",function ($scope,$http) {
     };
 
     google.charts.load('current', {
-        'packages':['geomap'],
+        'packages':['geochart'],
         // Note: you will need to get a mapsApiKey for your project.
         // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
         'mapsApiKey': 'AIzaSyBFVnXftTvVXgdkl_HCb3lXWg9_RnPn644'
     });
-    google.charts.setOnLoadCallback(drawMap);
 
-    function drawMap() {
+    google.charts.setOnLoadCallback(drawMarkersMap);
+
+    function drawMarkersMap() {
         var data = google.visualization.arrayToDataTable([
-            ['City', 'Popularity'],
-            ['New York', 200],
-            ['Boston', 300],
-            ['Miami', 400],
-            ['Chicago', 500],
-            ['Los Angeles', 600],
-            ['Houston', 700]
+            ['City', 'No.of Requests'],
+            ['Kansas City', parseInt($scope.kcvalue)],
+            ['New York', parseInt($scope.nyvalue)],
+            ['Austin',parseInt($scope.auvalue)],
+            ['Baton Rogue',parseInt($scope.bavalue)],
+            ['Chattanooga',parseInt($scope.chtvalue)],
+            ['Gainesville',parseInt($scope.gsvalue)],
+            ['New Orleans',parseInt($scope.nrvalue)]
         ]);
+        var options = {
+            region: 'US',
+            displayMode: 'markers',
+            colorAxis: {colors: ['#00853f', 'black', '#e31b23']},
+            backgroundColor: '#81d4fa',
+            datalessRegionColor: 'azure',
+            defaultColor: '#f5f5f5'
+        };
 
-        var options = {};
-        options['region'] = 'US';
-        options['colors'] = [0xFF8747, 0xFFB581, 0xc06000]; //orange colors
-        options['dataMode'] = 'markers';
-
-        var container = document.getElementById('map_canvas');
-        var geomap = new google.visualization.GeoMap(container);
-        geomap.draw(data, options);
+        var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
     }
-
 });
