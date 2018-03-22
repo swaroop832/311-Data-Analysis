@@ -582,7 +582,6 @@ app.controller("MinCtrl",function ($scope,$http) {
             {"creation_year" : 2015, "number_of_requests" :471694},
             {"creation_year" : 2016, "number_of_requests" :479626}
         ]
-
         drawChartx($scope.dvvalue[0].number_of_requests, $scope.dvvalue[1].number_of_requests, $scope.dvvalue[2].number_of_requests, $scope.dvvalue[3].number_of_requests, $scope.dvvalue[4].number_of_requests, $scope.dvvalue[5].number_of_requests, $scope.dvvalue[6].number_of_requests, 'dv_chart1');
         drawCharty($scope.dvvalue[0].number_of_requests/$scope.population[0].Denver, $scope.dvvalue[1].number_of_requests/$scope.population[1].Denver, $scope.dvvalue[2].number_of_requests/$scope.population[2].Denver, $scope.dvvalue[3].number_of_requests/$scope.population[3].Denver, $scope.dvvalue[4].number_of_requests/$scope.population[4].Denver, $scope.dvvalue[5].number_of_requests/$scope.population[5].Denver, $scope.dvvalue[6].number_of_requests/$scope.population[6].Denver, 'dv_chart2');
 
