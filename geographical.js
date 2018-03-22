@@ -2,6 +2,7 @@ var app = angular.module("app", []);
 
 app.controller("MinCtrl",function ($scope,$http) {
 
+    $("#chart_div").hide();
     $scope.hfunction = function (selected_year) {
 
         $http.get("https://data.kcmo.org/resource/cyqf-nban.json?$select=creation_year,count(case_id)&$group=creation_year&$where=creation_year="+selected_year+"").then(function (value) {
@@ -19,14 +20,8 @@ app.controller("MinCtrl",function ($scope,$http) {
                                 $http.get("https://data.nola.gov/resource/m959-fs8u.json?$select=date_extract_y(ticket_created_date_time)%20as%20year,count(ticket_id)&$group=year&$where=year="+selected_year+"&$order=year").then(function (value7) {
                                     $scope.nrvalue = value7.data[0].count_ticket_id;
                                     drawMarkersMap();
-                                });
-
-                            })
-                        });
-                    })
-                })
-            })
-        });
+                                    $("#chart_div").show();
+                                });})});})})})});
     };
 
     google.charts.load('current', {
