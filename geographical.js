@@ -44,7 +44,7 @@ app.controller("MinCtrl",function ($scope,$http) {
         var data = google.visualization.arrayToDataTable([
             ['City', 'No.of Requests'],
             ['Kansas City', parseInt($scope.kcvalue)],
-           // ['New York', parseInt($scope.nyvalue)],
+            ['New York', parseInt($scope.nyvalue)],
             ['Austin',parseInt($scope.auvalue)],
             ['Baton Rogue',parseInt($scope.bavalue)],
             ['Chattanooga',parseInt($scope.chtvalue)],
