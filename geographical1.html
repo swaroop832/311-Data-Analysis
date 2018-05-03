@@ -1,0 +1,114 @@
+<html lang="en">
+<head>
+    <title>311 City Comparison</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <style>
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        /* Set gray background color and 100% height */
+        /* Set gray background color and 100% height */
+
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            height: 100%;
+            position: fixed;
+            width: 200px;
+            overflow-y: scroll;
+            top: 0;
+            bottom: 0;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {height: auto;}
+        }
+        .container1{
+            margin-left: 15%;
+        }
+        .list1{
+            color : #e7711b
+        }
+
+        .table{
+            color : #e7711b
+        }
+
+        .page-header{
+            color : #e7711b
+        }
+        .button {
+            background-color: #e7711b;
+            border: none;
+            color: white;
+            padding: 5px 4px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 28px;
+            margin: 2px 0px -20px 9px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            width: 260px;
+            height: 66px;
+            font-family: "MS Outlook";
+            letter-spacing: 3px;
+        }
+        .button:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.4),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+        .button:active {
+            transform: translateY(3px);
+        }
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-3 sidenav">
+            <br>
+            <a onclick="window.location='https://311-data-analysis.azurewebsites.net'" class="btn btn-primary">Go Home</a>
+            <h3 class="text-success" style="color : #e7711b">Geographical Analysis</h3>
+            <p style="text-align: justify-all">In a more restricted sense, spatial analysis is the technique applied to structures at the human scale, most notably in the analysis of geographic data. Complex issues arise in spatial analysis, many of which are neither clearly defined nor completely resolved, but form the basis for current research.</p>
+
+        </div>
+        <div style="text-align: center; position: relative; margin-left: 165px; margin-top: 6px;">
+        <h1 style="font-size:36px; font-family: 'Berlin Sans FB' ;" >Click on the city you wish to show its<br/> Geographical Analysis </h1>
+           <br/><br/>
+
+        </div>
+        <div style="position: relative; margin-left: 295px; margin-top: 6px;">
+            <button class="button" onclick="window.open('https://data.kcmo.org/311/311-Call-Center-Service-Requests/7at3-sxhp/data')">Kansas City</button>
+            <button class="button" onclick="window.open('https://www.google.com/')" style="margin-left: 60px">New York</button>
+            <button class="button" onclick="window.open('https://www.google.com/')" style="margin-left: 60px">Austin</button>
+            <br/><br/><br/><br/><br/><br/>
+            <button class="button" onclick="window.open('https://www.google.com/')">Boston</button>
+            <button class="button" onclick="window.open('https://www.google.com/')" style="margin-left: 60px">Los Angeles</button>
+            <button class="button" onclick="window.open('https://www.google.com/')" style="margin-left: 60px">Chattanooga</button>
+        </div>
+
+
+
+    </div>
+</div>
+</body>
+</html>
