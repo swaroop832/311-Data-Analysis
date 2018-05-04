@@ -1,4 +1,4 @@
-var app = angular.module("app", []);
+/*var app = angular.module("app", []);
 
 app.controller("MinCtrl",function ($scope,$http) {
 
@@ -70,3 +70,6 @@ app.controller("MinCtrl",function ($scope,$http) {
     $scope.City = ["Kansas City","New York","Austin","Baton Rogue","Chattanooga","Gainesville","New Orleans","San Francisco","Cincinnati","Oakland","Chicago"]
     console.log($scope.hvalue);
 });
+
+
+*/
