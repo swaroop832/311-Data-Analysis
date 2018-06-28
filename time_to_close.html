@@ -67,6 +67,10 @@
             <ul class="nav nav-pills nav-stacked list1" >
                 <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
                 <li><a data-toggle="pill" href="#Kansas_City" data-ng-click="kcfunction()">Kansas City</a></li>
+                <li><a data-toggle="pill" href="#new_York_City" data-ng-click="nyfunction()">NYC</a></li>
+                <li><a data-toggle="pill" href="#boston" data-ng-click="bsfunction()">Boston</a></li>
+                <li><a data-toggle="pill" href="#denver" data-ng-click="dvfunction()">Denver</a></li>
+                <li><a data-toggle="pill" href="#houston" data-ng-click="hsfunction()">Houston</a></li>
             </ul><br>
         </div>
         <div class="col-sm-9 container1">
@@ -138,44 +142,56 @@
                     <div class="row">
                         <h2 class="page-header text-center text-primary">New York City</h2>
                         <div class="text-center">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4 col-md-offset-3">
                                 <table class="table table-primary table-bodered text-primary text-center">
                                     <thead>
                                     <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> No. of requests</th>
+                                        <th style="text-align: center">Year</th>
+                                        <th style="text-align: center">Number of Days Taken(AVG)</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="x in nycvalue | limitTo : 7 ">
-                                        <td>{{x.date_extract_y_created_date}}</td>
-                                        <td>{{x.count_unique_key}}</td>
+                                    <tr>
+                                        <td>2010</td>
+                                        <td>{{avg_days_2010}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2011</td>
+                                        <td>{{avg_days_2011}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2012</td>
+                                        <td>{{avg_days_2012}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2013</td>
+                                        <td>{{avg_days_2013}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2014</td>
+                                        <td>{{avg_days_2014}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2015</td>
+                                        <td>{{avg_days_2015}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016</td>
+                                        <td>{{avg_days_2016}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017</td>
+                                        <td>{{avg_days_2017}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> Population</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in population">
-                                        <td>{{x.Year}}</td>
-                                        <td>{{x.NewYork_City}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+
                         </div>
                     </div>
-                    <div class="row">
-                        <div id="ny_chart1" style="float: left; margin-left: 50px"></div>
-                        <div id="ny_chart2" style="margin-left: 550px"></div>
+                    <div class="image1">
+                        <div id="ny_chart1" style="margin-left: 10px"></div>
                     </div>
                 </div>
 
@@ -279,74 +295,63 @@
                 </div>
 
                 <!--Boston , MA-->
-                <div id="boston" class="tab-pane fade ">
+                <div id="boston" class="tab-pane fade">
                     <div class="row">
-                        <h2 class="page-header text-center text-primary">Boston City</h2>
+                        <h2 class="page-header text-center text-primary">Boston</h2>
                         <div class="text-center">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4 col-md-offset-3">
                                 <table class="table table-primary table-bodered text-primary text-center">
                                     <thead>
                                     <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> No. of requests</th>
+                                        <th style="text-align: center">Year</th>
+                                        <th style="text-align: center">Number of Days Taken(AVG)</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td>{{2010}}</td>
-                                        <td>{{bsvalue2010}}</td>
+                                        <td>2010</td>
+                                        <td>{{avg_days_2010}}</td>
                                     </tr>
                                     <tr>
-                                        <td>{{2011}}</td>
-                                        <td>{{bsvalue2011}}</td>
+                                        <td>2011</td>
+                                        <td>{{avg_days_2011}}</td>
                                     </tr>
                                     <tr>
-                                        <td>{{2012}}</td>
-                                        <td>{{bsvalue2012}}</td>
+                                        <td>2012</td>
+                                        <td>{{avg_days_2012}}</td>
                                     </tr>
                                     <tr>
-                                        <td>{{2013}}</td>
-                                        <td>{{bsvalue2013}}</td>
+                                        <td>2013</td>
+                                        <td>{{avg_days_2013}}</td>
                                     </tr>
                                     <tr>
-                                        <td>{{2014}}</td>
-                                        <td>{{bsvalue2014}}</td>
+                                        <td>2014</td>
+                                        <td>{{avg_days_2014}}</td>
                                     </tr>
                                     <tr>
-                                        <td>{{2015}}</td>
-                                        <td>{{bsvalue2015}}</td>
+                                        <td>2015</td>
+                                        <td>{{avg_days_2015}}</td>
                                     </tr>
                                     <tr>
-                                        <td>{{2016}}</td>
-                                        <td>{{bsvalue2016}}</td>
+                                        <td>2016</td>
+                                        <td>{{avg_days_2016}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017</td>
+                                        <td>{{avg_days_2017}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> Population</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in population">
-                                        <td>{{x.Year}}</td>
-                                        <td>{{x.Boston}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+
                         </div>
                     </div>
-                    <div class="row">
-                        <div id="bs_chart1" style="float: left; margin-left: 50px"></div>
-                        <div id="bs_chart2" style="margin-left: 550px"></div>
+                    <div class="image1">
+                        <div id="bs_chart1" style="margin-left: 10px"></div>
                     </div>
                 </div>
+
 
                 <!--Chattanooga, TN-->
                 <div id="chattanooga" class="tab-pane fade ">
@@ -442,6 +447,66 @@
                     </div>
                 </div>
 
+
+                <!--Denver, CO-->
+                <div id="denver" class="tab-pane fade">
+                    <div class="row">
+                        <h2 class="page-header text-center text-primary">Denver</h2>
+                        <div class="text-center">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4 col-md-offset-3">
+                                <table class="table table-primary table-bodered text-primary text-center">
+                                    <thead>
+                                    <tr class="text-center">
+                                        <th style="text-align: center">Year</th>
+                                        <th style="text-align: center">Number of Days Taken(AVG)</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>2010</td>
+                                        <td>{{avg_days_2010}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2011</td>
+                                        <td>{{avg_days_2011}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2012</td>
+                                        <td>{{avg_days_2012}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2013</td>
+                                        <td>{{avg_days_2013}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2014</td>
+                                        <td>{{avg_days_2014}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2015</td>
+                                        <td>{{avg_days_2015}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016</td>
+                                        <td>{{avg_days_2016}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017</td>
+                                        <td>{{avg_days_2017}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="image1">
+                        <div id="dv_chart1" style="margin-left: 10px"></div>
+                    </div>
+                </div>
+
+
                 <!--Gainesville, FL-->
                 <div id="gainesville" class="tab-pane fade ">
                     <div class="row">
@@ -493,66 +558,57 @@
                     <div class="row">
                         <h2 class="page-header text-center text-primary">Houston</h2>
                         <div class="text-center">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4 col-md-offset-3">
                                 <table class="table table-primary table-bodered text-primary text-center">
                                     <thead>
                                     <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> No. of requests</th>
+                                        <th style="text-align: center">Year</th>
+                                        <th style="text-align: center">Number of Days Taken(AVG)</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td>{{2011}}</td>
-                                        <td>{{hsvalue2011}}</td>
+                                        <td>2010</td>
+                                        <td>{{avg_days_2010}}</td>
                                     </tr>
                                     <tr>
-                                        <td>{{2012}}</td>
-                                        <td>{{hsvalue2012}}</td>
+                                        <td>2011</td>
+                                        <td>{{avg_days_2011}}</td>
                                     </tr>
                                     <tr>
-                                        <td>{{2013}}</td>
-                                        <td>{{hsvalue2013}}</td>
+                                        <td>2012</td>
+                                        <td>{{avg_days_2012}}</td>
                                     </tr>
                                     <tr>
-                                        <td>{{2014}}</td>
-                                        <td>{{hsvalue2014}}</td>
+                                        <td>2013</td>
+                                        <td>{{avg_days_2013}}</td>
                                     </tr>
                                     <tr>
-                                        <td>{{2015}}</td>
-                                        <td>{{hsvalue2015}}</td>
+                                        <td>2014</td>
+                                        <td>{{avg_days_2014}}</td>
                                     </tr>
                                     <tr>
-                                        <td>{{2016}}</td>
-                                        <td>{{hsvalue2016}}</td>
+                                        <td>2015</td>
+                                        <td>{{avg_days_2015}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016</td>
+                                        <td>{{avg_days_2016}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017</td>
+                                        <td>{{avg_days_2017}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> Population</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in population">
-                                        <td>{{x.Year}}</td>
-                                        <td>{{x.Washington}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+
                         </div>
                     </div>
-                    <div class="row">
-                        <div id="hs_chart1" style="float: left; margin-left: 50px"></div>
-                        <div id="hs_chart2" style="margin-left: 550px"></div>
+                    <div class="image1">
+                        <div id="hs_chart1" style="margin-left: 10px"></div>
                     </div>
-
                 </div>
 
                 <!--Johns Creek, GA-->
@@ -1207,53 +1263,7 @@
                     <h1>NO data found</h1>
                 </div>
 
-                <!--Denver, CO-->
-                <div id="denver" class="tab-pane fade" >
-                    <div class="row">
-                        <h2 class="page-header text-center text-primary">Denver</h2>
-                        <div class="text-center">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> No. of requests</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in dvvalue">
-                                        <td>{{x.creation_year}}</td>
-                                        <td>{{x.number_of_requests}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="col-md-4">
-                                <table class="table table-primary table-bodered text-primary text-center">
-                                    <thead>
-                                    <tr class="text-center">
-                                        <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> Population</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr ng-repeat="x in population">
-                                        <td>{{x.Year}}</td>
-                                        <td>{{x.Denver}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="image1">
-                        <div id="dv_chart1" style="float: left; margin-left: 50px"></div>
-                    </div>
-                    <div class="image1">
-                        <div id="dv_chart2" style="margin-left: 550px"></div>
-                    </div>
-                </div>
+
 
                 <!--Grand Rapids, MI-->
                 <div id="grand_Rapids" class="tab-pane fade ">
