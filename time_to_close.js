@@ -87,7 +87,8 @@ app.controller("MinCtrl",function ($scope,$http) {
         $scope.avg_days_2015 = 7;
         $scope.avg_days_2016 = 1;
         $scope.avg_days_2017 = 0;
-        drawChartx($scope.avg_days_2010, $scope.avg_days_2011, $scope.avg_days_2012, $scope.avg_days_2013, $scope.avg_days_2014, $scope.avg_days_2015, $scope.avg_days_2016, $scope.avg_days_2017, 'dv_chart1');
+        $scope.avg_days_2018 = 0;
+        drawChartx($scope.avg_days_2010, $scope.avg_days_2011, $scope.avg_days_2012, $scope.avg_days_2013, $scope.avg_days_2014, $scope.avg_days_2015, $scope.avg_days_2016, $scope.avg_days_2017, $scope.avg_days_2018, 'dv_chart1');
     };
     $scope.hsfunction = function () {
         $scope.avg_days_2010 = -1;
@@ -98,7 +99,8 @@ app.controller("MinCtrl",function ($scope,$http) {
         $scope.avg_days_2015 = 19;
         $scope.avg_days_2016 = 22;
         $scope.avg_days_2017 = 14;
-        drawChartx($scope.avg_days_2010, $scope.avg_days_2011, $scope.avg_days_2012, $scope.avg_days_2013, $scope.avg_days_2014, $scope.avg_days_2015, $scope.avg_days_2016, $scope.avg_days_2017, 'hs_chart1');
+        $scope.avg_days_2018 = 12;
+        drawChartx($scope.avg_days_2010, $scope.avg_days_2011, $scope.avg_days_2012, $scope.avg_days_2013, $scope.avg_days_2014, $scope.avg_days_2015, $scope.avg_days_2016, $scope.avg_days_2017, $scope.avg_days_2018, 'hs_chart1');
     };
 
 
