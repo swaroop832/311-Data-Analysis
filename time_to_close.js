@@ -61,7 +61,8 @@ app.controller("MinCtrl",function ($scope,$http) {
         $scope.avg_days_2015 = 16;
         $scope.avg_days_2016 = 12;
         $scope.avg_days_2017 = 8;
-        drawChartx($scope.avg_days_2010, $scope.avg_days_2011, $scope.avg_days_2012, $scope.avg_days_2013, $scope.avg_days_2014, $scope.avg_days_2015, $scope.avg_days_2016, $scope.avg_days_2017, 'ny_chart1');
+        $scope.avg_days_2018 = 8;
+        drawChartx($scope.avg_days_2010, $scope.avg_days_2011, $scope.avg_days_2012, $scope.avg_days_2013, $scope.avg_days_2014, $scope.avg_days_2015, $scope.avg_days_2016, $scope.avg_days_2017, $scope.avg_days_2018, 'ny_chart1');
     };
 
     $scope.bsfunction = function () {
