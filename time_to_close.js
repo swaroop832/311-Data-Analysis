@@ -126,8 +126,7 @@ app.controller("MinCtrl",function ($scope,$http) {
             ['2015', parseInt(var5)],
             ['2016', parseInt(var6)],
             ['2017', parseInt(var7)],
-            ['2018', parseInt(var8)],
-            ['2019', parseInt(var9)]
+            ['2018', parseInt(var8)]          
         ]);
         var options = {
             title: 'Time_to_close ',
