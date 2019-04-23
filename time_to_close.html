@@ -214,13 +214,45 @@
                                     <thead>
                                     <tr class="text-center">
                                         <th style="text-align: center">year</th>
-                                        <th style="text-align: center"> No. of requests</th>
+                                        <th style="text-align: center">Number of Days Taken(AVG)</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="x in auvalue | limitTo : 6 ">
-                                        <td>{{x.year}}</td>
-                                        <td>{{x.count_sr_number}}</td>
+                                    <tr>
+                                        <td>2010</td>
+                                        <td>{{avg_days_2010}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2011</td>
+                                        <td>{{avg_days_2011}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2012</td>
+                                        <td>{{avg_days_2012}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2013</td>
+                                        <td>{{avg_days_2013}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2014</td>
+                                        <td>{{avg_days_2014}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2015</td>
+                                        <td>{{avg_days_2015}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016</td>
+                                        <td>{{avg_days_2016}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017</td>
+                                        <td>{{avg_days_2017}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2018</td>
+                                        <td>{{avg_days_2018}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -243,11 +275,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div id="au_chart1" style="float: left; margin-left: 50px"></div>
-                        <div id="au_chart2" style="margin-left: 550px"></div>
+                    <div class="image1">
+                        <div id="au_chart1" style="margin-left: 10px"></div>
                     </div>
                 </div>
+                
+                
 
                 <!--Baltimore, MD-->
                 <div id="baltimore" class="tab-pane fade ">
