@@ -104,6 +104,18 @@ app.controller("MinCtrl",function ($scope,$http) {
     };
 
 
+    $scope.aufunction = function () {
+        $scope.avg_days_2010 = 0;
+        $scope.avg_days_2011 = 0;
+        $scope.avg_days_2012 = 0;
+        $scope.avg_days_2013 = 5.23;
+        $scope.avg_days_2014 = 24.58;
+        $scope.avg_days_2015 = 26.11;
+        $scope.avg_days_2016 = 24.76;
+        $scope.avg_days_2017 = 27.1;
+        $scope.avg_days_2018 = 26.6;
+        drawChartx($scope.avg_days_2010, $scope.avg_days_2011, $scope.avg_days_2012, $scope.avg_days_2013, $scope.avg_days_2014, $scope.avg_days_2015, $scope.avg_days_2016, $scope.avg_days_2017, $scope.avg_days_2018, 'au_chart1');
+    };
 
 
 
