@@ -8,25 +8,27 @@ app.controller("MinCtrl",function ($scope,$http) {
 
             $scope.kcvalue = value.data;
             //email
-            $scope.kc_email_2010 = parseInt($scope.kcvalue[41].count_case_id);
-            $scope.kc_email_2011 = parseInt($scope.kcvalue[42].count_case_id);
-            $scope.kc_email_2012 = parseInt($scope.kcvalue[43].count_case_id);
-            $scope.kc_email_2013 = parseInt($scope.kcvalue[41].count_case_id);
-            $scope.kc_email_2014 = parseInt($scope.kcvalue[42].count_case_id);
-            $scope.kc_email_2015 = parseInt($scope.kcvalue[43].count_case_id);
-            $scope.kc_email_2016 = parseInt($scope.kcvalue[44].count_case_id);
-            $scope.kc_email_2017 = parseInt($scope.kcvalue[45].count_case_id);
-            $scope.kc_email_2018 = parseInt($scope.kcvalue[46].count_case_id);
+            $scope.kc_email_2010 = parseInt($scope.kcvalue[43].count_case_id);
+            $scope.kc_email_2011 = parseInt($scope.kcvalue[44].count_case_id);
+            $scope.kc_email_2012 = parseInt($scope.kcvalue[45].count_case_id);
+            $scope.kc_email_2013 = parseInt($scope.kcvalue[46].count_case_id);
+            $scope.kc_email_2014 = parseInt($scope.kcvalue[47].count_case_id);
+            $scope.kc_email_2015 = parseInt($scope.kcvalue[48].count_case_id);
+            $scope.kc_email_2016 = parseInt($scope.kcvalue[49].count_case_id);
+            $scope.kc_email_2017 = parseInt($scope.kcvalue[50].count_case_id);
+            $scope.kc_email_2018 = parseInt($scope.kcvalue[51].count_case_id);
+            $scope.kc_email_2019 = parseInt($scope.kcvalue[52].count_case_id);
             //fax
-            $scope.kc_fax_2010 = parseInt($scope.kcvalue[50].count_case_id);
-            $scope.kc_fax_2011 = parseInt($scope.kcvalue[51].count_case_id);
-            $scope.kc_fax_2012 = parseInt($scope.kcvalue[52].count_case_id);
-            $scope.kc_fax_2013 = parseInt($scope.kcvalue[53].count_case_id);
-            $scope.kc_fax_2014 = parseInt($scope.kcvalue[54].count_case_id);
+            $scope.kc_fax_2010 = parseInt($scope.kcvalue[56].count_case_id);
+            $scope.kc_fax_2011 = parseInt($scope.kcvalue[57].count_case_id);
+            $scope.kc_fax_2012 = parseInt($scope.kcvalue[58].count_case_id);
+            $scope.kc_fax_2013 = parseInt($scope.kcvalue[59].count_case_id);
+            $scope.kc_fax_2014 = parseInt($scope.kcvalue[60].count_case_id);
             $scope.kc_fax_2015 = parseInt($scope.kcvalue[55].count_case_id);
-            $scope.kc_fax_2016 = parseInt($scope.kcvalue[56].count_case_id);
-            $scope.kc_fax_2017 = parseInt($scope.kcvalue[57].count_case_id);
-            $scope.kc_fax_2018 = parseInt($scope.kcvalue[58].count_case_id);
+            $scope.kc_fax_2016 = parseInt($scope.kcvalue[61].count_case_id);
+            $scope.kc_fax_2017 = parseInt($scope.kcvalue[62].count_case_id);
+            $scope.kc_fax_2018 = parseInt($scope.kcvalue[63].count_case_id);
+            $scope.kc_fax_2019 = parseInt($scope.kcvalue[64].count_case_id);
             //mail
             $scope.kc_mail_2010 = parseInt($scope.kcvalue[79].count_case_id);
             $scope.kc_mail_2011 = parseInt($scope.kcvalue[80].count_case_id);
