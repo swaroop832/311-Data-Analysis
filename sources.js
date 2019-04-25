@@ -8,8 +8,8 @@ app.controller("MinCtrl",function ($scope,$http) {
 
             $scope.kcvalue = value.data;
             //email
-            $scope.kc_email_2010 = parseInt($scope.kcvalue[38].count_case_id);
-            $scope.kc_email_2011 = parseInt($scope.kcvalue[39].count_case_id);
+            $scope.kc_email_2010 = parseInt($scope.kcvalue[418].count_case_id);
+            $scope.kc_email_2011 = parseInt($scope.kcvalue[42].count_case_id);
             $scope.kc_email_2012 = parseInt($scope.kcvalue[40].count_case_id);
             $scope.kc_email_2013 = parseInt($scope.kcvalue[41].count_case_id);
             $scope.kc_email_2014 = parseInt($scope.kcvalue[42].count_case_id);
