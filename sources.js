@@ -158,7 +158,7 @@ app.controller("MinCtrl",function ($scope,$http) {
 
             $scope.sfvalue = value.data;
             //phone
-            $scope.sf_phone_2012 = parseInt($scope.sfvalue[148537].count_service_request_id);
+            $scope.sf_phone_2012 = parseInt($scope.sfvalue[61].count_service_request_id);
             $scope.sf_phone_2013 = parseInt($scope.sfvalue[26].count_service_request_id);
             $scope.sf_phone_2014 = parseInt($scope.sfvalue[21].count_service_request_id);
             $scope.sf_phone_2015 = parseInt($scope.sfvalue[35].count_service_request_id);
