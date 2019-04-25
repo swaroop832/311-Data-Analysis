@@ -86,7 +86,7 @@ app.controller("MinCtrl",function ($scope,$http) {
                  /*fax*/ $scope.kc_fax_2010,$scope.kc_fax_2011,$scope.kc_fax_2012,$scope.kc_fax_2013,$scope.kc_fax_2014,$scope.kc_fax_2015,$scope.kc_fax_2016,$scope.kc_fax_2017,$scope.kc_fax_2018,
                 /*mail*/$scope.kc_mail_2010,$scope.kc_mail_2011,$scope.kc_mail_2012,$scope.kc_mail_2013,$scope.kc_mail_2014,$scope.kc_mail_2015,$scope.kc_mail_2016,$scope.kc_mail_2017,$scope.kc_mail_2018,
                 /*phone*/ $scope.kc_phone_2010,$scope.kc_phone_2011,$scope.kc_phone_2012,$scope.kc_phone_2013,$scope.kc_phone_2014,$scope.kc_phone_2015,$scope.kc_phone_2016,$scope.kc_phone_2017,$scope.kc_phone_2018,
-                /*walk*/$scope.kc_walk_2010,$scope.kc_walk_2011,$scope.kc_walk_2012,$scope.kc_walk_2013,$scope.kc_walk_2014,$scope.kc_walk_2015,$scope.kc_walk_2016,$scope.kc_walk_2017,$scope.kc_walk_2018,
+                /*twitter*/$scope.kc_twtr_2013,$scope.kc_twtr_2014,$scope.kc_twtr_2015,$scope.kc_twtr_2016,$scope.kc_twtr_2017,$scope.kc_twtr_2018,
                 /*web*/$scope.kc_web_2010,$scope.kc_web_2011,$scope.kc_web_2012,$scope.kc_web_2013,$scope.kc_web_2014,$scope.kc_web_2015,$scope.kc_web_2016,$scope.kc_web_2017,$scope.kc_web_2018,'kc_chart1');
 
 
@@ -94,7 +94,7 @@ app.controller("MinCtrl",function ($scope,$http) {
                 /*fax*/ $scope.kc_fax_2010,$scope.kc_fax_2011,$scope.kc_fax_2012,$scope.kc_fax_2013,$scope.kc_fax_2014,$scope.kc_fax_2015,$scope.kc_fax_2016,$scope.kc_fax_2017,$scope.kc_fax_2018,
                 /*mail*/$scope.kc_mail_2010,$scope.kc_mail_2011,$scope.kc_mail_2012,$scope.kc_mail_2013,$scope.kc_mail_2014,$scope.kc_mail_2015,$scope.kc_mail_2016,$scope.kc_mail_2017,$scope.kc_mail_2018,
                 /*phone*/ $scope.kc_phone_2010,$scope.kc_phone_2011,$scope.kc_phone_2012,$scope.kc_phone_2013,$scope.kc_phone_2014,$scope.kc_phone_2015,$scope.kc_phone_2016,$scope.kc_phone_2017,$scope.kc_phone_2018,
-                /*walk*/$scope.kc_walk_2010,$scope.kc_walk_2011,$scope.kc_walk_2012,$scope.kc_walk_2013,$scope.kc_walk_2014,$scope.kc_walk_2015,$scope.kc_walk_2016,$scope.kc_walk_2017,$scope.kc_walk_2018,
+                /*twitter*/$scope.kc_twtr_2013,$scope.kc_twtr_2014,$scope.kc_twtr_2015,$scope.kc_twtr_2016,$scope.kc_twtr_2017,$scope.kc_twtr_2018,
                 /*web*/$scope.kc_web_2010,$scope.kc_web_2011,$scope.kc_web_2012,$scope.kc_web_2013,$scope.kc_web_2014,$scope.kc_web_2015,$scope.kc_web_2016,$scope.kc_web_2017,$scope.kc_web_2018,'kc_chart2');
 
         });
