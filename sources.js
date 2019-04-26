@@ -172,70 +172,92 @@ app.controller("MinCtrl",function ($scope,$http) {
 
             $scope.sfvalue = value.data;
             //phone
-            $scope.sf_phone_2012 = parseInt($scope.sfvalue[61].count_service_request_id);
-            $scope.sf_phone_2013 = parseInt($scope.sfvalue[26].count_service_request_id);
-            $scope.sf_phone_2014 = parseInt($scope.sfvalue[21].count_service_request_id);
-            $scope.sf_phone_2015 = parseInt($scope.sfvalue[35].count_service_request_id);
-            $scope.sf_phone_2016 = parseInt($scope.sfvalue[28].count_service_request_id);
-            $scope.sf_phone_2017 = parseInt($scope.sfvalue[4].count_service_request_id);
+            $scope.sf_phone_2010 = parseInt($scope.sfvalue[43].count_service_request_id);
+            $scope.sf_phone_2011 = parseInt($scope.sfvalue[44].count_service_request_id);
+            $scope.sf_phone_2012 = parseInt($scope.sfvalue[45].count_service_request_id);
+            $scope.sf_phone_2013 = parseInt($scope.sfvalue[46].count_service_request_id);
+            $scope.sf_phone_2014 = parseInt($scope.sfvalue[47].count_service_request_id);
+            $scope.sf_phone_2015 = parseInt($scope.sfvalue[48].count_service_request_id);
+            $scope.sf_phone_2016 = parseInt($scope.sfvalue[49].count_service_request_id);
+            $scope.sf_phone_2017 = parseInt($scope.sfvalue[50].count_service_request_id);
+            $scope.sf_phone_2018 = parseInt($scope.sfvalue[51].count_service_request_id);
+            $scope.sf_phone_2019 = parseInt($scope.sfvalue[52].count_service_request_id);
             //web
-            $scope.sf_web_2012 = parseInt($scope.sfvalue[8].count_service_request_id);
-            $scope.sf_web_2013 = parseInt($scope.sfvalue[51].count_service_request_id);
-            $scope.sf_web_2014 = parseInt($scope.sfvalue[56].count_service_request_id);
-            $scope.sf_web_2015 = parseInt($scope.sfvalue[47].count_service_request_id);
-            $scope.sf_web_2016 = parseInt($scope.sfvalue[49].count_service_request_id);
-            $scope.sf_web_2017 = parseInt($scope.sfvalue[63].count_service_request_id);
+            $scope.sf_web_2010 = parseInt($scope.sfvalue[66].count_service_request_id);
+            $scope.sf_web_2011 = parseInt($scope.sfvalue[67].count_service_request_id);
+            $scope.sf_web_2012 = parseInt($scope.sfvalue[68].count_service_request_id);
+            $scope.sf_web_2013 = parseInt($scope.sfvalue[69].count_service_request_id);
+            $scope.sf_web_2014 = parseInt($scope.sfvalue[70].count_service_request_id);
+            $scope.sf_web_2015 = parseInt($scope.sfvalue[71].count_service_request_id);
+            $scope.sf_web_2016 = parseInt($scope.sfvalue[72].count_service_request_id);
+            $scope.sf_web_2017 = parseInt($scope.sfvalue[73].count_service_request_id);
+            $scope.sf_web_2018 = parseInt($scope.sfvalue[74].count_service_request_id);
+            $scope.sf_web_2019 = parseInt($scope.sfvalue[75].count_service_request_id);
             //mobile
-            $scope.sf_mobile_2012 = parseInt($scope.sfvalue[46].count_service_request_id);
-            $scope.sf_mobile_2013 = parseInt($scope.sfvalue[14].count_service_request_id);
-            $scope.sf_mobile_2014 = parseInt($scope.sfvalue[19].count_service_request_id);
-            $scope.sf_mobile_2015 = parseInt($scope.sfvalue[7].count_service_request_id);
-            $scope.sf_mobile_2016 = parseInt($scope.sfvalue[15].count_service_request_id);
-            $scope.sf_mobile_2017 = parseInt($scope.sfvalue[31].count_service_request_id);
+            $scope.sf_mobile_2012 = parseInt($scope.sfvalue[24].count_service_request_id);
+            $scope.sf_mobile_2013 = parseInt($scope.sfvalue[25].count_service_request_id);
+            $scope.sf_mobile_2014 = parseInt($scope.sfvalue[26].count_service_request_id);
+            $scope.sf_mobile_2015 = parseInt($scope.sfvalue[27].count_service_request_id);
+            $scope.sf_mobile_2016 = parseInt($scope.sfvalue[28].count_service_request_id);
+            $scope.sf_mobile_2017 = parseInt($scope.sfvalue[29].count_service_request_id);
+            $scope.sf_mobile_2018 = parseInt($scope.sfvalue[30].count_service_request_id);
+            $scope.sf_mobile_2019 = parseInt($scope.sfvalue[31].count_service_request_id);
             //twitter
-            $scope.sf_twitter_2012 = parseInt($scope.sfvalue[18].count_service_request_id);
-            $scope.sf_twitter_2013 = parseInt($scope.sfvalue[40].count_service_request_id);
-            $scope.sf_twitter_2014 = parseInt($scope.sfvalue[45].count_service_request_id);
-            $scope.sf_twitter_2015 = parseInt($scope.sfvalue[53].count_service_request_id);
-            $scope.sf_twitter_2016 = parseInt($scope.sfvalue[39].count_service_request_id);
-            $scope.sf_twitter_2017 = parseInt($scope.sfvalue[58].count_service_request_id);
+            $scope.sf_twitter_2010 = parseInt($scope.sfvalue[54].count_service_request_id);
+            $scope.sf_twitter_2011 = parseInt($scope.sfvalue[55].count_service_request_id);
+            $scope.sf_twitter_2012 = parseInt($scope.sfvalue[56].count_service_request_id);
+            $scope.sf_twitter_2013 = parseInt($scope.sfvalue[57].count_service_request_id);
+            $scope.sf_twitter_2014 = parseInt($scope.sfvalue[58].count_service_request_id);
+            $scope.sf_twitter_2015 = parseInt($scope.sfvalue[59].count_service_request_id);
+            $scope.sf_twitter_2016 = parseInt($scope.sfvalue[60].count_service_request_id);
+            $scope.sf_twitter_2017 = parseInt($scope.sfvalue[61].count_service_request_id);
+            $scope.sf_twitter_2018 = parseInt($scope.sfvalue[62].count_service_request_id);
+            $scope.sf_twitter_2019 = parseInt($scope.sfvalue[63].count_service_request_id);
             //integrated agency
-            $scope.sf_integrated_agency_2012 = parseInt($scope.sfvalue[60].count_service_request_id);
-            $scope.sf_integrated_agency_2013 = parseInt($scope.sfvalue[32].count_service_request_id);
-            $scope.sf_integrated_agency_2014 = parseInt($scope.sfvalue[38].count_service_request_id);
-            $scope.sf_integrated_agency_2015 = parseInt($scope.sfvalue[25].count_service_request_id);
-            $scope.sf_integrated_agency_2016 = parseInt($scope.sfvalue[33].count_service_request_id);
-            $scope.sf_integrated_agency_2017 = parseInt($scope.sfvalue[13].count_service_request_id);
+            $scope.sf_integrated_agency_2012 = parseInt($scope.sfvalue[12].count_service_request_id);
+            $scope.sf_integrated_agency_2013 = parseInt($scope.sfvalue[13].count_service_request_id);
+            $scope.sf_integrated_agency_2014 = parseInt($scope.sfvalue[14].count_service_request_id);
+            $scope.sf_integrated_agency_2015 = parseInt($scope.sfvalue[15].count_service_request_id);
+            $scope.sf_integrated_agency_2016 = parseInt($scope.sfvalue[16].count_service_request_id);
+            $scope.sf_integrated_agency_2017 = parseInt($scope.sfvalue[17].count_service_request_id);
+            $scope.sf_integrated_agency_2018 = parseInt($scope.sfvalue[18].count_service_request_id);
             //other department
-            $scope.sf_other_department_2013 = parseInt($scope.sfvalue[36].count_service_request_id);
-            $scope.sf_other_department_2014 = parseInt($scope.sfvalue[37].count_service_request_id);
-            $scope.sf_other_department_2015 = parseInt($scope.sfvalue[27].count_service_request_id);
-            $scope.sf_other_department_2016 = parseInt($scope.sfvalue[34].count_service_request_id);
-            $scope.sf_other_department_2017 = parseInt($scope.sfvalue[12].count_service_request_id);
+            $scope.sf_other_department_2011 = parseInt($scope.sfvalue[32].count_service_request_id);
+            $scope.sf_other_department_2013 = parseInt($scope.sfvalue[33].count_service_request_id);
+            $scope.sf_other_department_2014 = parseInt($scope.sfvalue[34].count_service_request_id);
+            $scope.sf_other_department_2015 = parseInt($scope.sfvalue[35].count_service_request_id);
+            $scope.sf_other_department_2016 = parseInt($scope.sfvalue[36].count_service_request_id);
+            $scope.sf_other_department_2017 = parseInt($scope.sfvalue[38].count_service_request_id);
+            $scope.sf_other_department_2018 = parseInt($scope.sfvalue[39].count_service_request_id);
+            $scope.sf_other_department_2019 = parseInt($scope.sfvalue[40].count_service_request_id);
             //mail
-            $scope.sf_mail_2013 = parseInt($scope.sfvalue[16].count_service_request_id);
-            $scope.sf_mail_2014 = parseInt($scope.sfvalue[11].count_service_request_id);
-            $scope.sf_mail_2015 = parseInt($scope.sfvalue[0].count_service_request_id);
-            $scope.sf_mail_2016 = parseInt($scope.sfvalue[17].count_service_request_id);
-            //web
-            $scope.sf_email_2012 = parseInt($scope.sfvalue[50].count_service_request_id);
+            $scope.sf_mail_2013 = parseInt($scope.sfvalue[21].count_service_request_id);
+            $scope.sf_mail_2014 = parseInt($scope.sfvalue[21].count_service_request_id);
+            $scope.sf_mail_2015 = parseInt($scope.sfvalue[22].count_service_request_id);
+            $scope.sf_mail_2016 = parseInt($scope.sfvalue[23].count_service_request_id);
+            //email
+            $scope.sf_email_2010 = parseInt($scope.sfvalue[3].count_service_request_id);
+            $scope.sf_email_2011 = parseInt($scope.sfvalue[4].count_service_request_id);
+            $scope.sf_email_2012 = parseInt($scope.sfvalue[5].count_service_request_id);
             $scope.sf_email_2013 = parseInt($scope.sfvalue[6].count_service_request_id);
-            $scope.sf_email_2014 = parseInt($scope.sfvalue[1].count_service_request_id);
-            $scope.sf_email_2017 = parseInt($scope.sfvalue[24].count_service_request_id);
+            $scope.sf_email_2014 = parseInt($scope.sfvalue[7].count_service_request_id);
+            $scope.sf_email_2016 = parseInt($scope.sfvalue[8].count_service_request_id);
+            $scope.sf_email_2017 = parseInt($scope.sfvalue{9].count_service_request_id);
+            $scope.sf_email_2018 = parseInt($scope.sfvalue[10].count_service_request_id);
             
-            drawChartsf1($scope.sf_mobile_2012,$scope.sf_mobile_2013,$scope.sf_mobile_2014,$scope.sf_mobile_2015,$scope.sf_mobile_2016,$scope.sf_mobile_2017,
-                /*twitter*/ $scope.sf_twitter_2012,$scope.sf_twitter_2013,$scope.sf_twitter_2014,$scope.sf_twitter_2015,$scope.sf_twitter_2016,$scope.sf_twitter_2017,
-                /*integrated agency*/$scope.sf_integrated_agency_2012,$scope.sf_integrated_agency_2013,$scope.sf_integrated_agency_2014,$scope.sf_integrated_agency_2015,$scope.sf_integrated_agency_2016,$scope.sf_integrated_agency_2017,
-                /*phone*/ $scope.sf_phone_2012,$scope.sf_phone_2013,$scope.sf_phone_2014,$scope.sf_phone_2015,$scope.sf_phone_2016,$scope.sf_phone_2017,
-                /*other department*/0,$scope.sf_other_department_2013,$scope.sf_other_department_2014,$scope.sf_other_department_2015,$scope.sf_other_department_2016,$scope.sf_other_department_2017,
-                /*web*/$scope.sf_web_2012,$scope.sf_web_2013,$scope.sf_web_2014,$scope.sf_web_2015,$scope.sf_web_2016,$scope.sf_web_2017,'sf_chart1');
+            drawChartsf1($scope.sf_mobile_2010,$scope.sf_mobile_2012,$scope.sf_mobile_2012,$scope.sf_mobile_2013,$scope.sf_mobile_2014,$scope.sf_mobile_2015,$scope.sf_mobile_2016,$scope.sf_mobile_2017,$scope.sf_mobile_2018,
+                /*twitter*/  $scope.sf_twitter_2010, $scope.sf_twitter_2011,$scope.sf_twitter_2012,$scope.sf_twitter_2013,$scope.sf_twitter_2014,$scope.sf_twitter_2015,$scope.sf_twitter_2016,$scope.sf_twitter_2017, $scope.sf_twitter_2018,
+                /*integrated agency*/$scope.sf_integrated_agency_2010,$scope.sf_integrated_agency_2011,$scope.sf_integrated_agency_2012,$scope.sf_integrated_agency_2013,$scope.sf_integrated_agency_2014,$scope.sf_integrated_agency_2015,$scope.sf_integrated_agency_2016,$scope.sf_integrated_agency_2017,$scope.sf_integrated_agency_2018,
+                /*phone*/ $scope.sf_phone_2010,$scope.sf_phone_2011,$scope.sf_phone_2012,$scope.sf_phone_2013,$scope.sf_phone_2014,$scope.sf_phone_2015,$scope.sf_phone_2016,$scope.sf_phone_2017,$scope.sf_phone_2018,
+                /*other department*/$scope.sf_other_department_2010,$scope.sf_other_department_2011,$scope.sf_other_department_2012,$scope.sf_other_department_2013,$scope.sf_other_department_2014,$scope.sf_other_department_2015,$scope.sf_other_department_2016,$scope.sf_other_department_2017,$scope.sf_other_department_2018,
+                /*web*/$scope.sf_web_2010,$scope.sf_web_2011,$scope.sf_web_2012,$scope.sf_web_2013,$scope.sf_web_2014,$scope.sf_web_2015,$scope.sf_web_2016,$scope.sf_web_2017,$scope.sf_web_2018,'sf_chart1');
 
-            drawChartsf2($scope.sf_mobile_2012,$scope.sf_mobile_2013,$scope.sf_mobile_2014,$scope.sf_mobile_2015,$scope.sf_mobile_2016,$scope.sf_mobile_2017,
-                /*twitter*/ $scope.sf_twitter_2012,$scope.sf_twitter_2013,$scope.sf_twitter_2014,$scope.sf_twitter_2015,$scope.sf_twitter_2016,$scope.sf_twitter_2017,
-                /*integrated agency*/$scope.sf_integrated_agency_2012,$scope.sf_integrated_agency_2013,$scope.sf_integrated_agency_2014,$scope.sf_integrated_agency_2015,$scope.sf_integrated_agency_2016,$scope.sf_integrated_agency_2017,
-                /*phone*/ $scope.sf_phone_2012,$scope.sf_phone_2013,$scope.sf_phone_2014,$scope.sf_phone_2015,$scope.sf_phone_2016,$scope.sf_phone_2017,
-                /*other department*/0,$scope.sf_other_department_2013,$scope.sf_other_department_2014,$scope.sf_other_department_2015,$scope.sf_other_department_2016,$scope.sf_other_department_2017,
-                /*web*/$scope.sf_web_2012,$scope.sf_web_2013,$scope.sf_web_2014,$scope.sf_web_2015,$scope.sf_web_2016,$scope.sf_web_2017,'sf_chart2');
+            drawChartsf2($scope.sf_mobile_2010,$scope.sf_mobile_2012,$scope.sf_mobile_2012,$scope.sf_mobile_2013,$scope.sf_mobile_2014,$scope.sf_mobile_2015,$scope.sf_mobile_2016,$scope.sf_mobile_2017,$scope.sf_mobile_2018,
+                /*twitter*/  $scope.sf_twitter_2010, $scope.sf_twitter_2011,$scope.sf_twitter_2012,$scope.sf_twitter_2013,$scope.sf_twitter_2014,$scope.sf_twitter_2015,$scope.sf_twitter_2016,$scope.sf_twitter_2017, $scope.sf_twitter_2018,
+                /*integrated agency*/$scope.sf_integrated_agency_2010,$scope.sf_integrated_agency_2011,$scope.sf_integrated_agency_2012,$scope.sf_integrated_agency_2013,$scope.sf_integrated_agency_2014,$scope.sf_integrated_agency_2015,$scope.sf_integrated_agency_2016,$scope.sf_integrated_agency_2017,$scope.sf_integrated_agency_2018,
+                /*phone*/ $scope.sf_phone_2010,$scope.sf_phone_2011,$scope.sf_phone_2012,$scope.sf_phone_2013,$scope.sf_phone_2014,$scope.sf_phone_2015,$scope.sf_phone_2016,$scope.sf_phone_2017,$scope.sf_phone_2018,
+                /*other department*/$scope.sf_other_department_2010,$scope.sf_other_department_2011,$scope.sf_other_department_2012,$scope.sf_other_department_2013,$scope.sf_other_department_2014,$scope.sf_other_department_2015,$scope.sf_other_department_2016,$scope.sf_other_department_2017,$scope.sf_other_department_2018,
+                /*web*/$scope.sf_web_2010,$scope.sf_web_2011,$scope.sf_web_2012,$scope.sf_web_2013,$scope.sf_web_2014,$scope.sf_web_2015,$scope.sf_web_2016,$scope.sf_web_2017,$scope.sf_web_2018,'sf_chart2');
 
         })
     };
