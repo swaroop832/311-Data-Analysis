@@ -172,16 +172,16 @@ app.controller("MinCtrl",function ($scope,$http) {
 
             $scope.sfvalue = value.data;
             //phone
-            $scope.sf_phone_2010 = parseInt($scope.sfvalue[43].count_service_request_id);
-            $scope.sf_phone_2011 = parseInt($scope.sfvalue[44].count_service_request_id);
-            $scope.sf_phone_2012 = parseInt($scope.sfvalue[45].count_service_request_id);
-            $scope.sf_phone_2013 = parseInt($scope.sfvalue[46].count_service_request_id);
-            $scope.sf_phone_2014 = parseInt($scope.sfvalue[47].count_service_request_id);
-            $scope.sf_phone_2015 = parseInt($scope.sfvalue[48].count_service_request_id);
-            $scope.sf_phone_2016 = parseInt($scope.sfvalue[49].count_service_request_id);
-            $scope.sf_phone_2017 = parseInt($scope.sfvalue[50].count_service_request_id);
-            $scope.sf_phone_2018 = parseInt($scope.sfvalue[51].count_service_request_id);
-            $scope.sf_phone_2019 = parseInt($scope.sfvalue[52].count_service_request_id);
+            $scope.sf_phone_2010 = parseInt($scope.sfvalue[41].count_service_request_id);
+            $scope.sf_phone_2011 = parseInt($scope.sfvalue[42].count_service_request_id);
+            $scope.sf_phone_2012 = parseInt($scope.sfvalue[43].count_service_request_id);
+            $scope.sf_phone_2013 = parseInt($scope.sfvalue[44].count_service_request_id);
+            $scope.sf_phone_2014 = parseInt($scope.sfvalue[45].count_service_request_id);
+            $scope.sf_phone_2015 = parseInt($scope.sfvalue[46].count_service_request_id);
+            $scope.sf_phone_2016 = parseInt($scope.sfvalue[47].count_service_request_id);
+            $scope.sf_phone_2017 = parseInt($scope.sfvalue[48].count_service_request_id);
+            $scope.sf_phone_2018 = parseInt($scope.sfvalue[49].count_service_request_id);
+            $scope.sf_phone_2019 = parseInt($scope.sfvalue[50].count_service_request_id);
             //web
             $scope.sf_web_2010 = parseInt($scope.sfvalue[66].count_service_request_id);
             $scope.sf_web_2011 = parseInt($scope.sfvalue[67].count_service_request_id);
