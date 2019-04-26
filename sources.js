@@ -241,9 +241,8 @@ app.controller("MinCtrl",function ($scope,$http) {
             $scope.sf_email_2012 = parseInt($scope.sfvalue[5].count_service_request_id);
             $scope.sf_email_2013 = parseInt($scope.sfvalue[6].count_service_request_id);
             $scope.sf_email_2014 = parseInt($scope.sfvalue[7].count_service_request_id);
-            $scope.sf_email_2016 = parseInt($scope.sfvalue[8].count_service_request_id);
-            $scope.sf_email_2017 = parseInt($scope.sfvalue{9].count_service_request_id);
-            $scope.sf_email_2018 = parseInt($scope.sfvalue[10].count_service_request_id);
+            $scope.sf_email_2017 = parseInt($scope.sfvalue{8].count_service_request_id);
+            $scope.sf_email_2018 = parseInt($scope.sfvalue[9].count_service_request_id);
             
             drawChartsf1($scope.sf_mobile_2010,$scope.sf_mobile_2012,$scope.sf_mobile_2012,$scope.sf_mobile_2013,$scope.sf_mobile_2014,$scope.sf_mobile_2015,$scope.sf_mobile_2016,$scope.sf_mobile_2017,$scope.sf_mobile_2018,
                 /*twitter*/  $scope.sf_twitter_2010, $scope.sf_twitter_2011,$scope.sf_twitter_2012,$scope.sf_twitter_2013,$scope.sf_twitter_2014,$scope.sf_twitter_2015,$scope.sf_twitter_2016,$scope.sf_twitter_2017, $scope.sf_twitter_2018,
