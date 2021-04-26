@@ -63,8 +63,7 @@ app.controller("MinCtrl",function ($scope,$http) {
             drawChart($scope.ny0,$scope.ny1,$scope.ny2,$scope.ny3,$scope.ny4,$scope.ny5,$scope.ny6,$scope.ny7,$scope.ny8,$scope.ny9,$scope.ny10,$scope.ny11,'nychart1');
         })
     };
-
-//San Francisco monthly api
+    
    $scope.sffunction = function (selected_year) {
 
         $http.get("https://data.sfgov.org/resource/ktji-gk7t.json?$select=date_extract_m(created)%20as%20month,count(month)&$group=month&$where=date_extract_y(created)="+selected_year+"&$order=month").then(function (response) {
@@ -86,7 +85,6 @@ app.controller("MinCtrl",function ($scope,$http) {
         })
     };
 
-    
     //Austin Tx  monthly api
 
     $scope.Aufunction = function (selected_year) {
