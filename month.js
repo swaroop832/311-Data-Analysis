@@ -64,7 +64,29 @@ app.controller("MinCtrl",function ($scope,$http) {
         })
     };
 
+//San Francisco monthly api
+   $scope.sffunction = function (selected_year) {
 
+        $http.get("https://data.sfgov.org/resource/ktji-gk7t.json?$select=date_extract_m(created)%20as%20month,count(month)&$group=month&$where=date_extract_y(created)="+selected_year+"&$order=month").then(function (response) {
+
+            $scope.sfvalue = response.data;
+            $scope.sfjan = $scope.gainvalue[0].count_month;
+            $scope.sffeb = $scope.gainvalue[1].count_month;
+            $scope.sfmar = $scope.gainvalue[2].count_month;
+            $scope.sfapr = $scope.gainvalue[3].count_month;
+            $scope.sfmay = $scope.gainvalue[4].count_month;
+            $scope.sfjun = $scope.gainvalue[5].count_month;
+            $scope.sfjul = $scope.gainvalue[6].count_month;
+            $scope.sfaug = $scope.gainvalue[7].count_month;
+            $scope.sfsep = $scope.gainvalue[8].count_month;
+            $scope.sfoct = $scope.gainvalue[9].count_month;
+            $scope.sfnov = $scope.gainvalue[10].count_month;
+            $scope.sfdec = $scope.gainvalue[11].count_month;
+            drawChart($scope.sfjan,$scope.sffeb,$scope.sfmar,$scope.sfapr,$scope.sfmay,$scope.sfjun,$scope.sfjul,$scope.sfaug,$scope.sfsep,$scope.sfoct,$scope.sfnov,$scope.sfdec,'sfchart1')
+        })
+    };
+
+    
     //Austin Tx  monthly api
 
     $scope.Aufunction = function (selected_year) {
