@@ -46,7 +46,7 @@ app.controller("MinCtrl",function ($scope,$http) {
             $scope.kc_mail_2018 = parseInt($scope.kcvalue[119].count_case_id);
             $scope.kc_mail_2019 = parseInt($scope.kcvalue[120].count_case_id);
             $scope.kc_mail_2020 = parseInt($scope.kcvalue[121].count_case_id);
-            $scope.kc_mail_2021 = parseInt($scope.kcvalue[].count_case_id);
+            //$scope.kc_mail_2021 = parseInt($scope.kcvalue[].count_case_id);
             //phone
             $scope.kc_phone_2010 = parseInt($scope.kcvalue[125].count_case_id);
             $scope.kc_phone_2011 = parseInt($scope.kcvalue[126].count_case_id);
