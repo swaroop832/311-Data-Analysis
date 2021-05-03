@@ -116,6 +116,20 @@ app.controller("MinCtrl",function ($scope,$http) {
     };
     //Kansas City api https://data.kcmo.org/resource/cyqf-nban.json?$select=creation_year,count(case_id)&$group=creation_year
 
+    
+    //NYC api
+    //$scope.nyfunction = function () {
+
+
+       // $http.get("https://data.cityofnewyork.us/resource/fhrw-4uyv.json?$query=SELECT%20open_data_channel_type,count(unique_key),date_extract_y(created_date)%20as%20year%20group%20by%20open_data_channel_type,year").then(function (value) {
+
+       
+    
+    
+    
+    
+    
+    
 //Austin api
     $scope.aufunction = function () {
 
