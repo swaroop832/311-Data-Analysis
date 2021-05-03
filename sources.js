@@ -8,94 +8,109 @@ app.controller("MinCtrl",function ($scope,$http) {
 
             $scope.kcvalue = value.data;
             //email
-            $scope.kc_email_2010 = parseInt($scope.kcvalue[42].count_case_id);
-            $scope.kc_email_2011 = parseInt($scope.kcvalue[43].count_case_id);
-            $scope.kc_email_2012 = parseInt($scope.kcvalue[44].count_case_id);
-            $scope.kc_email_2013 = parseInt($scope.kcvalue[45].count_case_id);
-            $scope.kc_email_2014 = parseInt($scope.kcvalue[46].count_case_id);
-            $scope.kc_email_2015 = parseInt($scope.kcvalue[47].count_case_id);
-            $scope.kc_email_2016 = parseInt($scope.kcvalue[48].count_case_id);
-            $scope.kc_email_2017 = parseInt($scope.kcvalue[49].count_case_id);
-            $scope.kc_email_2018 = parseInt($scope.kcvalue[50].count_case_id);
-            $scope.kc_email_2019 = parseInt($scope.kcvalue[51].count_case_id);
+            $scope.kc_email_2010 = parseInt($scope.kcvalue[52].count_case_id);
+            $scope.kc_email_2011 = parseInt($scope.kcvalue[53].count_case_id);
+            $scope.kc_email_2012 = parseInt($scope.kcvalue[54].count_case_id);
+            $scope.kc_email_2013 = parseInt($scope.kcvalue[55].count_case_id);
+            $scope.kc_email_2014 = parseInt($scope.kcvalue[56].count_case_id);
+            $scope.kc_email_2015 = parseInt($scope.kcvalue[57].count_case_id);
+            $scope.kc_email_2016 = parseInt($scope.kcvalue[58].count_case_id);
+            $scope.kc_email_2017 = parseInt($scope.kcvalue[59].count_case_id);
+            $scope.kc_email_2018 = parseInt($scope.kcvalue[60].count_case_id);
+            $scope.kc_email_2019 = parseInt($scope.kcvalue[61].count_case_id);
+            $scope.kc_email_2020 = parseInt($scope.kcvalue[62].count_case_id);
+            $scope.kc_email_2021 = parseInt($scope.kcvalue[63].count_case_id);
             //fax
-            $scope.kc_fax_2010 = parseInt($scope.kcvalue[55].count_case_id);
-            $scope.kc_fax_2011 = parseInt($scope.kcvalue[56].count_case_id);
-            $scope.kc_fax_2012 = parseInt($scope.kcvalue[57].count_case_id);
-            $scope.kc_fax_2013 = parseInt($scope.kcvalue[58].count_case_id);
-            $scope.kc_fax_2014 = parseInt($scope.kcvalue[59].count_case_id);
-            $scope.kc_fax_2015 = parseInt($scope.kcvalue[60].count_case_id);
-            $scope.kc_fax_2016 = parseInt($scope.kcvalue[61].count_case_id);
-            $scope.kc_fax_2017 = parseInt($scope.kcvalue[62].count_case_id);
-            $scope.kc_fax_2018 = parseInt($scope.kcvalue[63].count_case_id);
-            $scope.kc_fax_2019 = parseInt($scope.kcvalue[64].count_case_id);
+            $scope.kc_fax_2010 = parseInt($scope.kcvalue[67].count_case_id);
+            $scope.kc_fax_2011 = parseInt($scope.kcvalue[68].count_case_id);
+            $scope.kc_fax_2012 = parseInt($scope.kcvalue[69].count_case_id);
+            $scope.kc_fax_2013 = parseInt($scope.kcvalue[70].count_case_id);
+            $scope.kc_fax_2014 = parseInt($scope.kcvalue[71].count_case_id);
+            $scope.kc_fax_2015 = parseInt($scope.kcvalue[72].count_case_id);
+            $scope.kc_fax_2016 = parseInt($scope.kcvalue[73].count_case_id);
+            $scope.kc_fax_2017 = parseInt($scope.kcvalue[74].count_case_id);
+            $scope.kc_fax_2018 = parseInt($scope.kcvalue[75].count_case_id);
+            $scope.kc_fax_2019 = parseInt($scope.kcvalue[76].count_case_id);
+            $scope.kc_fax_2020 = parseInt($scope.kcvalue[77].count_case_id);
+            $scope.kc_fax_2021 = parseInt($scope.kcvalue[78].count_case_id);
             //mail
-            $scope.kc_mail_2010 = parseInt($scope.kcvalue[92].count_case_id);
-            $scope.kc_mail_2011 = parseInt($scope.kcvalue[93].count_case_id);
-            $scope.kc_mail_2012 = parseInt($scope.kcvalue[94].count_case_id);
-            $scope.kc_mail_2013 = parseInt($scope.kcvalue[95].count_case_id);
-            $scope.kc_mail_2014 = parseInt($scope.kcvalue[96].count_case_id);
-            $scope.kc_mail_2015 = parseInt($scope.kcvalue[97].count_case_id);
-            $scope.kc_mail_2016 = parseInt($scope.kcvalue[98].count_case_id);
-            $scope.kc_mail_2017 = parseInt($scope.kcvalue[99].count_case_id);
-            $scope.kc_mail_2018 = parseInt($scope.kcvalue[100].count_case_id);
-            $scope.kc_mail_2018 = parseInt($scope.kcvalue[101].count_case_id);
+            $scope.kc_mail_2010 = parseInt($scope.kcvalue[110].count_case_id);
+            $scope.kc_mail_2011 = parseInt($scope.kcvalue[111].count_case_id);
+            $scope.kc_mail_2012 = parseInt($scope.kcvalue[112].count_case_id);
+            $scope.kc_mail_2013 = parseInt($scope.kcvalue[113].count_case_id);
+            $scope.kc_mail_2014 = parseInt($scope.kcvalue[114].count_case_id);
+            $scope.kc_mail_2015 = parseInt($scope.kcvalue[115].count_case_id);
+            $scope.kc_mail_2016 = parseInt($scope.kcvalue[116].count_case_id);
+            $scope.kc_mail_2017 = parseInt($scope.kcvalue[117].count_case_id);
+            $scope.kc_mail_2018 = parseInt($scope.kcvalue[118].count_case_id);
+            $scope.kc_mail_2018 = parseInt($scope.kcvalue[119].count_case_id);
+            $scope.kc_mail_2019 = parseInt($scope.kcvalue[120].count_case_id);
+            $scope.kc_mail_2020 = parseInt($scope.kcvalue[121].count_case_id);
+            $scope.kc_mail_2021 = parseInt($scope.kcvalue[].count_case_id);
             //phone
-            $scope.kc_phone_2010 = parseInt($scope.kcvalue[105].count_case_id);
-            $scope.kc_phone_2011 = parseInt($scope.kcvalue[106].count_case_id);
-            $scope.kc_phone_2012 = parseInt($scope.kcvalue[107].count_case_id);
-            $scope.kc_phone_2013 = parseInt($scope.kcvalue[108].count_case_id);
-            $scope.kc_phone_2014 = parseInt($scope.kcvalue[109].count_case_id);
-            $scope.kc_phone_2015 = parseInt($scope.kcvalue[110].count_case_id);
-            $scope.kc_phone_2016 = parseInt($scope.kcvalue[111].count_case_id);
-            $scope.kc_phone_2017 = parseInt($scope.kcvalue[112].count_case_id);
-            $scope.kc_phone_2018 = parseInt($scope.kcvalue[113].count_case_id);
-            $scope.kc_phone_2019 = parseInt($scope.kcvalue[114].count_case_id);
+            $scope.kc_phone_2010 = parseInt($scope.kcvalue[125].count_case_id);
+            $scope.kc_phone_2011 = parseInt($scope.kcvalue[126].count_case_id);
+            $scope.kc_phone_2012 = parseInt($scope.kcvalue[127].count_case_id);
+            $scope.kc_phone_2013 = parseInt($scope.kcvalue[128].count_case_id);
+            $scope.kc_phone_2014 = parseInt($scope.kcvalue[129].count_case_id);
+            $scope.kc_phone_2015 = parseInt($scope.kcvalue[130].count_case_id);
+            $scope.kc_phone_2016 = parseInt($scope.kcvalue[131].count_case_id);
+            $scope.kc_phone_2017 = parseInt($scope.kcvalue[132].count_case_id);
+            $scope.kc_phone_2018 = parseInt($scope.kcvalue[133].count_case_id);
+            $scope.kc_phone_2019 = parseInt($scope.kcvalue[134].count_case_id);
+            $scope.kc_phone_2020 = parseInt($scope.kcvalue[135].count_case_id);
+            $scope.kc_phone_2021 = parseInt($scope.kcvalue[136].count_case_id);
             //walk
-            $scope.kc_walk_2010 = parseInt($scope.kcvalue[151].count_case_id);
-            $scope.kc_walk_2011 = parseInt($scope.kcvalue[152].count_case_id);
-            $scope.kc_walk_2012 = parseInt($scope.kcvalue[153].count_case_id);
-            $scope.kc_walk_2013 = parseInt($scope.kcvalue[154].count_case_id);
-            $scope.kc_walk_2014 = parseInt($scope.kcvalue[155].count_case_id);
-            $scope.kc_walk_2015 = parseInt($scope.kcvalue[156].count_case_id);
-            $scope.kc_walk_2016 = parseInt($scope.kcvalue[157].count_case_id);
-            $scope.kc_walk_2017 = parseInt($scope.kcvalue[158].count_case_id);
-            $scope.kc_walk_2018 = parseInt($scope.kcvalue[159].count_case_id);
-            $scope.kc_walk_2019 = parseInt($scope.kcvalue[160].count_case_id);
+            $scope.kc_walk_2010 = parseInt($scope.kcvalue[179].count_case_id);
+            $scope.kc_walk_2011 = parseInt($scope.kcvalue[180].count_case_id);
+            $scope.kc_walk_2012 = parseInt($scope.kcvalue[181].count_case_id);
+            $scope.kc_walk_2013 = parseInt($scope.kcvalue[182].count_case_id);
+            $scope.kc_walk_2014 = parseInt($scope.kcvalue[183].count_case_id);
+            $scope.kc_walk_2015 = parseInt($scope.kcvalue[184].count_case_id);
+            $scope.kc_walk_2016 = parseInt($scope.kcvalue[185].count_case_id);
+            $scope.kc_walk_2017 = parseInt($scope.kcvalue[186].count_case_id);
+            $scope.kc_walk_2018 = parseInt($scope.kcvalue[187].count_case_id);
+            $scope.kc_walk_2019 = parseInt($scope.kcvalue[188].count_case_id);
+            $scope.kc_walk_2020 = parseInt($scope.kcvalue[189].count_case_id);
+            
             //Twitter
-            $scope.kc_twtr_2013 = parseInt($scope.kcvalue[131].count_case_id);
-            $scope.kc_twtr_2014 = parseInt($scope.kcvalue[132].count_case_id);
-            $scope.kc_twtr_2015 = parseInt($scope.kcvalue[133].count_case_id);
-            $scope.kc_twtr_2016 = parseInt($scope.kcvalue[134].count_case_id);
-            $scope.kc_twtr_2017 = parseInt($scope.kcvalue[135].count_case_id);
-            $scope.kc_twtr_2018 = parseInt($scope.kcvalue[136].count_case_id);
-            $scope.kc_twtr_2019 = parseInt($scope.kcvalue[137].count_case_id);
+            $scope.kc_twtr_2013 = parseInt($scope.kcvalue[154].count_case_id);
+            $scope.kc_twtr_2014 = parseInt($scope.kcvalue[155].count_case_id);
+            $scope.kc_twtr_2015 = parseInt($scope.kcvalue[156].count_case_id);
+            $scope.kc_twtr_2016 = parseInt($scope.kcvalue[157].count_case_id);
+            $scope.kc_twtr_2017 = parseInt($scope.kcvalue[158].count_case_id);
+            $scope.kc_twtr_2018 = parseInt($scope.kcvalue[159].count_case_id);
+            $scope.kc_twtr_2019 = parseInt($scope.kcvalue[160].count_case_id);
+            $scope.kc_twtr_2020 = parseInt($scope.kcvalue[161].count_case_id);
+            $scope.kc_twtr_2021 = parseInt($scope.kcvalue[162].count_case_id);
             //website
-            $scope.kc_web_2010 = parseInt($scope.kcvalue[164].count_case_id);
-            $scope.kc_web_2011 = parseInt($scope.kcvalue[165].count_case_id);
-            $scope.kc_web_2012 = parseInt($scope.kcvalue[166].count_case_id);
-            $scope.kc_web_2013 = parseInt($scope.kcvalue[167].count_case_id);
-            $scope.kc_web_2014 = parseInt($scope.kcvalue[168].count_case_id);
-            $scope.kc_web_2015 = parseInt($scope.kcvalue[169].count_case_id);
-            $scope.kc_web_2016 = parseInt($scope.kcvalue[170].count_case_id);
-            $scope.kc_web_2017 = parseInt($scope.kcvalue[171].count_case_id);
-            $scope.kc_web_2018 = parseInt($scope.kcvalue[172].count_case_id);
-            $scope.kc_web_2018 = parseInt($scope.kcvalue[173].count_case_id);
+            $scope.kc_web_2010 = parseInt($scope.kcvalue[193].count_case_id);
+            $scope.kc_web_2011 = parseInt($scope.kcvalue[194].count_case_id);
+            $scope.kc_web_2012 = parseInt($scope.kcvalue[195].count_case_id);
+            $scope.kc_web_2013 = parseInt($scope.kcvalue[196].count_case_id);
+            $scope.kc_web_2014 = parseInt($scope.kcvalue[197].count_case_id);
+            $scope.kc_web_2015 = parseInt($scope.kcvalue[198].count_case_id);
+            $scope.kc_web_2016 = parseInt($scope.kcvalue[199].count_case_id);
+            $scope.kc_web_2017 = parseInt($scope.kcvalue[200].count_case_id);
+            $scope.kc_web_2018 = parseInt($scope.kcvalue[201].count_case_id);
+            $scope.kc_web_2019 = parseInt($scope.kcvalue[202].count_case_id);
+            $scope.kc_web_2020 = parseInt($scope.kcvalue[203].count_case_id);
+            $scope.kc_web_2021 = parseInt($scope.kcvalue[204].count_case_id);
 
-            drawChartkc1($scope.kc_email_2010,$scope.kc_email_2011,$scope.kc_email_2012,$scope.kc_email_2013,$scope.kc_email_2014,$scope.kc_email_2015,$scope.kc_email_2016,$scope.kc_email_2017,$scope.kc_email_2018,
-                 /*fax*/ $scope.kc_fax_2010,$scope.kc_fax_2011,$scope.kc_fax_2012,$scope.kc_fax_2013,$scope.kc_fax_2014,$scope.kc_fax_2015,$scope.kc_fax_2016,$scope.kc_fax_2017,$scope.kc_fax_2018,
-                /*walk*/$scope.kc_walk_2010,$scope.kc_walk_2011,$scope.kc_walk_2012,$scope.kc_walk_2013,$scope.kc_walk_2014,$scope.kc_walk_2015,$scope.kc_walk_2016,$scope.kc_walk_2017,$scope.kc_walk_2018,
-                /*phone*/ $scope.kc_phone_2010,$scope.kc_phone_2011,$scope.kc_phone_2012,$scope.kc_phone_2013,$scope.kc_phone_2014,$scope.kc_phone_2015,$scope.kc_phone_2016,$scope.kc_phone_2017,$scope.kc_phone_2018,
-                /*twitter*/$scope.kc_twtr_2013,$scope.kc_twtr_2014,$scope.kc_twtr_2015,$scope.kc_twtr_2016,$scope.kc_twtr_2017,$scope.kc_twtr_2018,
-                /*web*/$scope.kc_web_2010,$scope.kc_web_2011,$scope.kc_web_2012,$scope.kc_web_2013,$scope.kc_web_2014,$scope.kc_web_2015,$scope.kc_web_2016,$scope.kc_web_2017,$scope.kc_web_2018,'kc_chart1');
+            drawChartkc1($scope.kc_email_2010,$scope.kc_email_2011,$scope.kc_email_2012,$scope.kc_email_2013,$scope.kc_email_2014,$scope.kc_email_2015,$scope.kc_email_2016,$scope.kc_email_2017,$scope.kc_email_2018,$scope.kc_email_2019,$scope.kc_email_2020,$scope.kc_email_2021,
+                 /*fax*/ $scope.kc_fax_2010,$scope.kc_fax_2011,$scope.kc_fax_2012,$scope.kc_fax_2013,$scope.kc_fax_2014,$scope.kc_fax_2015,$scope.kc_fax_2016,$scope.kc_fax_2017,$scope.kc_fax_2018,$scope.kc_fax_2019,$scope.kc_fax_2020,$scope.kc_fax_2021,
+                /*walk*/$scope.kc_walk_2010,$scope.kc_walk_2011,$scope.kc_walk_2012,$scope.kc_walk_2013,$scope.kc_walk_2014,$scope.kc_walk_2015,$scope.kc_walk_2016,$scope.kc_walk_2017,$scope.kc_walk_2018,$scope.kc_walk_2019,$scope.kc_walk_2020,$scope.kc_walk_2021,
+                /*phone*/ $scope.kc_phone_2010,$scope.kc_phone_2011,$scope.kc_phone_2012,$scope.kc_phone_2013,$scope.kc_phone_2014,$scope.kc_phone_2015,$scope.kc_phone_2016,$scope.kc_phone_2017,$scope.kc_phone_2018,$scope.kc_phone_2019,$scope.kc_phone_2020,$scope.kc_phone_2021,
+                /*twitter*/$scope.kc_twtr_2013,$scope.kc_twtr_2014,$scope.kc_twtr_2015,$scope.kc_twtr_2016,$scope.kc_twtr_2017,$scope.kc_twtr_2018,$scope.kc_twtr_2019,$scope.kc_twtr_2020,$scope.kc_twtr_2021,
+                /*web*/$scope.kc_web_2010,$scope.kc_web_2011,$scope.kc_web_2012,$scope.kc_web_2013,$scope.kc_web_2014,$scope.kc_web_2015,$scope.kc_web_2016,$scope.kc_web_2017,$scope.kc_web_2018,$scope.kc_web_2019,$scope.kc_web_2020,$scope.kc_web_2021,'kc_chart1');
 
 
-            drawChartkc2($scope.kc_email_2010,$scope.kc_email_2011,$scope.kc_email_2012,$scope.kc_email_2013,$scope.kc_email_2014,$scope.kc_email_2015,$scope.kc_email_2016,$scope.kc_email_2017,$scope.kc_email_2018,
-                /*fax*/ $scope.kc_fax_2010,$scope.kc_fax_2011,$scope.kc_fax_2012,$scope.kc_fax_2013,$scope.kc_fax_2014,$scope.kc_fax_2015,$scope.kc_fax_2016,$scope.kc_fax_2017,$scope.kc_fax_2018,
-                /*walk*/$scope.kc_walk_2010,$scope.kc_walk_2011,$scope.kc_walk_2012,$scope.kc_walk_2013,$scope.kc_walk_2014,$scope.kc_walk_2015,$scope.kc_walk_2016,$scope.kc_walk_2017,$scope.kc_walk_2018,
-                /*phone*/ $scope.kc_phone_2010,$scope.kc_phone_2011,$scope.kc_phone_2012,$scope.kc_phone_2013,$scope.kc_phone_2014,$scope.kc_phone_2015,$scope.kc_phone_2016,$scope.kc_phone_2017,$scope.kc_phone_2018,
-                /*twitter*/$scope.kc_twtr_2013,$scope.kc_twtr_2014,$scope.kc_twtr_2015,$scope.kc_twtr_2016,$scope.kc_twtr_2017,$scope.kc_twtr_2018,
-                /*web*/$scope.kc_web_2010,$scope.kc_web_2011,$scope.kc_web_2012,$scope.kc_web_2013,$scope.kc_web_2014,$scope.kc_web_2015,$scope.kc_web_2016,$scope.kc_web_2017,$scope.kc_web_2018,'kc_chart2');
+            drawChartkc2($scope.kc_email_2010,$scope.kc_email_2011,$scope.kc_email_2012,$scope.kc_email_2013,$scope.kc_email_2014,$scope.kc_email_2015,$scope.kc_email_2016,$scope.kc_email_2017,$scope.kc_email_2018,$scope.kc_email_2019,$scope.kc_email_2020,$scope.kc_email_2021,
+                /*fax*/ $scope.kc_fax_2010,$scope.kc_fax_2011,$scope.kc_fax_2012,$scope.kc_fax_2013,$scope.kc_fax_2014,$scope.kc_fax_2015,$scope.kc_fax_2016,$scope.kc_fax_2017,$scope.kc_fax_2018,$scope.kc_fax_2019,$scope.kc_fax_2020,$scope.kc_fax_2021,
+                /*walk*/$scope.kc_walk_2010,$scope.kc_walk_2011,$scope.kc_walk_2012,$scope.kc_walk_2013,$scope.kc_walk_2014,$scope.kc_walk_2015,$scope.kc_walk_2016,$scope.kc_walk_2017,$scope.kc_walk_2018,$scope.kc_walk_2019,$scope.kc_walk_2020,$scope.kc_walk_2021,
+                /*phone*/ $scope.kc_phone_2010,$scope.kc_phone_2011,$scope.kc_phone_2012,$scope.kc_phone_2013,$scope.kc_phone_2014,$scope.kc_phone_2015,$scope.kc_phone_2016,$scope.kc_phone_2017,$scope.kc_phone_2018,$scope.kc_phone_2019,$scope.kc_phone_2020,$scope.kc_phone_2021,
+                /*twitter*/$scope.kc_twtr_2013,$scope.kc_twtr_2014,$scope.kc_twtr_2015,$scope.kc_twtr_2016,$scope.kc_twtr_2017,$scope.kc_twtr_2018,$scope.kc_twtr_2019,$scope.kc_twtr_2020,$scope.kc_twtr_2021,
+                /*web*/$scope.kc_web_2010,$scope.kc_web_2011,$scope.kc_web_2012,$scope.kc_web_2013,$scope.kc_web_2014,$scope.kc_web_2015,$scope.kc_web_2016,$scope.kc_web_2017,$scope.kc_web_2018,$scope.kc_web_2019,$scope.kc_web_2020,$scope.kc_web_2021,'kc_chart2');
 
         });
     };
