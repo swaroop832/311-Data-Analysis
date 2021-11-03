@@ -660,7 +660,7 @@ app.controller("MinCtrl",function ($scope,$http) {
                 bar: {groupWidth: "50%"},
                 colors : ['#e7711b']
             };
-            var chart = new google.visualization.ColumnChart(document.getElementById(var7));
+            var chart = new google.visualization.ColumnChart(document.getElementById(var10));
             chart.draw(data, options);
         }
         function drawCharty(var0, var1 , var2, var3, var4, var5, var6,var7,var8,var,9,var10) {
