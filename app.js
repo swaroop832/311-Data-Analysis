@@ -157,7 +157,7 @@ app.controller("MinCtrl",function ($scope,$http) {
                 drawCharty(0,0,0,$scope.scvalue2013/$scope.population[3].Sacramento,$scope.scvalue2014/$scope.population[4].Sacramento,$scope.scvalue2015/$scope.population[5].Sacramento,$scope.scvalue2016/$scope.population[6].Sacramento,'compare_chart2');
             }
             if(my.sel2 === "San_Francisco"){
-                drawCharty($scope.sfvalue2010/$scope.population[0].San_Francisco,$scope.sfvalue2011/$scope.population[1].San_Francisco,$scope.sfvalue2012/$scope.population[2].San_Francisco,$scope.sfvalue2013/$scope.population[3].San_Francisco,$scope.sfvalue2014/$scope.population[4].San_Francisco,$scope.sfvalue2015/$scope.population[5].San_Francisco,$scope.sfvalue2016/$scope.population[6].San_Francisco,'compare_chart2')
+                drawCharty($scope.sfvalue2010/$scope.population[0].San_Francisco,$scope.sfvalue2011/$scope.population[1].San_Francisco,$scope.sfvalue2012/$scope.population[2].San_Francisco,$scope.sfvalue2013/$scope.population[3].San_Francisco,$scope.sfvalue2014/$scope.population[4].San_Francisco,$scope.sfvalue2015/$scope.population[5].San_Francisco,$scope.sfvalue2016/$scope.population[6].San_Francisco,$scope.sfvalue2017/$scope.population[7].San_Francisco,$scope.sfvalue2018/$scope.population[8].San_Francisco,$scope.sfvalue2019/$scope.population[9].San_Francisco,$scope.sfvalue2020/$scope.population[10].San_Francisco,'compare_chart2')
             }
             if(my.sel2 === "Washington"){
                 drawCharty($scope.wdvalue2010 / $scope.population[0].Washington, $scope.wdvalue2011 / $scope.population[1].Washington, $scope.wdvalue2012 / $scope.population[2].Washington, $scope.wdvalue2013 / $scope.population[3].Washington, $scope.wdvalue2014 / $scope.population[4].Washington, $scope.wdvalue2015 / $scope.population[5].Washington, $scope.wdvalue2016 / $scope.population[6].Washington, 'compare_chart2')
@@ -225,7 +225,7 @@ app.controller("MinCtrl",function ($scope,$http) {
             $scope.nyc2020 =parseInt($scope.nycvalue[10].count_unique_key);
             $scope.nyc2021 =parseInt($scope.nycvalue[11].count_unique_key);
             drawChartx($scope.nyc2010,$scope.nyc2011,$scope.nyc2012,$scope.nyc2013,$scope.nyc2014,$scope.nyc2015,$scope.nyc2016, $scope.nyc2017,$scope.nyc2018,$scope.nyc2019,$scope.nyc2020,$scope.nyc2021,'ny_chart1');
-            drawCharty($scope.nyc2010/$scope.population[0].NewYork_City,$scope.nyc2011/$scope.population[1].NewYork_City,$scope.nyc2012/$scope.population[2].NewYork_City,$scope.nyc2013/$scope.population[3].NewYork_City,$scope.nyc2014/$scope.population[4].NewYork_City,$scope.nyc2015/$scope.population[5].NewYork_City,$scope.nyc2016/$scope.population[6].NewYork_City,'ny_chart2');
+            drawCharty($scope.nyc2010/$scope.population[0].NewYork_City,$scope.nyc2011/$scope.population[1].NewYork_City,$scope.nyc2012/$scope.population[2].NewYork_City,$scope.nyc2013/$scope.population[3].NewYork_City,$scope.nyc2014/$scope.population[4].NewYork_City,$scope.nyc2015/$scope.population[5].NewYork_City,$scope.nyc2016/$scope.population[6].NewYork_City,$scope.nyc2017/$scope.population[7].NewYork_City,$scope.nyc2018/$scope.population[8].NewYork_City,$scope.nyc2019/$scope.population[9].NewYork_City,$scope.nyc2020/$scope.population[10].NewYork_City,'ny_chart2');
         });
     };
 
