@@ -261,7 +261,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="x in nycvalue">
+                                    <tr ng-repeat="x in nycvalue | limitTo : 7 ">
                                         <td>{{x.date_extract_y_created_date}}</td>
                                         <td>{{x.count_unique_key}}</td>
                                     </tr>
@@ -308,7 +308,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="x in auvalue">
+                                    <tr ng-repeat="x in auvalue | limitTo : 6 ">
                                         <td>{{x.year}}</td>
                                         <td>{{x.count_sr_number}}</td>
                                     </tr>
@@ -359,7 +359,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="x in bavalue">
+                                    <tr ng-repeat="x in bavalue | limitTo : 6 ">
                                         <td>{{x.year}}</td>
                                         <td>{{x.count_id}}</td>
                                     </tr>
@@ -434,22 +434,6 @@
                                         <td>{{2016}}</td>
                                         <td>{{bsvalue2016}}</td>
                                     </tr>
-                                        <tr>
-                                        <td>{{2017}}</td>
-                                        <td>{{bsvalue2016}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2018}}</td>
-                                        <td>{{bsvalue2016}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2019}}</td>
-                                        <td>{{bsvalue2016}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2020}}</td>
-                                        <td>{{bsvalue2016}}</td>
-                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -492,7 +476,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="x in ctvalue">
+                                    <tr ng-repeat="x in ctvalue | limitTo : 7 : 7 ">
                                         <td>{{x.year}}</td>
                                         <td>{{x.count_description}}</td>
                                     </tr>
@@ -538,7 +522,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="x in chvalue">
+                                    <tr ng-repeat="x in chvalue | limitTo : 7 : 9">
                                         <td>{{x.year}}</td>
                                         <td>{{x.count_case_number}}</td>
                                     </tr>
@@ -655,22 +639,6 @@
                                     <tr>
                                         <td>{{2016}}</td>
                                         <td>{{hsvalue2016}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2017}}</td>
-                                        <td>{{bsvalue2016}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2018}}</td>
-                                        <td>{{bsvalue2016}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2019}}</td>
-                                        <td>{{bsvalue2016}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2020}}</td>
-                                        <td>{{bsvalue2016}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -889,22 +857,6 @@
                                     </tr>
                                     <tr><td>2016</td>
                                         <td>{{mi2016}}</td></tr>
-                                        <tr>
-                                        <td>{{2017}}</td>
-                                        <td>{{bsvalue2016}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2018}}</td>
-                                        <td>{{bsvalue2016}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2019}}</td>
-                                        <td>{{bsvalue2016}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2020}}</td>
-                                        <td>{{bsvalue2016}}</td>
-                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -1003,26 +955,6 @@
                                     </tr>
                                     <tr><td>2016</td>
                                         <td>{{phvalue2016}}</td></tr>
-                                        <tr>
-                                        <td>{{2017}}</td>
-                                        <td>{{bsvalue2017}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2018}}</td>
-                                        <td>{{bsvalue2018}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2019}}</td>
-                                        <td>{{bsvalue2019}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2020}}</td>
-                                        <td>{{bsvalue2020}}</td>
-                                    </tr>
-                                         <tr>
-                                        <td>{{2021}}</td>
-                                        <td>{{bsvalue2021}}</td>
-                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -1085,30 +1017,6 @@
                                     <tr>
                                         <td>{{2016}}</td>
                                         <td>{{scvalue2016}}</td>
-                                    </tr>
-                                         <tr>
-                                        <td>{{2016}}</td>
-                                        <td>{{bsvalue2018}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2016}}</td>
-                                        <td>{{bsvalue2019}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2016}}</td>
-                                        <td>{{bsvalue2020}}</td>
-                                    </tr>
-                                         <tr>
-                                        <td>{{2016}}</td>
-                                        <td>{{bsvalue2018}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2016}}</td>
-                                        <td>{{bsvalue2019}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2016}}</td>
-                                        <td>{{bsvalue2020}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -1228,24 +1136,8 @@
                                         <td>{{wdvalue2015}}</td>
                                     </tr>
                                     <tr>
-                                        <td>{{2017}}</td>
-                                        <td>{{wdvalue2017}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>{{2018}}</td>
-                                        <td>{{bsvalue2018}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2019}}</td>
-                                        <td>{{bsvalue2019}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2020}}</td>
-                                        <td>{{bsvalue2020}}</td>
-                                    </tr>
-                                         <tr>
-                                        <td>{{2021}}</td>
-                                        <td>{{bsvalue2021}}</td>
+                                        <td>{{2016}}</td>
+                                        <td>{{wdvalue2016}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -1299,7 +1191,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr ng-repeat="x in cinvalue">
+                                    <tr ng-repeat="x in cinvalue | limitTo : 5">
                                         <td>{{x.year | date :"y"}}</td>
                                         <td>{{x.count_service_request_id}}</td>
                                     </tr>
@@ -1382,18 +1274,6 @@
                                     <tr>
                                         <td>{{2016}}</td>
                                         <td>{{santa2016}}</td>
-                                    </tr>
-                                         <tr>
-                                        <td>{{2016}}</td>
-                                        <td>{{bsvalue2018}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2016}}</td>
-                                        <td>{{bsvalue2019}}</td>
-                                    </tr>
-                                        <tr>
-                                        <td>{{2016}}</td>
-                                        <td>{{bsvalue2020}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
