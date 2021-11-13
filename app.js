@@ -32,7 +32,7 @@ app.controller("MinCtrl",function ($scope,$http) {
             ]);
 
             var options = {
-                title: 'City Comparison from 2010 to 2016',
+                title: 'City Comparison from 2010 to 2020',
                 curveType: 'none',
                 dataOpacity : 2.0,
                 pointSize: 7,
@@ -192,7 +192,10 @@ app.controller("MinCtrl",function ($scope,$http) {
                 $scope.mydata2015 = parseInt($scope.kcvalue[9].count_case_id);
                 $scope.mydata2016 = parseInt($scope.kcvalue[10].count_case_id);
                 $scope.mydata2017 = parseInt($scope.kcvalue[11].count_case_id);
-                drawChartx($scope.mydata2010, $scope.mydata2011, $scope.mydata2012, $scope.mydata2013, $scope.mydata2014, $scope.mydata2015, $scope.mydata2016, 'kc_chart1');
+                $scope.mydata2018 = parseInt($scope.kcvalue[12].count_case_id);
+                $scope.mydata2019 = parseInt($scope.kcvalue[13].count_case_id);
+                $scope.mydata2020 = parseInt($scope.kcvalue[14].count_case_id);
+                drawChartx($scope.mydata2010, $scope.mydata2011, $scope.mydata2012, $scope.mydata2013, $scope.mydata2014, $scope.mydata2015, $scope.mydata2016, $scope.mydata2017, $scope.mydata2018, $scope.mydata2019, $scope.mydata2020, 'kc_chart1');
                 drawCharty($scope.mydata2010/$scope.population[0].Kansas_City, $scope.mydata2011/$scope.population[1].Kansas_City, $scope.mydata2012/$scope.population[2].Kansas_City, $scope.mydata2013/$scope.population[3].Kansas_City, $scope.mydata2014/$scope.population[4].Kansas_City, $scope.mydata2015/$scope.population[5].Kansas_City, $scope.mydata2016/$scope.population[6].Kansas_City, 'kc_chart2');
             });
         };
@@ -212,7 +215,11 @@ app.controller("MinCtrl",function ($scope,$http) {
             $scope.nyc2014 =parseInt($scope.nycvalue[4].count_unique_key);
             $scope.nyc2015 =parseInt($scope.nycvalue[5].count_unique_key);
             $scope.nyc2016 =parseInt($scope.nycvalue[6].count_unique_key);
-            drawChartx($scope.nyc2010,$scope.nyc2011,$scope.nyc2012,$scope.nyc2013,$scope.nyc2014,$scope.nyc2015,$scope.nyc2016, 'ny_chart1');
+            $scope.nyc2017 =parseInt($scope.nycvalue[7].count_unique_key);
+            $scope.nyc2018 =parseInt($scope.nycvalue[8].count_unique_key);
+            $scope.nyc2019 =parseInt($scope.nycvalue[9].count_unique_key);
+            $scope.nyc2020 =parseInt($scope.nycvalue[10].count_unique_key);
+            drawChartx($scope.nyc2010,$scope.nyc2011,$scope.nyc2012,$scope.nyc2013,$scope.nyc2014,$scope.nyc2015,$scope.nyc2016,$scope.nyc2017,$scope.nyc2018,$scope.nyc2019,$scope.nyc2020, 'ny_chart1');
             drawCharty($scope.nyc2010/$scope.population[0].NewYork_City,$scope.nyc2011/$scope.population[1].NewYork_City,$scope.nyc2012/$scope.population[2].NewYork_City,$scope.nyc2013/$scope.population[3].NewYork_City,$scope.nyc2014/$scope.population[4].NewYork_City,$scope.nyc2015/$scope.population[5].NewYork_City,$scope.nyc2016/$scope.population[6].NewYork_City,'ny_chart2');
         });
     };
@@ -424,7 +431,11 @@ app.controller("MinCtrl",function ($scope,$http) {
             $scope.sfvalue2014 = value.data[6].count_service_request_id;
             $scope.sfvalue2015 = value.data[7].count_service_request_id;
             $scope.sfvalue2016 = value.data[8].count_service_request_id;
-            drawChartx($scope.sfvalue2010,$scope.sfvalue2011,$scope.sfvalue2012,$scope.sfvalue2013,$scope.sfvalue2014,$scope.sfvalue2015,$scope.sfvalue2016,'sf_chart1');
+            $scope.sfvalue2017 = value.data[9].count_service_request_id;
+            $scope.sfvalue2018 = value.data[10].count_service_request_id;
+            $scope.sfvalue2019 = value.data[11].count_service_request_id;
+            $scope.sfvalue2020 = value.data[12].count_service_request_id;
+            drawChartx($scope.sfvalue2010,$scope.sfvalue2011,$scope.sfvalue2012,$scope.sfvalue2013,$scope.sfvalue2014,$scope.sfvalue2015,$scope.sfvalue2016,$scope.sfvalue2017,$scope.sfvalue2018,$scope.sfvalue2019,$scope.sfvalue2020,'sf_chart1');
             drawCharty($scope.sfvalue2010/$scope.population[0].San_Francisco,$scope.sfvalue2011/$scope.population[1].San_Francisco,$scope.sfvalue2012/$scope.population[2].San_Francisco,$scope.sfvalue2013/$scope.population[3].San_Francisco,$scope.sfvalue2014/$scope.population[4].San_Francisco,$scope.sfvalue2015/$scope.population[5].San_Francisco,$scope.sfvalue2016/$scope.population[6].San_Francisco,'sf_chart2')
 
         })
