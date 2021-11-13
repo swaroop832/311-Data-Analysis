@@ -195,6 +195,7 @@ app.controller("MinCtrl",function ($scope,$http) {
                 $scope.mydata2018 = parseInt($scope.kcvalue[12].count_case_id);
                 $scope.mydata2019 = parseInt($scope.kcvalue[13].count_case_id);
                 $scope.mydata2020 = parseInt($scope.kcvalue[14].count_case_id);
+                $scope.mydata2021 = parseInt($scope.kcvalue[15].count_case_id);
                 drawChartx($scope.mydata2010, $scope.mydata2011, $scope.mydata2012, $scope.mydata2013, $scope.mydata2014, $scope.mydata2015, $scope.mydata2016, $scope.mydata2017, $scope.mydata2018, $scope.mydata2019, $scope.mydata2020, 'kc_chart1');
                 drawCharty($scope.mydata2010/$scope.population[0].Kansas_City, $scope.mydata2011/$scope.population[1].Kansas_City, $scope.mydata2012/$scope.population[2].Kansas_City, $scope.mydata2013/$scope.population[3].Kansas_City, $scope.mydata2014/$scope.population[4].Kansas_City, $scope.mydata2015/$scope.population[5].Kansas_City, $scope.mydata2016/$scope.population[6].Kansas_City,$scope.mydata2017/$scope.population[7].Kansas_City, $scope.mydata2018/$scope.population[8].Kansas_City,$scope.mydata2019/$scope.population[9].Kansas_City, $scope.mydata2020/$scope.population[10].Kansas_City, 'kc_chart2');
             });
@@ -219,6 +220,7 @@ app.controller("MinCtrl",function ($scope,$http) {
             $scope.nyc2018 =parseInt($scope.nycvalue[8].count_unique_key);
             $scope.nyc2019 =parseInt($scope.nycvalue[9].count_unique_key);
             $scope.nyc2020 =parseInt($scope.nycvalue[10].count_unique_key);
+            $scope.nyc2021 =parseInt($scope.nycvalue[11].count_unique_key);
             drawChartx($scope.nyc2010,$scope.nyc2011,$scope.nyc2012,$scope.nyc2013,$scope.nyc2014,$scope.nyc2015,$scope.nyc2016,$scope.nyc2017,$scope.nyc2018,$scope.nyc2019,$scope.nyc2020, 'ny_chart1');
             drawCharty($scope.nyc2010/$scope.population[0].NewYork_City,$scope.nyc2011/$scope.population[1].NewYork_City,$scope.nyc2012/$scope.population[2].NewYork_City,$scope.nyc2013/$scope.population[3].NewYork_City,$scope.nyc2014/$scope.population[4].NewYork_City,$scope.nyc2015/$scope.population[5].NewYork_City,$scope.nyc2016/$scope.population[6].NewYork_City,$scope.nyc2017/$scope.population[7].NewYork_City,$scope.nyc2018/$scope.population[8].NewYork_City,$scope.nyc2019/$scope.population[9].NewYork_City,$scope.nyc2020/$scope.population[10].NewYork_City,'ny_chart2');
         });
