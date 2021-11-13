@@ -659,8 +659,8 @@ app.controller("MinCtrl",function ($scope,$http) {
             var options = {
                 title: '311 call service requests ',
                 legend: {position: 'bottom'},
-                width:600
-                ,height:400,
+                width:800
+                ,height:500,
                 bar: {groupWidth: "30%"},
                 colors : ['#e7711b']
             };
@@ -685,8 +685,8 @@ app.controller("MinCtrl",function ($scope,$http) {
             var options = {
                 title: '311 call service requests Normilization ',
                 legend: {position: 'bottom'},
-                width:600
-                ,height:400,
+                width:800
+                ,height:500,
                 pointSize: 7,
                 colors : ['#e7711b']
             };
