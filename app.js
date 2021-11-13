@@ -864,8 +864,8 @@ app.controller("MinCtrl",function ($scope,$http) {
         },
         {
             "Year" : 2017,
-            "Kansas_City" : 481420,
-            "NewYork_City": 8538000,
+            "Kansas_City" : 476974,
+            "NewYork_City": 8560000,
             "Austin": 947890,
             "Baton_Rouge": 227715,
             "Boston" :673184,
@@ -889,8 +889,8 @@ app.controller("MinCtrl",function ($scope,$http) {
         },
         {
             "Year" : 2018,
-            "Kansas_City" : 481420,
-            "NewYork_City": 8538000,
+            "Kansas_City" : 481417,
+            "NewYork_City": 8444000,
             "Austin": 947890,
             "Baton_Rouge": 227715,
             "Boston" :673184,
@@ -914,8 +914,8 @@ app.controller("MinCtrl",function ($scope,$http) {
         },
         {
             "Year" : 2019,
-            "Kansas_City" : 481420,
-            "NewYork_City": 8538000,
+            "Kansas_City" : 486404,
+            "NewYork_City": 8419000,
             "Austin": 947890,
             "Baton_Rouge": 227715,
             "Boston" :673184,
@@ -939,8 +939,8 @@ app.controller("MinCtrl",function ($scope,$http) {
         },
         {
             "Year" : 2020,
-            "Kansas_City" : 481420,
-            "NewYork_City": 8538000,
+            "Kansas_City" : 508090,
+            "NewYork_City": 8804000,
             "Austin": 947890,
             "Baton_Rouge": 227715,
             "Boston" :673184,
