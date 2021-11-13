@@ -667,20 +667,19 @@ app.controller("MinCtrl",function ($scope,$http) {
             var chart = new google.visualization.ColumnChart(document.getElementById(var11));
             chart.draw(data, options);
         }
-        function drawCharty( var1 , var2, var3, var4, var5, var6,var7,var8,var9,var10,var11) {
+        function drawCharty(var0, var1 , var2, var3, var4, var5, var6,var7,var8,var9,var10) {
             var data = google.visualization.arrayToDataTable([
                 ['Year', 'No.of requests/population Normization'],
-                
-                ['2011', var1],
-                ['2012', var2],
-                ['2013', var3],
-                ['2014', var4],
-                ['2015', var5],
-                ['2016', var6],
-                ['2017', var7],
-                ['2018', var8],
-                ['2019', var9],
-                ['2020', var10]
+                ['2011', var0],
+                ['2012', var1],
+                ['2013', var2],
+                ['2014', var3],
+                ['2015', var4],
+                ['2016', var5],
+                ['2017', var6],
+                ['2018', var7],
+                ['2019', var8],
+                ['2020', var19]
             ]);
             var options = {
                 title: '311 call service requests Normilization ',
@@ -690,7 +689,7 @@ app.controller("MinCtrl",function ($scope,$http) {
                 pointSize: 7,
                 colors : ['#e7711b']
             };
-            var chart = new google.visualization.LineChart(document.getElementById(var11));
+            var chart = new google.visualization.LineChart(document.getElementById(var10));
             chart.draw(data, options);
         }
     $scope.population = [
