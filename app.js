@@ -220,7 +220,7 @@ app.controller("MinCtrl",function ($scope,$http) {
             $scope.nyc2019 =parseInt($scope.nycvalue[9].count_unique_key);
             $scope.nyc2020 =parseInt($scope.nycvalue[10].count_unique_key);
             drawChartx($scope.nyc2010,$scope.nyc2011,$scope.nyc2012,$scope.nyc2013,$scope.nyc2014,$scope.nyc2015,$scope.nyc2016,$scope.nyc2017,$scope.nyc2018,$scope.nyc2019,$scope.nyc2020, 'ny_chart1');
-            drawCharty($scope.nyc2010/$scope.population[0].NewYork_City,$scope.nyc2011/$scope.population[1].NewYork_City,$scope.nyc2012/$scope.population[2].NewYork_City,$scope.nyc2013/$scope.population[3].NewYork_City,$scope.nyc2014/$scope.population[4].NewYork_City,$scope.nyc2015/$scope.population[5].NewYork_City,$scope.nyc2016/$scope.population[6].NewYork_City,'ny_chart2');
+            drawCharty($scope.nyc2010/$scope.population[0].NewYork_City,$scope.nyc2011/$scope.population[1].NewYork_City,$scope.nyc2012/$scope.population[2].NewYork_City,$scope.nyc2013/$scope.population[3].NewYork_City,$scope.nyc2014/$scope.population[4].NewYork_City,$scope.nyc2015/$scope.population[5].NewYork_City,$scope.nyc2016/$scope.population[6].NewYork_City,$scope.nyc2017/$scope.population[7].NewYork_City,$scope.nyc2018/$scope.population[8].NewYork_City,$scope.nyc2019/$scope.population[9].NewYork_City,$scope.nyc2020/$scope.population[10].NewYork_City,'ny_chart2');
         });
     };
 
@@ -436,7 +436,7 @@ app.controller("MinCtrl",function ($scope,$http) {
             $scope.sfvalue2019 = value.data[11].count_service_request_id;
             $scope.sfvalue2020 = value.data[12].count_service_request_id;
             drawChartx($scope.sfvalue2010,$scope.sfvalue2011,$scope.sfvalue2012,$scope.sfvalue2013,$scope.sfvalue2014,$scope.sfvalue2015,$scope.sfvalue2016,$scope.sfvalue2017,$scope.sfvalue2018,$scope.sfvalue2019,$scope.sfvalue2020,'sf_chart1');
-            drawCharty($scope.sfvalue2010/$scope.population[0].San_Francisco,$scope.sfvalue2011/$scope.population[1].San_Francisco,$scope.sfvalue2012/$scope.population[2].San_Francisco,$scope.sfvalue2013/$scope.population[3].San_Francisco,$scope.sfvalue2014/$scope.population[4].San_Francisco,$scope.sfvalue2015/$scope.population[5].San_Francisco,$scope.sfvalue2016/$scope.population[6].San_Francisco,'sf_chart2')
+            drawCharty($scope.sfvalue2010/$scope.population[0].San_Francisco,$scope.sfvalue2011/$scope.population[1].San_Francisco,$scope.sfvalue2012/$scope.population[2].San_Francisco,$scope.sfvalue2013/$scope.population[3].San_Francisco,$scope.sfvalue2014/$scope.population[4].San_Francisco,$scope.sfvalue2015/$scope.population[5].San_Francisco,$scope.sfvalue2016/$scope.population[6].San_Francisco,$scope.sfvalue2017/$scope.population[7].San_Francisco,$scope.sfvalue2018/$scope.population[8].San_Francisco,$scope.sfvalue2019/$scope.population[9].San_Francisco,$scope.sfvalue2020/$scope.population[10].San_Francisco,'sf_chart2')
 
         })
     };
