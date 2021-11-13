@@ -667,10 +667,10 @@ app.controller("MinCtrl",function ($scope,$http) {
             var chart = new google.visualization.ColumnChart(document.getElementById(var11));
             chart.draw(data, options);
         }
-        function drawCharty(var0, var1 , var2, var3, var4, var5, var6,var7,var8,var9,var10,var11) {
+        function drawCharty( var1 , var2, var3, var4, var5, var6,var7,var8,var9,var10,var11) {
             var data = google.visualization.arrayToDataTable([
                 ['Year', 'No.of requests/population Normization'],
-                ['2010', var0],
+                
                 ['2011', var1],
                 ['2012', var2],
                 ['2013', var3],
@@ -687,7 +687,7 @@ app.controller("MinCtrl",function ($scope,$http) {
                 legend: {position: 'bottom'},
                 width:600
                 ,height:400,
-                pointSize: 5,
+                pointSize: 7,
                 colors : ['#e7711b']
             };
             var chart = new google.visualization.LineChart(document.getElementById(var11));
