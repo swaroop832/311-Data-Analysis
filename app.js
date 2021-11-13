@@ -679,7 +679,7 @@ app.controller("MinCtrl",function ($scope,$http) {
                 ['2017', var6],
                 ['2018', var7],
                 ['2019', var8],
-                ['2020', var19]
+                ['2020', var9]
             ]);
             var options = {
                 title: '311 call service requests Normilization ',
