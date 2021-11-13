@@ -641,7 +641,7 @@ app.controller("MinCtrl",function ($scope,$http) {
 
     google.charts.load('current', {'packages': ['corechart']});
     google.charts.setOnLoadCallback(drawChartx);
-        function drawChartx(var0, var1 , var2, var3, var4, var5, var6,var7) {
+        function drawChartx(var0, var1 , var2, var3, var4, var5, var6,var7,var8,var9,var10,var11) {
             var data = google.visualization.arrayToDataTable([
                 ['Year', 'No.of Requests'],
                 ['2010', parseInt(var0)],
@@ -650,7 +650,11 @@ app.controller("MinCtrl",function ($scope,$http) {
                 ['2013', parseInt(var3)],
                 ['2014', parseInt(var4)],
                 ['2015', parseInt(var5)],
-                ['2016', parseInt(var6)]
+                ['2016', parseInt(var6)],
+                ['2017', parseInt(var7)],
+                ['2018', parseInt(var8)],
+                ['2019', parseInt(var9)],
+                ['2020', parseInt(var10)]
             ]);
             var options = {
                 title: '311 call service requests ',
@@ -660,10 +664,10 @@ app.controller("MinCtrl",function ($scope,$http) {
                 bar: {groupWidth: "50%"},
                 colors : ['#e7711b']
             };
-            var chart = new google.visualization.ColumnChart(document.getElementById(var7));
+            var chart = new google.visualization.ColumnChart(document.getElementById(var11));
             chart.draw(data, options);
         }
-        function drawCharty(var0, var1 , var2, var3, var4, var5, var6,var7) {
+        function drawCharty(var0, var1 , var2, var3, var4, var5, var6,var7,var8,var9,var10,var11) {
             var data = google.visualization.arrayToDataTable([
                 ['Year', 'No.of requests/population Normization'],
                 ['2010', var0],
@@ -672,7 +676,11 @@ app.controller("MinCtrl",function ($scope,$http) {
                 ['2013', var3],
                 ['2014', var4],
                 ['2015', var5],
-                ['2016', var6]
+                ['2016', var6],
+                ['2017', var7],
+                ['2018', var8],
+                ['2019', var9],
+                ['2020', var10]
             ]);
             var options = {
                 title: '311 call service requests Normilization ',
@@ -682,7 +690,7 @@ app.controller("MinCtrl",function ($scope,$http) {
                 pointSize: 7,
                 colors : ['#e7711b']
             };
-            var chart = new google.visualization.LineChart(document.getElementById(var7));
+            var chart = new google.visualization.LineChart(document.getElementById(var11));
             chart.draw(data, options);
         }
     $scope.population = [
