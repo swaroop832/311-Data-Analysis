@@ -940,7 +940,7 @@ app.controller("MinCtrl",function ($scope,$http) {
         {
             "Year" : 2020,
             "Kansas_City" : 508090,
-            "NewYork_City": 8804000,
+            "NewYork_City": 8804190,
             "Austin": 947890,
             "Baton_Rouge": 227715,
             "Boston" :673184,
