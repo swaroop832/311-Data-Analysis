@@ -644,7 +644,6 @@ app.controller("MinCtrl",function ($scope,$http) {
         function drawChartx(var0, var1 , var2, var3, var4, var5, var6,var7,var8,var9,var10,var11) {
             var data = google.visualization.arrayToDataTable([
                 ['Year', 'No.of Requests'],
-                ['2010', parseInt(var0)],
                 ['2011', parseInt(var1)],
                 ['2012', parseInt(var2)],
                 ['2013', parseInt(var3)],
@@ -659,7 +658,7 @@ app.controller("MinCtrl",function ($scope,$http) {
             var options = {
                 title: '311 call service requests ',
                 legend: {position: 'bottom'},
-                width:800
+                width:600
                 ,height:400,
                 bar: {groupWidth: "40%"},
                 colors : ['#e7711b']
@@ -685,7 +684,7 @@ app.controller("MinCtrl",function ($scope,$http) {
             var options = {
                 title: '311 call service requests Normilization ',
                 legend: {position: 'bottom'},
-                width:800
+                width:600
                 ,height:400,
                 pointSize: 7,
                 colors : ['#e7711b']
