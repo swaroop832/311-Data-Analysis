@@ -196,7 +196,7 @@ app.controller("MinCtrl",function ($scope,$http) {
                 $scope.mydata2019 = parseInt($scope.kcvalue[13].count_case_id);
                 $scope.mydata2020 = parseInt($scope.kcvalue[14].count_case_id);
                 drawChartx($scope.mydata2010, $scope.mydata2011, $scope.mydata2012, $scope.mydata2013, $scope.mydata2014, $scope.mydata2015, $scope.mydata2016, $scope.mydata2017, $scope.mydata2018, $scope.mydata2019, $scope.mydata2020, 'kc_chart1');
-                drawCharty($scope.mydata2010/$scope.population[0].Kansas_City, $scope.mydata2011/$scope.population[1].Kansas_City, $scope.mydata2012/$scope.population[2].Kansas_City, $scope.mydata2013/$scope.population[3].Kansas_City, $scope.mydata2014/$scope.population[4].Kansas_City, $scope.mydata2015/$scope.population[5].Kansas_City, $scope.mydata2016/$scope.population[6].Kansas_City, 'kc_chart2');
+                drawCharty($scope.mydata2010/$scope.population[0].Kansas_City, $scope.mydata2011/$scope.population[1].Kansas_City, $scope.mydata2012/$scope.population[2].Kansas_City, $scope.mydata2013/$scope.population[3].Kansas_City, $scope.mydata2014/$scope.population[4].Kansas_City, $scope.mydata2015/$scope.population[5].Kansas_City, $scope.mydata2016/$scope.population[6].Kansas_City,$scope.mydata2017/$scope.population[7].Kansas_City, $scope.mydata2018/$scope.population[8].Kansas_City,$scope.mydata2019/$scope.population[9].Kansas_City, $scope.mydata2020/$scope.population[10].Kansas_City, 'kc_chart2');
             });
         };
         //Kansas City api https://data.kcmo.org/resource/cyqf-nban.json?$select=creation_year,count(case_id)&$group=creation_year
@@ -659,7 +659,7 @@ app.controller("MinCtrl",function ($scope,$http) {
             var options = {
                 title: '311 call service requests ',
                 legend: {position: 'bottom'},
-                width:600
+                width:800
                 ,height:400,
                 bar: {groupWidth: "50%"},
                 colors : ['#e7711b']
@@ -685,7 +685,7 @@ app.controller("MinCtrl",function ($scope,$http) {
             var options = {
                 title: '311 call service requests Normilization ',
                 legend: {position: 'bottom'},
-                width:600
+                width:800
                 ,height:400,
                 pointSize: 7,
                 colors : ['#e7711b']
