@@ -66,7 +66,7 @@ app.controller("MinCtrl",function ($scope,$http) {
     
    $scope.sffunction = function (selected_year) {
 
-        $http.get("https://data.sfgov.org/resource/ktji-gk7t.json?$query=SELECT%20date_extract_m(requested_datetime)%20as%20month,count(service_request_id),date_extract_y(requested_datetime)%20as%20year%20group%20by%20date_extract_y(requested_datetime),date_extract_m(requested_datetime)="+selected_year+"&$order=month").then(function (response) {
+        $http.get("https://data.sfgov.org/resource/ktji-gk7t.json?$select=date_extract_m(requested_datetime)%20as%20month,count(month)&$group=month&$where=date_extract_y(requested_datetime)="+selected_year+"&$order=month").then(function (response) {
 
             $scope.sfvalue = response.data;
             $scope.sfjan = $scope.gainvalue[0].count_month;
